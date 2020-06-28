@@ -13,6 +13,11 @@ h1 {
 	line-height: 5px;
 	font-size:15px;
 }
+h2 {
+		margin: 30px;
+		line-height: 5px;
+		font-size:15px;
+}
 ul li {
 	line-height: 18px;
   list-style: none;
