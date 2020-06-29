@@ -10,7 +10,21 @@ h1 {
 	line-height: 5px;
 	font-size:20px;
 }
+h2 {
+	margin: 30px;
+	line-height: 5px;
+	font-size:16px;
+}
+p {
+	margin: 60px;
+	line-height: 5px;
+	font-size:12px;
+}
 ul li {
 	line-height: 18px;
   list-style: none;
 }
+ol li {
+	line-height: 18px;
+}
+p {margin: 600;}
