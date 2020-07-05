@@ -3,7 +3,7 @@ body {
 	font-size:14px;
 	font-weight: lighter;
 	background-color: rgb(255,255,255);
-	margin: 5%;
+	margin: 3%;
 }
 
 h1 {
@@ -15,12 +15,12 @@ h2 {
 }
 
 ul li {
-	line-height: 20px;
-  list-style: none;
+	margin-left: -2%;
 	font-size:12px;
 	line-height: 20px;
 }
 
 ol li {
+	margin-left: -2%;
 	line-height: 20px;
 }
