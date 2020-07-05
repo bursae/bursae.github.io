@@ -1,29 +1,26 @@
 body {
 	font-family: sans-serif;
-	font-size:12px;
+	font-size:14px;
 	font-weight: lighter;
 	background-color: rgb(255,255,255);
-	margin: 30px;
+	margin: 5%;
 }
+
 h1 {
-	margin: 30px;
-	line-height: 5px;
 	font-size:20px;
 }
+
 h2 {
-	margin: 30px;
-	line-height: 5px;
 	font-size:16px;
 }
-p {
-	margin: 60px;
-	line-height: 5px;
-	font-size:12px;
-}
+
 ul li {
-	line-height: 18px;
+	line-height: 20px;
   list-style: none;
+	font-size:12px;
+	line-height: 20px;
 }
+
 ol li {
-	line-height: 18px;
+	line-height: 20px;
 }
