@@ -3,23 +3,19 @@ body {
 	font-size:14px;
 	font-weight: lighter;
 	background-color: rgb(255,255,255);
-	margin: 3%;
+	margin: 4%;
 }
-
 h1 {
-	font-size:20px;
+	font-size:22px;
 }
-
 h2 {
-	font-size:16px;
+	font-size:18px;
 }
-
 ul li {
 	margin-left: -2%;
-	font-size:12px;
+	font-size:14px;
 	line-height: 20px;
 }
-
 ol li {
 	margin-left: -2%;
 	line-height: 20px;
