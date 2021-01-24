@@ -1,5 +1,5 @@
 body {
-	font-family: sans-serif;
+	font-family: avenir;
 	font-size:14px;
 	font-weight: lighter;
 	background-color: rgb(255,255,255);
@@ -12,7 +12,7 @@ h2 {
 	font-size:18px;
 }
 ul li {
-	margin-left: -2%;
+	margin-left: -3%;
 	font-size:14px;
 	line-height: 20px;
 }
