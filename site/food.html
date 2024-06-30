@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - Food</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        :root {
+            --font-family: 'Arial', sans-serif;
+            --font-color: #000;
+            --background-color: #fff;
+            --primary-color: #007BFF;
+            --hover-color: #0056b3;
+            --margin: 4%;
+        }
+
+        body {
+            font-family: var(--font-family);
+            font-size: 14px;
+            font-weight: 300;
+            background-color: var(--background-color);
+            color: var(--font-color);
+            margin: var(--margin);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-bottom: 1px solid var(--font-color);
+            text-align: center;
+        }
+
+        header img {
+            vertical-align: middle;
+            height: var(--header-image-size); /* Use the variable to control image size */
+        }
+
+        header h1 {
+            margin-left: 20px;
+            font-size: 2.5em;
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        .recipe-section {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .recipe-section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .recipe-section ul {
+            text-align: left;
+            margin: 0 auto;
+            display: inline-block;
+            padding: 0;
+            list-style: none;
+        }
+
+        .recipe-section ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="../images/dancer.svg" class="small-header-image" alt="Dancer">
+        </a>
+        <h1>Anthony Bursae</h1>
+    </header>
+    <main>
+        <h1>Food</h1>
+        <section class="recipe-section">
+            <h2 id="lobster">Grilled Lobster</h2>
+            <p>
+                <img src="../images/lobster.png" alt="Grilled Lobster">
+            </p>
+            <h3>Ingredients</h3>
+            <ul>
+                <li>2 whole live lobsters (1-1/2 to 2 lb. each)</li>
+                <li>Olive oil, as needed</li>
+                <li>Sea salt</li>
+                <li>1 Lemon</li>
+            </ul>
+            <h3>Preparation</h3>
+            <ul>
+                <li>Kill the lobsters by cutting them in half.</li>
+                <li>Set the grill to medium-high heat. Brush some olive oil and place them bottom side down on the grill.</li>
+                <li>Grill until the shells are bright red and the juices turn white, 8 to 10 minutes for a 1-1/2-lb. lobster and 12 to 14 minutes for a 2-lb. lobster.</li>
+                <li>Remove the lobsters. Season with sea salt and a squeeze of lemon on each.</li>
+            </ul>
+        </section>
+        <section class="recipe-section">
+            <h2 id="squid">Braised Squid and Artichoke</h2>
+            <p>
+                <img src="../images/squid.png" alt="Braised Squid and Artichoke">
+            </p>
+            <h3>Ingredients</h3>
+            <ul>
+                <li>1 lemon</li>
+                <li>4 large artichokes</li>
+                <li>1 tablespoon extra virgin olive oil</li>
+                <li>1 tablespoon minced garlic</li>
+                <li>3-4 anchovy fillets, chopped</li>
+                <li>2 pounds cleaned squid, the bodies cut into rings</li>
+                <li>Freshly ground black pepper</li>
+                <li>Minced parsley for garnish</li>
+            </ul>
+            <h3>Preparation</h3>
+            <ul>
+                <li>Cut the lemon in half, squeeze the juice into a bowl of water, and add the lemon halves. Cut the trimmed artichokes into 4 pieces each, and as they are done, add them to the lemon water.</li>
+                <li>Place a large skillet or broad saucepan over medium heat and add 2 tablespoons of the oil; a minute later, add the garlic and anchovies. Cook, stirring occasionally, until the anchovies break up and the garlic begins to color, 3 to 5 minutes. Add the squid and the artichokes, stir, cover and turn the heat to medium.</li>
+                <li>Uncover and stir the mixture every 5 minutes or so. When the squid and artichokes begin to become tender, after 15 or 20 minutes, uncover and cook until most of the liquid has evaporated and the squid and artichokes are tender, about 10 to 15 minutes longer. Season with pepper. It's highly unlikely this dish will need added salt, especially if you use anchovies, but taste and see. Stir in the remaining olive oil, garnish with the parsley and serve.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

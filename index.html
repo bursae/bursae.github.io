@@ -5,24 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        :root {
+            --font-family: 'Arial', sans-serif;
+            --font-color: #000;
+            --background-color: #fff;
+            --primary-color: #007BFF;
+            --hover-color: #0056b3;
+            --margin: 4%;
+        }
+
+        body {
+            font-family: var(--font-family);
+            font-size: 14px;
+            font-weight: 300;
+            background-color: var(--background-color);
+            color: var(--font-color);
+            margin: var(--margin);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-bottom: 1px solid var(--font-color);
+            text-align: center;
+        }
+
+        header img {
+            vertical-align: middle;
+        }
+
+        header h1 {
+            margin-left: 20px;
+            font-size: 2.5em;
+        }
+
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--font-color);
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--hover-color);
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        ul li {
+            margin-left: -3%;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        ol li {
+            margin-left: -2%;
+            line-height: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: var(--hover-color);
+        }
+    </style>
 </head>
 <body>
     <header>
         <a href="index.html">
-            <img src="images/dancer.svg" height="90px" alt="Dancer">
+            <img src="images/dancer.svg" height="90" alt="Dancer">
         </a>
         <h1>Anthony Bursae</h1>
     </header>
-    <hr>
     <nav>
-      <ul style="list-style: none;">
+        <ul>
             <li><a href="site/about.html">About</a></li>
-            <li><a href="site/portfolio.html">Portfolio</a></li>
-            <li><a href="site/photos.html">Photos</a></li>
-            <li><a href="site/maps.html">Maps</a></li>
-            <li><a href="site/recipes.html">Recipes</a></li>
+            <li><a href="site/projects.html">Projects</a></li>
+            <li><a href="site/places.html">Places</a></li>
+            <li><a href="site/bergen.html">Bergen</a></li>
+            <li><a href="site/food.html">Food</a></li>
         </ul>
     </nav>
 </body>
 </html>
-

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - Projects</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        :root {
+            --font-family: 'Arial', sans-serif;
+            --font-color: #000;
+            --background-color: #fff;
+            --primary-color: #007BFF;
+            --hover-color: #0056b3;
+            --margin: 4%;
+        }
+
+        body {
+            font-family: var(--font-family);
+            font-size: 14px;
+            font-weight: 300;
+            background-color: var(--background-color);
+            color: var(--font-color);
+            margin: var(--margin);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-bottom: 1px solid var(--font-color);
+            text-align: center;
+        }
+
+        header img {
+            vertical-align: middle;
+            height: var(--header-image-size); /* Use the variable to control image size */
+        }
+
+        header h1 {
+            margin-left: 20px;
+            font-size: 2.5em;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        ul li, ol li {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        ul li {
+            margin-left: -3%;
+        }
+
+        ol li {
+            margin-left: -2%;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(-orimary-color);
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: var(--hover-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .project-description {
+            margin-bottom: 20px;
+        }
+
+        .project-description img {
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="../images/dancer.svg" class="small-header-image" alt="Dancer">
+        </a>
+        <h1>Anthony Bursae</h1>
+    </header>
+    <main>
+        <h1>Projects</h1>
+        <section class="project-description">
+            <h2 id="web_app">Data Visualization Application (2018)</h2>
+            <p>
+                <img src="../images/irx.png" height="180" alt="Data Visualization Application"> <br>
+                An advanced analytical tool for users to explore and analyze data with ease. Featuring search capabilities and graph analysis, this tool provides deep insights and visualizations, enabling users to make informed decisions based on data exploration.
+            </p>
+        </section>
+        <section class="project-description">
+          <h2 id="mobile_app">Risk Alerting Mobile App (2017)</h2>
+          <p>
+              <img src="../images/pr_app_1.png" height="240" alt="Risk Alerting Mobile App"> <br>
+              A mobile app designed to provide users with actionable alerts by analyzing publicly available information from social media, news sources, and various online platforms. This app ensures users stay informed and ready to respond to emerging trends and potential risks in real-time.
+          </p>
+      </section>
+        <section class="project-description">
+            <h2 id="analysis">Geospatial Predictive Assessments (2011)</h2>
+            <p>
+                <img src="../images/spadac.png" height="410" alt="Geospatial Predictive Assessments"> <br>
+                Utilized advanced statistical and machine learning models to perform in-depth analysis of historical spatial data, enabling accurate predictions of future events and trends. This project demonstrated the power of predictive analytics in uncovering valuable insights from complex datasets.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
