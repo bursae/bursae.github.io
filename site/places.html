@@ -5,121 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project - Places</title>
     <link rel="stylesheet" href="../css/main.css">
-    <style>
-        :root {
-            --font-family: 'Arial', sans-serif;
-            --font-color: #000;
-            --background-color: #fff;
-            --primary-color: #007BFF;
-            --hover-color: #0056b3;
-            --margin: 4%;
-        }
-
-        body {
-            font-family: var(--font-family);
-            font-size: 14px;
-            font-weight: 300;
-            background-color: var(--background-color);
-            color: var(--font-color);
-            margin: var(--margin);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            border-bottom: 1px solid var(--font-color);
-            text-align: center;
-        }
-
-        header img {
-            vertical-align: middle;
-            height: var(--header-image-size); /* Use the variable to control image size */
-        }
-
-        header h1 {
-            margin-left: 20px;
-            font-size: 2.5em;
-        }
-
-        main {
-            flex-grow: 1;
-        }
-
-        h1, h2 {
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 1.5em;
-            margin-top: 20px;
-        }
-
-        .photo-section {
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .photo-section img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
 </head>
 <body>
     <header>
         <a href="../index.html">
-            <img src="../images/dancer.svg" class="small-header-image" alt="Dancer">
+            <img src="../images/dancer.png" class="small-header-image" alt="Dancer">
         </a>
         <h1>Anthony Bursae</h1>
     </header>
     <main>
         <h1>Places</h1>
-        <section class="photo-section">
-            <h2 id="Oradell Reservoir">Oradell Reservoir</h2>
-            <p>
-                <img src="../images/oradell_reservoir.png" alt="Oradell Reservoir">
-            </p>
+        <section class="photo-section" id="oradell_reservoir">
+            <h2>Oradell Reservoir</h2>
+            <img src="../images/oradell_reservoir.png" alt="Oradell Reservoir">
         </section>
-        <section class="photo-section">
-          <h2 id="spring_lake">Spring Lake</h2>
-          <p>
-              <img src="../images/spring_lake.png" alt="Old Office">
-          </p>
-      </section>
-        <section class="photo-section">
-            <h2 id="old_office">Englewood</h2>
-            <p>
-                <img src="../images/old_office.png" alt="Old Office">
-            </p>
+        <section class="photo-section" id="spring_lake">
+            <h2>Spring Lake</h2>
+            <img src="../images/spring_lake.png" alt="Spring Lake">
         </section>
-        <section class="photo-section">
-            <h2 id="the_pond">Pascack Valley</h2>
-            <p>
-                <img src="../images/pond_yard.png" alt="Pascack Valley">
-            </p>
+        <section class="photo-section" id="englewood">
+            <h2>Englewood</h2>
+            <img src="../images/old_office.png" alt="Englewood">
         </section>
-        <section class="photo-section">
-            <h2 id="bournemouth">Bournemouth</h2>
-            <p>
-                <img src="../images/bournemouth.png" alt="Bournemouth">
-            </p>
+        <section class="photo-section" id="pascack_valley">
+            <h2>Pascack Valley</h2>
+            <img src="../images/pond_yard.png" alt="Pascack Valley">
         </section>
-        <section class="photo-section">
-            <h2 id="highland_brook">Highland Brook</h2>
-            <p>
-                <img src="../images/highland_brook2.png" alt="Highland Brook">
-            </p>
+        <section class="photo-section" id="bournemouth">
+            <h2>Bournemouth</h2>
+            <img src="../images/bournemouth.png" alt="Bournemouth">
         </section>
-        <section class="photo-section">
-            <h2 id="kingsland">Kingsland</h2>
-            <p>
-                <img src="../images/lyndhurst.png" alt="Kingsland">
-            </p>
+        <section class="photo-section" id="highland_brook">
+            <h2>Highland Brook</h2>
+            <img src="../images/highland_brook2.png" alt="Highland Brook">
+        </section>
+        <section class="photo-section" id="kingsland">
+            <h2>Kingsland</h2>
+            <img src="../images/lyndhurst.png" alt="Kingsland">
         </section>
     </main>
 </body>
