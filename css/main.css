@@ -6,7 +6,7 @@
     --hover-color: #003f7f;
     --accent-color: #FF4081;
     --margin: 4%;
-    --header-image-size: 80px;
+    --header-image-size: 80px; /* Can adjust or remove this if you want to control for larger screens */
     --header-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -32,11 +32,13 @@ header {
     text-align: center;
     box-shadow: var(--header-shadow);
     background-color: #fff;
+    flex-direction: row; /* Default layout */
 }
 
 header img {
     vertical-align: middle;
-    height: var(--header-image-size);
+    max-width: 100%; /* Ensure the image scales down */
+    height: auto; /* Maintain aspect ratio */
     transition: transform 0.3s ease;
 }
 
@@ -63,111 +65,4 @@ header h1::after {
     background: var(--accent-color);
     position: absolute;
     left: 25%;
-    bottom: -10px;
-    transition: width 0.3s;
-}
-
-header h1:hover {
-    color: var(--hover-color);
-    transform: translateY(-5px);
-}
-
-header h1:hover::after {
-    width: 80%;
-}
-
-nav {
-    margin: 15px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li {
-    position: relative;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--font-color);
-    font-size: 1em;
-    transition: color 0.3s;
-    padding: 5px;
-}
-
-nav ul li a:hover {
-    color: var(--primary-color);
-}
-
-nav ul li::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: var(--primary-color);
-    transition: width .3s;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-}
-
-nav ul li:hover::after {
-    width: 100%;
-}
-
-a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: color 0.3s;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: var(--hover-color);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-ul li, ol li {
-    font-size: 15px;
-    line-height: 24px;
-    margin-left: 0;
-    padding-left: 1.5em;
-    text-indent: -1.5em;
-}
-
-ul {
-    list-style: disc inside;
-}
-
-ol {
-    list-style: decimal inside;
-}
-
-footer {
-    margin-top: auto;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9em;
-    color: #555;
-}
-
-footer a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: var(--hover-color);
-}
+    bottom:
