@@ -200,3 +200,31 @@ footer a:hover {
         gap: 10px;
     }
 }
+main {
+    flex: 1;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+nav ul li a.active {
+    color: var(--accent-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem 0;
+    }
+
+    nav ul li a {
+        font-size: 1.1em;
+        padding: 10px 0;
+    }
+}
+blockquote {
+  color: #777;
+  font-style: italic;
+  margin: 0 0 1rem;
+}

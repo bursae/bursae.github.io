@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../bursae.github.io/images/favicon-16x16.png" type="image/x-icon">
-    <title>Project - Me</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-        }
-        header img {
-            vertical-align: middle;
-        }
-        header h1 {
-            display: inline;
-            margin-left: 15px;
-        }
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .image-container {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            padding: 20px 0;
-        }
-        .image-container img {
-            height: 250px;
-            width: auto;
-        }
-        p {
-            text-align: left;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Anthony Bursae</title>
+  <link rel="icon" href="../images/favicon-16x16.png" type="image/png" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <style>
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px 0;
+    }
+
+    .image-container img {
+      max-height: 250px;
+      width: auto;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <a href="../index.html">
-            <img src="../images/dancer.png" class="small-header-image" alt="Dancer">
-        </a>
-        <h1>Anthony Bursae</h1>
-    </header>
-    <main>
-        <h1>About</h1>
-        <div class="image-container">
-            <img src="../images/family.png" alt="About Image">
-            <img src="../images/about.png" alt="About Image">
-        </div>
-        <p>I grew up in Kingsland, a hamlet just outside New York City. I've sailed on a Navy destroyer, earned a degree in history, and built my career in tech product management. Today, I live in the Northern Valley of Bergen County, NJ, with my wife and two children.</p>
-    </main>
+  <header>
+    <a href="../index.html">
+      <img src="../images/dancer.png" alt="Anthony Bursae logo" />
+    </a>
+    <h1>Anthony Bursae</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="places.html">Places</a></li>
+      <li><a href="bergen.html">Bergen</a></li>
+      <li><a href="notes.html">Notes</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>About</h2>
+    <div class="image-container">
+      <img src="../images/family.png" alt="Anthony Bursae and family" />
+      <img src="../images/about.png" alt="Anthony Bursae professional photo" />
+    </div>
+    <p>
+      I grew up in Kingsland, an unincorporated hamlet just outside New York City. I’ve sailed on a Navy destroyer, earned a degree in history, and built my career in tech product management. Today, I live in Bergen County, NJ, with my wife, daughter, and son.
+    </p>
+  </main>
+
+  <footer>
+    <p>© 2025 Anthony Bursae • 
+      <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
+      <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
+    </p>
+  </footer>
 </body>
 </html>
-

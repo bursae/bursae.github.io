@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../bursae.github.io/images/favicon-16x16.png" type="image/x-icon">
-    <title>Project - Projects</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-        }
-        header img {
-            vertical-align: middle;
-        }
-        header h1 {
-            display: inline;
-            margin-left: 15px;
-        }
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .project-description {
-            padding: 30px 0;
-            text-align: left;
-        }
-        .project-description img {
-            display: block;
-            margin: 0 auto 15px;
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Anthony Bursae</title>
+  <link rel="icon" href="../images/favicon-16x16.png" type="image/png" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <style>
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .note-entry {
+      margin-bottom: 3rem;
+    }
+
+    .note-entry h2 {
+      font-size: 1.5em;
+      margin-bottom: 0.5rem;
+    }
+
+    .note-entry img {
+      display: block;
+      margin: 1rem auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .note-entry p {
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <a href="../index.html">
-            <img src="../images/dancer.png" class="small-header-image" alt="Dancer">
-        </a>
-        <h1>Anthony Bursae</h1>
-    </header>
-    <main>
-        <h1>Projects</h1>
-        <section class="project-description" id="web_app">
-            <h2>Data Visualization Application (2018)</h2>
-            <img src="../images/irx.png" alt="Data Visualization Application">
-            <p>PlanetRisk Analytics: A powerful analytical tool designed to simplify data exploration and analysis. With advanced search capabilities and graph analysis features, it delivers deep insights and visualizations, empowering users to make informed decisions.</p>
-        </section>
-        <section class="project-description" id="mobile_app">
-            <h2>Risk Alerting Mobile App (2017)</h2>
-            <img src="../images/pr_app_1.png" alt="Risk Alerting Mobile App">
-            <p>PlanRisk Mobile: A mobile app designed to provide users with actionable alerts by analyzing publicly available information from social media, news sources, and various online platforms. This app ensures users stay informed and ready to respond to emerging trends and potential risks in real-time.</p>
-        </section>
-        <section class="project-description" id="analysis">
-            <h2>Geospatial Predictive Assessments (2011)</h2>
-            <img src="../images/spadac.png" alt="Geospatial Predictive Assessments">
-            <p>Geospatial Analytics: Utilized advanced statistical and machine learning models to perform in-depth analysis of spatial data, enabling accurate predictions of future events and trends. This project demonstrated the power of predictive analytics in uncovering valuable insights from complex datasets.</p>
-        </section>
-    </main>
+  <header>
+    <a href="../index.html">
+      <img src="../images/dancer.png" alt="Anthony Bursae logo" />
+    </a>
+    <h1>Anthony Bursae</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="places.html">Places</a></li>
+      <li><a href="bergen.html">Bergen</a></li>
+      <li><a href="notes.html">Notes</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Projects</h2>
+
+    <div class="note-entry" id="web_app">
+      <h2>Data Visualization Application (2018)</h2>
+      <img src="../images/irx.png" alt="Data Visualization Application" />
+      <p><strong>PlanetRisk Analytics:</strong> A powerful analytical tool designed to simplify data exploration and analysis. With advanced search capabilities and graph analysis features, it delivers deep insights and visualizations, empowering users to make informed decisions.</p>
+    </div>
+
+    <div class="note-entry" id="mobile_app">
+      <h2>Risk Alerting Mobile App (2017)</h2>
+      <img src="../images/pr_app_1.png" alt="Risk Alerting Mobile App" />
+      <p><strong>PlanetRisk Mobile:</strong> A mobile app designed to provide users with actionable alerts by analyzing publicly available information from social media, news sources, and various online platforms. This app ensures users stay informed and ready to respond to emerging trends and potential risks in real-time.</p>
+    </div>
+
+    <div class="note-entry" id="analysis">
+      <h2>Geospatial Predictive Assessments (2011)</h2>
+      <img src="../images/spadac.png" alt="Geospatial Predictive Assessments" />
+      <p><strong>Geospatial Analytics:</strong> Utilized advanced statistical and machine learning models to perform in-depth analysis of spatial data, enabling accurate predictions of future events and trends. This project demonstrated the power of predictive analytics in uncovering valuable insights from complex datasets.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Anthony Bursae • 
+      <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
+      <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
+    </p>
+  </footer>
 </body>
 </html>
