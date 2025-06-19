@@ -72,7 +72,7 @@
       <main>
         <div id="note-list" class="note-list">Loading notes...</div>
         <div id="note-content" style="display:none;">
-          <a href="#" class="back-link" onclick="goBack(); return false;">← Back to Notes</a>
+          <a href="notes.html" class="back-link">← Back to Notes</a>
           <div id="note-body"></div>
         </div>
       </main>
@@ -87,33 +87,46 @@
   </div>
 
   <script>
-    async function loadNoteList() {
-      const res = await fetch('./notes/notes.json');
-      const notes = await res.json();
-      const listEl = document.getElementById('note-list');
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get('file');
 
-      listEl.innerHTML = notes.map(note => `
-        <div>
-          <h3><a href="#" onclick="loadNote('${note.file}'); return false;">${note.title}</a></h3>
-          <small>${note.date}</small>
-        </div>
-      `).join('');
+    const noteList = document.getElementById('note-list');
+    const noteContent = document.getElementById('note-content');
+    const noteBody = document.getElementById('note-body');
+
+    if (file) {
+      // Single post view
+      noteList.style.display = 'none';
+      noteContent.style.display = 'block';
+
+      fetch(`../posts/${file}`)
+        .then(res => res.text())
+        .then(text => {
+          noteBody.innerHTML = marked.parse(text);
+        })
+        .catch(err => {
+          noteBody.innerHTML = "Failed to load post.";
+          console.error(err);
+        });
+    } else {
+      // List view
+      noteContent.style.display = 'none';
+
+      fetch('../posts/posts.json')
+        .then(res => res.json())
+        .then(notes => {
+          noteList.innerHTML = notes.map(note => `
+            <div>
+              <h3><a href="notes.html?file=${note.file}">${note.title}</a></h3>
+              <small>${note.date}</small>
+            </div>
+          `).join('');
+        })
+        .catch(err => {
+          noteList.innerHTML = "Failed to load posts.";
+          console.error(err);
+        });
     }
-
-    async function loadNote(filename) {
-      const res = await fetch(`./notes/${filename}`);
-      const text = await res.text();
-      document.getElementById('note-body').innerHTML = marked.parse(text);
-      document.getElementById('note-list').style.display = 'none';
-      document.getElementById('note-content').style.display = 'block';
-    }
-
-    function goBack() {
-      document.getElementById('note-content').style.display = 'none';
-      document.getElementById('note-list').style.display = 'block';
-    }
-
-    loadNoteList();
   </script>
 </body>
 </html>
