@@ -7,7 +7,7 @@
   --primary-color: #000;
   --hover-color: #2b5fc0;
   --accent-color: #FF4081;
-  --header-image-size-desktop: 100px;
+  --header-image-size-desktop: 120px;
   --header-image-size-mobile: 60px;
 }
 
@@ -36,15 +36,18 @@ html, body {
 header {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 40px 0 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 40px 0 10px;
 }
 
 header img {
   max-width: var(--header-image-size-desktop);
+  aspect-ratio: 1 / 1;
+  margin-bottom: 0.5rem;
   height: auto;
   width: auto;
-  aspect-ratio: 1 / 1;
   transition: transform 0.2s ease;
 }
 
@@ -55,7 +58,7 @@ header img:hover {
 .header-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 header h1 {
@@ -79,6 +82,7 @@ nav ul {
   margin: 1rem 0 0;
   display: flex;
   gap: 32px;
+  justify-content: center;
 }
 
 nav ul li a {
@@ -101,7 +105,7 @@ nav ul li a.active {
 main {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 3rem 0 2rem;
   min-height: 600px;
 }
 
@@ -116,7 +120,7 @@ img {
   display: block;
   aspect-ratio: auto;
   margin: 1rem auto;
-  max-height: 320px;
+  max-height: 360px;
 }
 
 .image-container {
@@ -128,7 +132,7 @@ img {
 }
 
 .image-container img {
-  max-width: 45%;
+  max-width: 48%;
   height: auto;
   display: block;
 }
