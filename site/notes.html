@@ -95,7 +95,6 @@
     const noteBody = document.getElementById('note-body');
 
     if (file) {
-      // Single post view
       noteList.style.display = 'none';
       noteContent.style.display = 'block';
 
@@ -109,17 +108,16 @@
           console.error(err);
         });
     } else {
-      // List view
       noteContent.style.display = 'none';
 
       fetch('../posts/posts.json')
         .then(res => res.json())
         .then(notes => {
           noteList.innerHTML = notes.map(note => `
-            <div>
+            <article class="note-entry">
               <h3><a href="notes.html?file=${note.file}">${note.title}</a></h3>
               <small>${note.date}</small>
-            </div>
+            </article>
           `).join('');
         })
         .catch(err => {
@@ -130,3 +128,4 @@
   </script>
 </body>
 </html>
+
