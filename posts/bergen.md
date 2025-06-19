@@ -1,11 +1,4 @@
-# Notes on the County of Bergen
-
-## Table of Contents
-1. [Boundaries](#boundaries)
-2. [Water](#water)
-3. [Mountains & Cliffs](#mountains--cliffs)
-4. [Transportation](#transportation)
-5. [Towns](#towns)
+# The County of Bergen
 
 ---
 
