@@ -1,3 +1,5 @@
+/* Main Site CSS */
+
 :root {
   --font-family: 'Satoshi', 'Arial', sans-serif;
   --font-color: #222;
@@ -17,8 +19,6 @@ html, body {
   color: var(--font-color);
   height: 100%;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .site-container {
@@ -33,18 +33,18 @@ html, body {
   padding: 0 1rem;
 }
 
-/* HEADER */
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  gap: 16px;
+  padding: 40px 0 20px;
 }
 
 header img {
   max-width: var(--header-image-size-desktop);
-  aspect-ratio: 1 / 1;
   height: auto;
+  width: auto;
+  aspect-ratio: 1 / 1;
   transition: transform 0.2s ease;
 }
 
@@ -73,7 +73,6 @@ header h1 a:hover {
   color: var(--hover-color);
 }
 
-/* NAV */
 nav ul {
   list-style: none;
   padding: 0;
@@ -99,12 +98,11 @@ nav ul li a.active {
   border-bottom: 1px solid var(--primary-color);
 }
 
-/* MAIN */
 main {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem 1rem;
-  min-height: 600px; /* Helps reduce layout shift */
+  padding: 2rem 0;
+  min-height: 600px;
 }
 
 main p {
@@ -117,40 +115,24 @@ img {
   height: auto;
   display: block;
   aspect-ratio: auto;
+  margin: 1rem auto;
+  max-height: 320px;
 }
 
-/* BLOG FEED */
-.blog-feed {
+.image-container {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 2rem 0;
 }
 
-.blog-feed .post {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 1rem;
+.image-container img {
+  max-width: 45%;
+  height: auto;
+  display: block;
 }
 
-.blog-feed .post h2 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.blog-feed .post a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-.blog-feed .post a:hover {
-  color: var(--hover-color);
-}
-
-.blog-feed .post small {
-  color: #666;
-  font-size: 0.9rem;
-}
-
-/* FOOTER */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -167,4 +149,9 @@ footer a {
 
 footer a:hover {
   border-bottom: 1px solid var(--primary-color);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

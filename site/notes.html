@@ -3,67 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anthony Bursae</title>
-  <link rel="icon" href="images/favicon-16x16.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css" />
+  <title>Notes – Anthony Bursae</title>
+  <link rel="icon" href="../images/favicon-16x16.png" type="image/png" />
+  <link rel="stylesheet" href="../css/main.css" />
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
   <div class="site-container">
     <div class="page">
+
       <header>
-        <a href="index.html">
-          <img src="images/dancer.png" alt="Anthony Bursae logo" />
+        <a href="../index.html">
+          <img src="../images/dancer.png" alt="Anthony Bursae logo" />
         </a>
         <div class="header-content">
-          <h1><a href="index.html">Anthony Bursae</a></h1>
+          <h1><a href="../index.html">Anthony Bursae</a></h1>
           <nav>
             <ul>
-              <li><a href="site/about.html">About</a></li>
-              <li><a href="site/projects.html">Projects</a></li>
-              <li><a href="site/places.html">Places</a></li>
-              <li><a href="site/notes.html">Notes</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="places.html">Places</a></li>
+              <li><a href="notes.html" class="active">Notes</a></li>
             </ul>
           </nav>
         </div>
       </header>
 
       <main>
-        <section class="blog-feed" id="blog-feed">
-          Loading posts...
-        </section>
+        <div id="note-list" class="note-list">Loading notes...</div>
+        <div id="note-content" style="display:none;">
+          <a href="notes.html" class="back-link">← Back to Notes</a>
+          <div id="note-body"></div>
+        </div>
       </main>
-    </div>
 
-    <footer>
-      <p>© 2025 Anthony Bursae • 
-        <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
-        <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
-      </p>
-    </footer>
+      <footer>
+        <p>© 2025 Anthony Bursae • 
+          <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
+          <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
+        </p>
+      </footer>
+
+    </div>
   </div>
 
   <script>
-    async function loadPosts() {
-      try {
-        const res = await fetch('posts/posts.json');
-        const posts = await res.json();
-        const feed = document.getElementById('blog-feed');
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get('file');
 
-        feed.innerHTML = posts.map(post => `
-          <article class="post">
-            <h2><a href="site/notes.html?file=${post.file}">${post.title}</a></h2>
-            <p>${post.description} <br><small>${post.date}</small></p>
-          </article>
-        `).join('');
-      } catch (err) {
-        document.getElementById('blog-feed').innerHTML = 'Failed to load posts.';
-        console.error(err);
-      }
+    const noteList = document.getElementById('note-list');
+    const noteContent = document.getElementById('note-content');
+    const noteBody = document.getElementById('note-body');
+
+    if (file) {
+      noteList.style.display = 'none';
+      noteContent.style.display = 'block';
+
+      fetch(`../posts/${file}`)
+        .then(res => res.text())
+        .then(text => {
+          noteBody.innerHTML = marked.parse(text);
+        })
+        .catch(err => {
+          noteBody.innerHTML = "Failed to load post.";
+          console.error(err);
+        });
+    } else {
+      noteContent.style.display = 'none';
+
+      fetch('../posts/posts.json')
+        .then(res => res.json())
+        .then(notes => {
+          noteList.innerHTML = notes.map(note => `
+            <div style="margin-bottom: 2rem;">
+              <h3><a href="notes.html?file=${note.file}">${note.title}</a></h3>
+              <small>${note.date}</small>
+            </div>
+          `).join('');
+        })
+        .catch(err => {
+          noteList.innerHTML = "Failed to load posts.";
+          console.error(err);
+        });
     }
-
-    loadPosts();
   </script>
 </body>
 </html>
