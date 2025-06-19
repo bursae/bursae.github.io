@@ -40,7 +40,7 @@ header {
   flex-wrap: nowrap;
   gap: 12px;
   padding: 20px 0 10px;
-  margin-left: -80px; /* Further left for alignment */
+  margin-left: -60px; /* Further left for alignment */
 }
 
 header img {
@@ -62,7 +62,7 @@ header img:hover {
   align-items: flex-start;
   justify-content: center;
   margin-top: 0;
-  margin-left: -32px; /* Tighter to logo */
+  margin-left: -24px; /* Tighter to logo */
 }
 
 header h1 {
@@ -115,7 +115,7 @@ main {
 }
 
 main h2 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
@@ -131,7 +131,7 @@ img {
   display: block;
   aspect-ratio: auto;
   margin: 1.5rem auto;
-  max-height: 360px;
+  max-height: 400px; /* Increased from 360px */
 }
 
 .image-container {
@@ -143,7 +143,7 @@ img {
 }
 
 .image-container img {
-  max-width: 44%;
+  max-width: 48%; /* Increased from 44% */
   height: auto;
   display: block;
 }
