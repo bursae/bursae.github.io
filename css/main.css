@@ -1,230 +1,140 @@
 :root {
-    --font-family: 'Arial', sans-serif;
-    --font-color: #222;
-    --background-color: #fdfdfd;
-    --primary-color: #000000;
-    --hover-color: #003f7f;
-    --accent-color: #FF4081;
-    --margin: 4%;
-    --header-image-size-desktop: 80px;
-    --header-image-size-mobile: 60px;
-    --header-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --font-family: 'Satoshi', 'Arial', sans-serif;
+  --font-color: #222;
+  --background-color: #fdfdfd;
+  --primary-color: #000;
+  --hover-color: #2b5fc0;
+  --accent-color: #FF4081;
+  --header-image-size-desktop: 100px;
+  --header-image-size-mobile: 60px;
 }
 
-body {
-    font-family: var(--font-family);
-    font-size: 16px;
-    font-weight: 400;
-    background-color: var(--background-color);
-    color: var(--font-color);
-    margin: var(--margin);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    line-height: 1.5;
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--font-color);
+  height: 100%;
 }
 
+.site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.page {
+  width: 960px;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+/* HEADER */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    border-bottom: 1px solid var(--font-color);
-    text-align: center;
-    box-shadow: var(--header-shadow);
-    background-color: #fff;
-    flex-direction: row; /* Default layout for desktop */
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 0 20px;
 }
 
 header img {
-    vertical-align: middle;
-    max-width: var(--header-image-size-desktop); /* Default size for desktop */
-    height: auto;
-    transition: transform 0.3s ease;
+  max-width: var(--header-image-size-desktop);
+  height: auto;
+  transition: transform 0.2s ease;
+  display: block;
 }
 
 header img:hover {
-    transform: scale(1.02);
+  transform: scale(1.04);
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 header h1 {
-    margin-left: 15px;
-    font-size: 2.5em;
-    color: var(--primary-color);
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    position: relative;
-    transition: color 0.3s, transform 0.3s;
+  font-size: 2.4em;
+  font-weight: 300;
+  margin: 0;
 }
 
-header h1::after {
-    content: '';
-    display: block;
-    width: 50%;
-    height: 3px;
-    background: var(--accent-color);
-    position: absolute;
-    left: 25%;
-    bottom: -10px;
-    transition: width 0.3s;
+header h1 a {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
-header h1:hover {
-    color: var(--hover-color);
-    transform: translateY(-5px);
+header h1 a:hover {
+  color: var(--hover-color);
 }
 
-header h1:hover::after {
-    width: 80%;
-}
-
-nav {
-    margin: 15px 0;
-    text-align: center;
-}
-
+/* NAV */
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li {
-    position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  gap: 32px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: var(--font-color);
-    font-size: 1em;
-    transition: color 0.3s;
-    padding: 5px;
+  text-decoration: none;
+  color: var(--font-color);
+  font-weight: 300;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s, border 0.3s;
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
-}
-
-nav ul li::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: var(--primary-color);
-    transition: width .3s;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-}
-
-nav ul li:hover::after {
-    width: 100%;
-}
-
-a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: color 0.3s;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: var(--hover-color);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-ul li, ol li {
-    font-size: 15px;
-    line-height: 24px;
-    margin-left: 0;
-    padding-left: 1.5em;
-    text-indent: -1.5em;
-}
-
-ul {
-    list-style: disc inside;
-}
-
-ol {
-    list-style: decimal inside;
-}
-
-footer {
-    margin-top: auto;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9em;
-    color: #555;
-}
-
-footer a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: var(--hover-color);
-}
-
-/* Media query for mobile optimization */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Stack header elements vertically */
-    }
-
-    header img {
-        max-width: var(--header-image-size-mobile); /* Smaller size for mobile */
-    }
-
-    header h1 {
-        font-size: 1.8em; /* Adjust font size for mobile */
-        margin-left: 0; /* Center text on mobile */
-        margin-top: 10px;
-    }
-
-    header h1::after {
-        left: 10%; /* Adjust the positioning of the underline */
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-main {
-    flex: 1;
-    padding: 2rem 1rem;
-    max-width: 800px;
-    margin: 0 auto;
+  color: var(--hover-color);
+  border-bottom: 1px solid var(--hover-color);
 }
 
 nav ul li a.active {
-    color: var(--accent-color);
-    font-weight: bold;
-    border-bottom: 2px solid var(--accent-color);
+  border-bottom: 1px solid var(--primary-color);
 }
 
-@media (max-width: 768px) {
-    nav {
-        padding: 1rem 0;
-    }
-
-    nav ul li a {
-        font-size: 1.1em;
-        padding: 10px 0;
-    }
+/* MAIN */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  min-height: 100px;
 }
-blockquote {
-  color: #777;
-  font-style: italic;
-  margin: 0 0 1rem;
+
+main p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9em;
+  color: #666;
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border 0.2s ease;
+}
+
+footer a:hover {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+html {
+  overflow-y: scroll;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

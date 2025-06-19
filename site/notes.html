@@ -6,6 +6,7 @@
   <title>Notes – Anthony Bursae</title>
   <link rel="icon" href="../images/favicon-16x16.png" type="image/png" />
   <link rel="stylesheet" href="../css/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     main {
       max-width: 700px;
@@ -19,15 +20,11 @@
 
     .note-list a {
       text-decoration: none;
-      color: #333;
+      color: var(--primary-color);
     }
 
     .note-list a:hover {
-      text-decoration: underline;
-    }
-
-    .note-list small {
-      color: #888;
+      color: var(--hover-color);
     }
 
     #note-content {
@@ -39,59 +36,38 @@
       max-width: 100%;
       margin: 1rem 0;
     }
+
+    .back-link {
+      display: inline-block;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+
+    .back-link:hover {
+      color: var(--hover-color);
+    }
   </style>
 </head>
 <body>
-  <header>
-    <a href="../index.html"><img src="../images/dancer.png" alt="Anthony Bursae logo" /></a>
-    <h1>Anthony Bursae</h1>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="places.html">Places</a></li>
-      <li><a href="bergen.html">Bergen</a></li>
-      <li><a href="notes.html" class="active">Notes</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <h2>Notes</h2>
-    <div class="note-list" id="note-list">Loading notes...</div>
-    <div id="note-content"></div>
-  </main>
-
-  <footer>
-    <p>© 2025 Anthony Bursae • 
-      <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
-      <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
-    </p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-    async function loadNoteList() {
-      const res = await fetch('./notes/notes.json');
-      const notes = await res.json();
-      const listEl = document.getElementById('note-list');
-
-      listEl.innerHTML = notes.map(note => `
-        <div>
-          <h3><a href="#" onclick="loadNote('${note.file}'); return false;">${note.title}</a></h3>
-          <small>${note.date}</small>
+  <div class="site-container">
+    <div class="page">
+      <header>
+        <a href="../index.html"><img src="../images/dancer.png" alt="Anthony Bursae logo" /></a>
+        <div class="header-content">
+          <h1><a href="../index.html">Anthony Bursae</a></h1>
+          <nav>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="places.html">Places</a></li>
+              <li><a href="bergen.html">Bergen</a></li>
+              <li><a href="notes.html" class="active">Notes</a></li>
+            </ul>
+          </nav>
         </div>
-      `).join('');
-    }
+      </header>
 
-    async function loadNote(filename) {
-      const res = await fetch(`./notes/${filename}`);
-      const text = await res.text();
-      document.getElementById('note-content').innerHTML = marked.parse(text);
-    }
-
-    loadNoteList();
-  </script>
-</body>
-</html>
+      <main>
+        <div id="note-list" class="note-list">Loading notes...</

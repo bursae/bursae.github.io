@@ -9,8 +9,8 @@
   <style>
     main {
       max-width: 800px;
+      padding: 2rem 0;
       margin: 0 auto;
-      padding: 2rem 1rem;
     }
 
     .note-entry {
@@ -30,55 +30,61 @@
     }
 
     .note-entry p {
-      line-height: 1.6;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
   </style>
 </head>
 <body>
-  <header>
-    <a href="../index.html">
-      <img src="../images/dancer.png" alt="Anthony Bursae logo" />
-    </a>
-    <h1>Anthony Bursae</h1>
-  </header>
+  <div class="site-container">
+    <div class="page">
+      
+      <header>
+        <a href="../index.html"><img src="../images/dancer.png" alt="Anthony Bursae logo" /></a>
+        <div class="header-content">
+          <h1><a href="../index.html">Anthony Bursae</a></h1>
+          <nav>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html" class="active">Projects</a></li>
+              <li><a href="places.html">Places</a></li>
+              <li><a href="bergen.html">Bergen</a></li>
+              <li><a href="notes.html">Notes</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-  <nav>
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
-      <li><a href="places.html">Places</a></li>
-      <li><a href="bergen.html">Bergen</a></li>
-      <li><a href="notes.html">Notes</a></li>
-    </ul>
-  </nav>
+      <main>
+        <h2>Projects</h2>
 
-  <main>
-    <h2>Projects</h2>
+        <div class="note-entry" id="web_app">
+          <h2>Data Visualization Application (2018)</h2>
+          <img src="../images/irx.png" alt="Data Visualization Application" />
+          <p><strong>PlanetRisk Analytics:</strong> A powerful analytical tool designed to simplify data exploration and analysis. With advanced search capabilities and graph analysis features, it delivers deep insights and visualizations, empowering users to make informed decisions.</p>
+        </div>
 
-    <div class="note-entry" id="web_app">
-      <h2>Data Visualization Application (2018)</h2>
-      <img src="../images/irx.png" alt="Data Visualization Application" />
-      <p><strong>PlanetRisk Analytics:</strong> A powerful analytical tool designed to simplify data exploration and analysis. With advanced search capabilities and graph analysis features, it delivers deep insights and visualizations, empowering users to make informed decisions.</p>
+        <div class="note-entry" id="mobile_app">
+          <h2>Risk Alerting Mobile App (2017)</h2>
+          <img src="../images/pr_app_1.png" alt="Risk Alerting Mobile App" />
+          <p><strong>PlanetRisk Mobile:</strong> A mobile app designed to provide users with actionable alerts by analyzing publicly available information from social media, news sources, and various online platforms. This app ensures users stay informed and ready to respond to emerging trends and potential risks in real-time.</p>
+        </div>
+
+        <div class="note-entry" id="analysis">
+          <h2>Geospatial Predictive Assessments (2011)</h2>
+          <img src="../images/spadac.png" alt="Geospatial Predictive Assessments" />
+          <p><strong>Geospatial Analytics:</strong> Utilized advanced statistical and machine learning models to perform in-depth analysis of spatial data, enabling accurate predictions of future events and trends. This project demonstrated the power of predictive analytics in uncovering valuable insights from complex datasets.</p>
+        </div>
+      </main>
+
+      <footer>
+        <p>© 2025 Anthony Bursae • 
+          <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
+          <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
+        </p>
+      </footer>
+
     </div>
-
-    <div class="note-entry" id="mobile_app">
-      <h2>Risk Alerting Mobile App (2017)</h2>
-      <img src="../images/pr_app_1.png" alt="Risk Alerting Mobile App" />
-      <p><strong>PlanetRisk Mobile:</strong> A mobile app designed to provide users with actionable alerts by analyzing publicly available information from social media, news sources, and various online platforms. This app ensures users stay informed and ready to respond to emerging trends and potential risks in real-time.</p>
-    </div>
-
-    <div class="note-entry" id="analysis">
-      <h2>Geospatial Predictive Assessments (2011)</h2>
-      <img src="../images/spadac.png" alt="Geospatial Predictive Assessments" />
-      <p><strong>Geospatial Analytics:</strong> Utilized advanced statistical and machine learning models to perform in-depth analysis of spatial data, enabling accurate predictions of future events and trends. This project demonstrated the power of predictive analytics in uncovering valuable insights from complex datasets.</p>
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2025 Anthony Bursae • 
-      <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
-      <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
-    </p>
-  </footer>
+  </div>
 </body>
 </html>

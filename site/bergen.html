@@ -10,106 +10,103 @@
     main {
       max-width: 800px;
       margin: 0 auto;
-      padding: 2rem 1rem;
+      padding: 2rem 0;
+    }
+
+    .toc {
+      padding-left: 1rem;
+      line-height: 1.8;
     }
 
     .note-entry {
       margin-bottom: 3rem;
     }
 
-    .note-entry h2 {
-      margin-bottom: 0.5rem;
-      font-size: 1.5em;
-    }
-
     .note-entry img {
       display: block;
-      margin: 1rem auto;
-      max-width: 100%;
+      margin: 1.5rem auto;
+      width: 70%;
+      max-width: 480px;
       height: auto;
     }
 
     .note-entry p {
-      margin-top: 0.5rem;
-      line-height: 1.6;
-    }
-
-    .toc {
-      padding-left: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .toc li {
-      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
   </style>
 </head>
 <body>
-  <header>
-    <a href="../index.html">
-      <img src="../images/dancer.png" alt="Anthony Bursae logo" />
-    </a>
-    <h1>Anthony Bursae</h1>
-  </header>
+  <div class="site-container">
+    <div class="page">
 
-  <nav>
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="places.html">Places</a></li>
-      <li><a href="bergen.html" class="active">Bergen</a></li>
-      <li><a href="notes.html">Notes</a></li>
-    </ul>
-  </nav>
+      <header>
+        <a href="../index.html"><img src="../images/dancer.png" alt="Anthony Bursae logo" /></a>
+        <div class="header-content">
+          <h1><a href="../index.html">Anthony Bursae</a></h1>
+          <nav>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="places.html">Places</a></li>
+              <li><a href="bergen.html" class="active">Bergen</a></li>
+              <li><a href="notes.html">Notes</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-  <main>
-    <h2>Bergen</h2>
-    <p><strong>Notes on the County of Bergen</strong></p>
+      <main>
+        <h2 id="bergen-notes">Bergen</h2>
+        <p><strong>Notes on the County of Bergen</strong></p>
 
-    <ol class="toc">
-      <li><a href="#boundaries">Boundaries</a></li>
-      <li><a href="#water">Water</a></li>
-      <li><a href="#mountains">Mountains & Cliffs</a></li>
-      <li><a href="#transportation">Transportation</a></li>
-      <li><a href="#towns">Towns</a></li>
-    </ol>
+        <ol class="toc">
+          <li><a href="#boundaries">Boundaries</a></li>
+          <li><a href="#water">Water</a></li>
+          <li><a href="#mountains">Mountains & Cliffs</a></li>
+          <li><a href="#transportation">Transportation</a></li>
+          <li><a href="#towns">Towns</a></li>
+        </ol>
 
-    <div class="note-entry" id="boundaries">
-      <h2>Boundaries</h2>
-      <img src="../images/bound.png" alt="Map showing boundaries" />
-      <p>Bergen County is located in the northeastern corner of New Jersey, bordering New York State to the north and east. It shares its southern boundary with Hudson County and its western boundary with Passaic County. The county is part of the New York City metropolitan area, making it a pivotal region for both state and interstate interactions.</p>
+        <section class="note-entry" id="boundaries">
+          <h3>Boundaries</h3>
+          <img src="../images/bound.png" alt="Map showing boundaries" />
+          <p>Bergen County sits in the northeastern corner of New Jersey, bordered by New York to the north and east. The Hudson River forms its eastern edge, while Passaic and Essex counties border to the west and south.</p>
+        </section>
+
+        <section class="note-entry" id="water">
+          <h3>Water</h3>
+          <img src="../images/water.png" alt="Map showing water bodies" />
+          <p>The Hackensack and Passaic Rivers flow through Bergen, with reservoirs like Oradell, Woodcliff Lake, and Lake Tappan supplying water and shaping the landscape.</p>
+        </section>
+
+        <section class="note-entry" id="mountains">
+          <h3>Mountains & Cliffs</h3>
+          <img src="../images/mountains.png" alt="Map showing mountains and cliffs" />
+          <p>The Ramapo Mountains rise in the northwest, while the Palisades form sheer basalt cliffs along the Hudson River, offering dramatic views into Manhattan.</p>
+        </section>
+
+        <section class="note-entry" id="transportation">
+          <h3>Transportation</h3>
+          <img src="../images/transit.png" alt="Map showing transportation routes" />
+          <p>Bergen is crisscrossed by I-80, I-95, Route 4, and Route 17, along with NJ Transit commuter lines to Hoboken and NYC. Bridges and tunnels link the county to Manhattan and the Bronx.</p>
+        </section>
+
+        <section class="note-entry" id="towns">
+          <h3>Towns</h3>
+          <img src="../images/towns.png" alt="Map showing towns" />
+          <p>Hackensack serves as the county seat. Other notable municipalities include Englewood, Ridgewood, Teaneck, Fort Lee, and Fair Lawn — each with its own character and local history.</p>
+        </section>
+      </main>
+
+      <footer>
+        <p>© 2025 Anthony Bursae • 
+          <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
+          <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
+        </p>
+      </footer>
+
     </div>
-
-    <div class="note-entry" id="water">
-      <h2>Water</h2>
-      <img src="../images/water.png" alt="Map showing water bodies" />
-      <p>Bergen County is enriched with various bodies of water. The Hackensack River and the Passaic River flow through the region, providing vital resources for wildlife and recreation. The county is also home to several reservoirs, including the Oradell Reservoir, which supplies water to many residents.</p>
-    </div>
-
-    <div class="note-entry" id="mountains">
-      <h2>Mountains & Cliffs</h2>
-      <img src="../images/mountains.png" alt="Map showing mountains and cliffs" />
-      <p>The county features parts of the Ramapo Mountains in its northwest, offering a scenic backdrop and recreational opportunities like hiking. The Palisades, towering cliffs along the Hudson River, provide stunning views and are a geologically significant feature of the area.</p>
-    </div>
-
-    <div class="note-entry" id="transportation">
-      <h2>Transportation</h2>
-      <img src="../images/transit.png" alt="Map showing transportation routes" />
-      <p>Bergen County boasts a robust transportation network, including major highways like Interstate 80, Interstate 95 (the New Jersey Turnpike), and Routes 4, 17, and 46. Public transportation options, including NJ Transit trains and buses, connect the county to New York City and surrounding areas, facilitating commuting and travel.</p>
-    </div>
-
-    <div class="note-entry" id="towns">
-      <h2>Towns</h2>
-      <img src="../images/towns.png" alt="Map showing towns" />
-      <p>The county encompasses a diverse array of towns and municipalities, each with its unique character. Hackensack serves as the county seat, while other notable towns include Englewood, Teaneck, and Ridgewood. These areas offer a mix of suburban living, cultural heritage, and thriving business districts, reflecting the county's dynamic nature.</p>
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2025 Anthony Bursae • 
-      <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
-      <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
-    </p>
-  </footer>
+  </div>
 </body>
 </html>
