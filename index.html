@@ -55,7 +55,7 @@
         feed.innerHTML = posts.map(post => `
           <article class="post">
             <h2><a href="site/notes.html?file=${post.file}">${post.title}</a></h2>
-            <p>${post.description} <br><small>${post.date}</small></p>
+            <small>${post.date}</small>
           </article>
         `).join('');
       } catch (err) {
