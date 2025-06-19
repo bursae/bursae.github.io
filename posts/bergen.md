@@ -43,5 +43,3 @@ Bergen is crisscrossed by I-80, I-95, Route 4, and Route 17, along with NJ Trans
 Hackensack serves as the county seat. Other notable municipalities include Englewood, Ridgewood, Teaneck, Fort Lee, and Fair Lawn — each with its own character and local history.
 
 ---
-
-© 2025 Anthony Bursae • [Email](mailto:anthony.bursae@gmail.com) • [LinkedIn](https://www.linkedin.com/in/anthonybursae/)
