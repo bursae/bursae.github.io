@@ -8,42 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css" />
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <style>
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-      min-height: 600px;
-    }
-
-    .blog-feed article {
-      margin-bottom: 2rem;
-    }
-
-    .blog-feed h2 {
-      margin-bottom: 0.3rem;
-    }
-
-    .blog-feed a {
-      text-decoration: none;
-      color: var(--primary-color);
-    }
-
-    .blog-feed a:hover {
-      color: var(--hover-color);
-    }
-
-    .blog-feed p {
-      margin: 0;
-      font-size: 1rem;
-    }
-  </style>
 </head>
 <body>
   <div class="site-container">
-    <div class="page">
-      <header>
-        <a href="index.html">
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo-link">
           <img src="images/dancer.png" alt="Anthony Bursae logo" />
         </a>
         <div class="header-content">
@@ -53,18 +23,19 @@
               <li><a href="site/about.html">About</a></li>
               <li><a href="site/projects.html">Projects</a></li>
               <li><a href="site/places.html">Places</a></li>
+              <li><a href="site/bergen.html">Bergen</a></li>
               <li><a href="site/notes.html">Notes</a></li>
             </ul>
           </nav>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <main>
-        <section class="blog-feed" id="blog-feed">
-          Loading posts...
-        </section>
-      </main>
-    </div>
+    <main>
+      <section class="blog-feed" id="blog-feed">
+        Loading posts...
+      </section>
+    </main>
 
     <footer>
       <p>© 2025 Anthony Bursae • 
