@@ -40,7 +40,7 @@ header {
   flex-wrap: nowrap;
   gap: 12px;
   padding: 20px 0 10px;
-  margin-left: -60px; /* Further left for alignment */
+  margin-left: -80px; /* Further left for alignment */
 }
 
 header img {
@@ -62,7 +62,7 @@ header img:hover {
   align-items: flex-start;
   justify-content: center;
   margin-top: 0;
-  margin-left: -24px; /* Tighter to logo */
+  margin-left: -32px; /* Tighter to logo */
 }
 
 header h1 {
@@ -112,6 +112,12 @@ main {
   padding: 3rem 0 2rem;
   min-height: 600px;
   text-align: left;
+}
+
+main h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
 }
 
 main p {
