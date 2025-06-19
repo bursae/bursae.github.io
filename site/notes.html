@@ -70,4 +70,50 @@
       </header>
 
       <main>
-        <div id="note-list" class="note-list">Loading notes...</
+        <div id="note-list" class="note-list">Loading notes...</div>
+        <div id="note-content" style="display:none;">
+          <a href="#" class="back-link" onclick="goBack(); return false;">← Back to Notes</a>
+          <div id="note-body"></div>
+        </div>
+      </main>
+
+      <footer>
+        <p>© 2025 Anthony Bursae • 
+          <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
+          <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
+        </p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    async function loadNoteList() {
+      const res = await fetch('./notes/notes.json');
+      const notes = await res.json();
+      const listEl = document.getElementById('note-list');
+
+      listEl.innerHTML = notes.map(note => `
+        <div>
+          <h3><a href="#" onclick="loadNote('${note.file}'); return false;">${note.title}</a></h3>
+          <small>${note.date}</small>
+        </div>
+      `).join('');
+    }
+
+    async function loadNote(filename) {
+      const res = await fetch(`./notes/${filename}`);
+      const text = await res.text();
+      document.getElementById('note-body').innerHTML = marked.parse(text);
+      document.getElementById('note-list').style.display = 'none';
+      document.getElementById('note-content').style.display = 'block';
+    }
+
+    function goBack() {
+      document.getElementById('note-content').style.display = 'none';
+      document.getElementById('note-list').style.display = 'block';
+    }
+
+    loadNoteList();
+  </script>
+</body>
+</html>

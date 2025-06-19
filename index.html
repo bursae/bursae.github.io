@@ -7,6 +7,7 @@
   <link rel="icon" href="images/favicon-16x16.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
   <div class="site-container">
@@ -28,7 +29,11 @@
           </nav>
         </div>
       </header>
+
       <main>
+        <section class="blog-feed" id="blog-feed">
+          Loading posts...
+        </section>
       </main>
     </div>
     <footer>
@@ -38,5 +43,27 @@
       </p>
     </footer>
   </div>
+
+  <script>
+    async function loadPosts() {
+      try {
+        const res = await fetch('posts/posts.json');
+        const posts = await res.json();
+        const feed = document.getElementById('blog-feed');
+
+        feed.innerHTML = posts.map(post => `
+          <article class="post">
+            <h2><a href="posts/${post.file}">${post.title}</a></h2>
+            <p>${post.description} <br><small>${post.date}</small></p>
+          </article>
+        `).join('');
+      } catch (err) {
+        document.getElementById('blog-feed').innerHTML = 'Failed to load posts.';
+        console.error(err);
+      }
+    }
+
+    loadPosts();
+  </script>
 </body>
 </html>
