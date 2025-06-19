@@ -1,6 +1,4 @@
-# Bergen
-
-**Notes on the County of Bergen**
+# Notes on the County of Bergen
 
 ## Table of Contents
 1. [Boundaries](#boundaries)
