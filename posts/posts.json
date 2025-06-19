@@ -1,8 +1,14 @@
 [
   {
+    "title": "Grilling Lobsters",
+    "file": "lobster.md",
+    "description": "How to grill lobsters",
+    "date": "June 2025"
+  },
+  {
     "title": "The County of Bergen",
     "file": "bergen.md",
-    "description": "Info on Bergen County",
+    "description": "Some basic info on Bergen County",
     "date": "June 2025"
   }
 ]
