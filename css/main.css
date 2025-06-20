@@ -117,12 +117,14 @@ main {
 main h2 {
   font-size: 1.6rem;
   font-weight: 400;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.2rem; /* tightened from 1.5rem */
 }
 
 main p {
   font-size: 1.2rem;
   line-height: 1.7;
+  margin-top: 0; /* tightened vertical spacing */
+  margin-bottom: 1.5rem; /* keeps spacing to next section */
 }
 
 img {
