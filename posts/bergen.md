@@ -19,7 +19,7 @@ The Hackensack and Passaic Rivers flow through Bergen, with reservoirs like Orad
 ### Mountains & Cliffs
 ![Map showing mountains and cliffs](../images/mountains.png)
 
-The Ramapo Mountains rise in the northwest, while the Palisades form sheer basalt cliffs along the Hudson River, offering dramatic views into Manhattan.
+The Ramapo Mountains rise in the northwest, while the Palisades form sheer basalt cliffs along the Hudson River, offering  views into Manhattan.
 
 ---
 
@@ -33,6 +33,6 @@ Bergen is crisscrossed by I-80, I-95, Route 4, and Route 17, along with NJ Trans
 ### Towns
 ![Map showing towns](../images/towns.png)
 
-Hackensack serves as the county seat. Other notable municipalities include Englewood, Ridgewood, Teaneck, Fort Lee, and Fair Lawn — each with its own character and local history.
+Hackensack serves as the county seat. Other notable towns include Englewood, Ridgewood, Teaneck, and Fort Lee.
 
 ---
