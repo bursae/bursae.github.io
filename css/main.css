@@ -33,22 +33,21 @@ html, body {
   padding: 0 1rem;
 }
 
+/* --- Header --- */
+
 header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex-wrap: nowrap;
-  gap: 12px;
+  gap: 24px;
   padding: 20px 0 10px;
 }
 
 header img {
   max-width: var(--header-image-size-desktop);
-  aspect-ratio: 1 / 1;
   height: auto;
   width: auto;
   transition: transform 0.2s ease;
-  margin-top: 0;
 }
 
 header img:hover {
@@ -58,19 +57,21 @@ header img:hover {
 .header-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
+  gap: 12px;
 }
 
 header h1 {
-  font-size: 2.2em;
-  font-weight: 300;
   margin: 0;
+  line-height: 1.1;
 }
 
 header h1 a {
-  color: var(--primary-color);
+  font-size: 36px !important;
+  font-weight: 500;
+  line-height: 1.1;
   text-decoration: none;
+  color: var(--primary-color);
 }
 
 header h1 a:hover {
@@ -80,10 +81,11 @@ header h1 a:hover {
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 0.4rem 0 0;
+  margin: 0;
   display: flex;
   gap: 24px;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -103,6 +105,8 @@ nav ul li a.active {
   border-bottom: 1px solid var(--primary-color);
 }
 
+/* --- Main Content --- */
+
 main {
   max-width: 760px;
   margin: 0 auto;
@@ -112,9 +116,9 @@ main {
 }
 
 main h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  margin-bottom: 0.2rem;
+  margin-bottom: 1rem;
 }
 
 main p {
@@ -151,6 +155,8 @@ img {
   display: block;
 }
 
+/* --- Footer --- */
+
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -169,18 +175,20 @@ footer a:hover {
   border-bottom: 1px solid var(--primary-color);
 }
 
-/* Slight right shift for content */
+/* --- Content Shift on Desktop --- */
+
 .content-right {
   padding-left: 3rem;
 }
 
-/* Mobile Optimization */
+/* --- Mobile Styles --- */
+
 @media (max-width: 600px) {
   header {
     flex-direction: column;
     align-items: flex-start;
     padding: 16px 1rem 10px;
-    gap: 10px;
+    gap: 12px;
   }
 
   header img {
@@ -189,10 +197,11 @@ footer a:hover {
 
   .header-content {
     align-items: flex-start;
+    gap: 0.5rem;
   }
 
-  header h1 {
-    font-size: 1.6em;
+  header h1 a {
+    font-size: 28px !important;
   }
 
   nav ul {
