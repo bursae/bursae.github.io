@@ -125,7 +125,7 @@ main p {
 }
 
 a {
-  font-size: 1.1rem; /* slightly reduced link font size */
+  font-size: 1.1rem;
 }
 
 img {
@@ -168,6 +168,13 @@ footer a {
 footer a:hover {
   border-bottom: 1px solid var(--primary-color);
 }
+
+/* Slight right shift for content */
+.content-right {
+  padding-left: 3rem;
+}
+
+/* Mobile Optimization */
 @media (max-width: 600px) {
   header {
     flex-direction: column;
@@ -194,11 +201,15 @@ footer a:hover {
     margin-top: 0.5rem;
   }
 
-  main {
-    padding: 2rem 1rem;
+  main,
+  .content-right {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  main h2, main p, a {
+  main h2,
+  main p,
+  a {
     font-size: 1rem;
   }
 
