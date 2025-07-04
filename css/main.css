@@ -7,8 +7,15 @@
   --accent-color: #FF4081;
   --header-image-size-desktop: 120px;
   --header-image-size-mobile: 60px;
+
+  /* New for table/footnotes */
+  --table-border: #ccc;
+  --table-zebra: #f8f8f8;
+  --footnote-size: 0.8rem;
+  --footnote-color: #666;
 }
 
+/* Existing global styles */
 html, body {
   margin: 0;
   padding: 0;
@@ -21,6 +28,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Layout containers */
 .site-container {
   min-height: 100vh;
   display: flex;
@@ -33,8 +41,7 @@ html, body {
   padding: 0 1rem;
 }
 
-/* --- Header --- */
-
+/* --- Header Styles --- */
 header {
   display: flex;
   align-items: center;
@@ -106,7 +113,6 @@ nav ul li a.active {
 }
 
 /* --- Main Content --- */
-
 main {
   max-width: 760px;
   margin: 0 auto;
@@ -155,8 +161,47 @@ img {
   display: block;
 }
 
-/* --- Footer --- */
+/* --- Table Styling --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 1.05rem;
+}
 
+th, td {
+  border: 1px solid var(--table-border);
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-zebra);
+}
+
+/* --- Footnotes --- */
+small,
+sup,
+.footnotes,
+.footnotes small {
+  font-size: var(--footnote-size);
+  color: var(--footnote-color);
+  line-height: 1.5;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 0.75em;
+}
+
+.footnotes {
+  margin-top: 2rem;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 1rem;
+}
+
+/* --- Footer --- */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -175,14 +220,12 @@ footer a:hover {
   border-bottom: 1px solid var(--primary-color);
 }
 
-/* --- Content Shift on Desktop --- */
-
+/* --- Optional Sidebar Padding --- */
 .content-right {
   padding-left: 3rem;
 }
 
 /* --- Mobile Styles --- */
-
 @media (max-width: 600px) {
   header {
     flex-direction: column;
@@ -224,5 +267,9 @@ footer a:hover {
 
   .image-container img {
     max-width: 100%;
+  }
+
+  table {
+    font-size: 0.95rem;
   }
 }
