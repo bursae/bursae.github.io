@@ -177,6 +177,12 @@ a.button.primary:hover { opacity:0.9; }
    ———————————————————————— */
 @media (max-width: 600px) {
 
+  /* Make layout fill viewport width */
+  .page {
+    max-width: 100%;
+    padding: 0 0.75rem;
+  }
+
   /* Header */
   .site-header {
     flex-wrap: wrap;
@@ -213,7 +219,7 @@ a.button.primary:hover { opacity:0.9; }
     margin-bottom: 1rem;
   }
 
-  /* About page layout */
+  /* About page */
   .about-layout {
     flex-direction: column;
     align-items: center;
