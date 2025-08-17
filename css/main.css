@@ -120,7 +120,7 @@ main > *:first-child { margin-top: 0; }
 .note-body img {
   width: 100%;
   height: auto;
-  max-width: 680px;
+  max-width: 480px;
   display: block;
   margin: 1.5rem auto;
   border-radius: 4px;
