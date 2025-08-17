@@ -133,3 +133,11 @@ footer a:hover{ border-bottom:1px solid var(--primary-color); }
   .site-header { flex-wrap:wrap;height:auto;gap:1rem; }
   .site-header nav { margin-left:0;gap:1rem;margin-top:.5rem; }
 }
+/* Light subtle dividers between portfolio items */
+main hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 2rem 0;
+  width: 100%;
+  opacity: 0.6;
+}
