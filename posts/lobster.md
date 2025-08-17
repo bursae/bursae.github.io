@@ -2,16 +2,31 @@
 
 ![Grilled Lobster](../images/lobster.png)
 
+There’s nothing delicate about a lobster. It wears armor, cracks clams for a living, and survives under crushing tides. The only proper way to eat one is quickly and over fire - not drowned in butter or fuss.
+
+---
+
 ## Ingredients
 
-- 2 whole live lobsters (1-1/2 to 2 lb. each)  
-- Olive oil, as needed  
+- 2 live lobsters (1½–2 lb hard-shells)  
+- Olive oil  
 - Sea salt  
-- 1 Lemon  
+- 1 lemon  
 
-## Preparation
+---
 
-- Kill the lobsters by cutting them in half.  
-- Set the grill to medium-high heat. Brush some olive oil and place them bottom side down on the grill.  
-- Grill until the shells are bright red and the juices turn white, 8 to 10 minutes for a 1-1/2-lb. lobster and 12 to 14 minutes for a 2-lb. lobster.  
-- Remove the lobsters. Season with sea salt and a squeeze of lemon on each.  
+## Method
+
+1. Place each lobster on its back. Drive a sharp knife between the eyes and split clean through. No slow boiling — end it quickly.
+
+2. Brush the exposed meat with olive oil. Not for flavor — just so it doesn’t weld itself to the grill.
+
+3. Lay on a medium-hot fire **cut-side down** for 2–3 minutes. Flip to **shell-side down** and cook until the shell turns deep red and white foam seeps from the tail — 8–10 minutes for smaller lobsters, 12–14 for larger.
+
+4. Remove, sprinkle with sea salt, and give each half a hard squeeze of lemon.
+
+---
+
+## Field Note
+
+Lobsters have survived ice ages, wooden traps, and worse. Treat them with respect — don’t overcook them, don’t smother them, and eat them with your hands.

@@ -164,36 +164,4 @@ transform: scaleX(1);
   display: block;
   margin: 0 auto 1rem; /* center + spacing below */
   }
-  /* Styled note tables */
-.note-card {
-  width: 100%;
-  max-width: 720px;
-  margin: 2rem auto;
-  border-collapse: collapse;
-  font-size: 0.95rem;
-}
-
-.note-card th,
-.note-card td {
-  padding: 0.75rem 0.5rem;
-  text-align: left;
-  vertical-align: top;
-}
-
-.note-card th {
-  width: 200px;
-  font-weight: 600;
-  color: #333;
-}
-
-.note-card td {
-  color: #444;
-}
-
-.note-card tr {
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.note-card tr:nth-child(even) {
-  background-color: #fafafa;
-}
+  
