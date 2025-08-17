@@ -17,21 +17,20 @@
     <nav>
       <a href="site/about.html">About</a>
       <a href="site/projects.html">Portfolio</a>
-      <a href="index.html" class="active">Notes</a>
+      <a href="site/notes.html">Notes</a>
     </nav>
   </header>
 
   <div class="page">
     <main style="padding-top:1.2rem; max-width:32rem;">
       <p>
-        To observe, to build, and to report
+        I’ve spent a decade building B2B products that turn data into decisions. I’ve built ad-tech, geospatial, and real-time intel systems. I move fast, hunt for product-market fit, and serve customers across the private and public sectors.
       </p>
 
-      <h2 style="margin-top:2rem; margin-bottom:1rem;">Notes on…</h2>
-
-      <section id="blog-feed">
-        Loading posts...
-      </section>
+      <div style="margin-top:2rem;">
+        <a href="site/projects.html" class="button" style="margin-right:1rem;">View Portfolio</a>
+        <a href="site/notes.html" class="button secondary">Read Notes</a>
+      </div>
     </main>
 
     <footer>
@@ -42,24 +41,5 @@
     </footer>
   </div>
 </div>
-
-<script>
-  async function loadPosts() {
-    try {
-      const res = await fetch('posts/posts.json');
-      const posts = await res.json();
-      const feed = document.getElementById('blog-feed');
-      feed.innerHTML = posts.map(post => `
-        <article class="post" style="margin-bottom:2rem;">
-          <h3><a href="site/notes.html?file=${post.file}">${post.title}</a></h3>
-          <small>${post.date}</small>
-        </article>
-      `).join('');
-    } catch (err) {
-      console.error(err);
-    }
-  }
-  loadPosts();
-</script>
 </body>
 </html>
