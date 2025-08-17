@@ -123,3 +123,77 @@ transform: scaleX(1);
   .site-header { flex-wrap:wrap; height:auto; gap:1rem; }
   .site-header nav { margin-left:0; gap:1rem; margin-top:.5rem; }
 }
+
+/* Notes list (blog-feed) – tighten spacing and style inline title/date */
+#blog-feed article.post {
+  margin: 0;
+  padding: 0.25rem 0;
+  border: none;
+}
+
+#blog-feed h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  display: inline;
+}
+
+#blog-feed h3 a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+#blog-feed h3 a:hover {
+  text-decoration: underline;
+}
+
+#blog-feed small {
+  color: #888;
+  font-size: 0.85rem;
+  margin-left: 0.5rem;
+}
+
+/* Standardize blog post images */
+#blog-feed img,
+.notes img,
+.post img {
+  width: 100%;
+  max-width: 600px;   /* blog "standard" width */
+  height: 350px;      /* blog "standard" height */
+  object-fit: cover;  /* crop edges instead of stretching */
+  display: block;
+  margin: 0 auto 1rem; /* center + spacing below */
+  }
+  /* Styled note tables */
+.note-card {
+  width: 100%;
+  max-width: 720px;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.note-card th,
+.note-card td {
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.note-card th {
+  width: 200px;
+  font-weight: 600;
+  color: #333;
+}
+
+.note-card td {
+  color: #444;
+}
+
+.note-card tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.note-card tr:nth-child(even) {
+  background-color: #fafafa;
+}
