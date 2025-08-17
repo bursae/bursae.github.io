@@ -8,45 +8,62 @@
   <link rel="stylesheet" href="../css/main.css" />
 </head>
 <body>
-  <div class="site-container">
-    <div class="page">
+<div class="site-container">
 
-      <header>
-        <a href="../index.html">
-          <img src="../images/dancer.png" alt="Anthony Bursae logo" />
-        </a>
-        <div class="header-content">
-          <h1><a href="../index.html">Anthony Bursae</a></h1>
-          <nav>
-            <ul>
-              <li><a href="about.html" class="active">About</a></li>
-              <li><a href="projects.html">Projects</a></li>
-              <li><a href="places.html">Places</a></li>
-              <li><a href="notes.html">Notes</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+  <!-- UNIFIED HEADER -->
+  <header class="site-header">
+    <a href="../index.html"><img src="../images/dancer.png" alt="Anthony Bursae logo" /></a>
+    <h1><a href="../index.html" style="text-decoration:none;color:inherit;">Anthony Bursae</a></h1>
+    <nav>
+      <a href="about.html" class="active">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="places.html">Places</a>
+      <a href="../index.html">Notes</a>
+    </nav>
+  </header>
 
-      <main>
-        <h2>About</h2>
-        <div class="image-container">
-          <img src="../images/family.png" alt="Anthony Bursae and family" />
-          <img src="../images/about.png" alt="Anthony Bursae professional photo" />
-        </div>
-        <p>
-          I grew up in Kingsland, an unincorporated hamlet just outside New York City. I’ve sailed on a Navy destroyer, earned a degree in history, and built my career in tech product management. Today, I live in Bergen County, NJ, with my wife, daughter, son, and dog.
-        </p>
-      </main>
+  <div class="page">
+ <main>
+  <style>
+    .about-layout {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+    .about-layout .about-images {
+      display: flex;
+      gap: 1rem;
+    }
+    .about-layout img {
+      width: 200px; 
+      height: auto;
+      border-radius: 4px;
+    }
+  </style>
 
-      <footer>
-        <p>© 2025 Anthony Bursae • 
-          <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
-          <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
-        </p>
-      </footer>
-
+  <div class="about-layout">
+    <!-- IMAGES ON LEFT -->
+    <div class="about-images">
+      <img src="../images/about.png" alt="Anthony Bursae professional photo" />
+      <img src="../images/family.png" alt="Anthony Bursae and family" />
     </div>
+
+    <!-- TEXT ON RIGHT -->
+    <p style="max-width:28rem;">
+      I grew up in the hamlet of Kingsland, in the shadow of the New York skyline. After sailing on a Navy destroyer and earning a degree in history, I drifted into technology and found myself building products for a living. I now live in Bergen County, New Jersey, with my wife, daughter, son, and dog.
+    </p>
   </div>
+</main>
+
+
+    <footer>
+      <p>© 2025 Anthony Bursae • 
+        <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
+        <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
+      </p>
+    </footer>
+
+  </div>
+</div>
 </body>
 </html>

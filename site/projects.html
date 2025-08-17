@@ -8,56 +8,85 @@
   <link rel="stylesheet" href="../css/main.css" />
 </head>
 <body>
-  <div class="site-container">
-    <div class="page">
+<div class="site-container">
 
-      <header>
-        <a href="../index.html">
-          <img src="../images/dancer.png" alt="Anthony Bursae logo" />
-        </a>
-        <div class="header-content">
-          <h1><a href="../index.html">Anthony Bursae</a></h1>
-          <nav>
-            <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="projects.html" class="active">Projects</a></li>
-              <li><a href="places.html">Places</a></li>
-              <li><a href="notes.html">Notes</a></li>
-            </ul>
-          </nav>
+  <!-- UNIFIED HEADER (moved above .page) -->
+  <header class="site-header">
+    <a href="../index.html"><img src="../images/dancer.png" alt="Anthony Bursae logo" /></a>
+    <h1><a href="../index.html" style="text-decoration:none;color:inherit;">Anthony Bursae</a></h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="places.html">Places</a>
+      <a href="../index.html">Notes</a>
+    </nav>
+  </header>
+
+  <div class="page">
+    <main>
+      <h2>Projects</h2>
+
+      <style>
+        .project-card {
+          display: flex;
+          gap: 1.5rem;
+          margin-bottom: 2rem;
+        }
+        .project-card img {
+          max-width: 400px;
+          height: auto;
+          object-fit: contain;
+          border-radius: 4px;
+        }
+      </style>
+
+      <div class="project-card">
+        <img src="../images/irx.png" alt="PlanetRisk Analytics" />
+        <div>
+          <h3>PlanetRisk Analytics (2018)</h3>
+          <p><strong>Role:</strong> Product Manager</p>
+          <ul>
+            <li><strong>Problem:</strong> Analysts were wasting hours piecing together siloed public and private data to map people, places, and relationships.</li>
+            <li><strong>Solution:</strong> Developed a search-led platform for network analysis with geographic context, integrating ingestion, visualisation, and alerting.</li>
+            <li><strong>Impact:</strong> Clear signal of product-market fit among mission-critical users - setting the stage for expansion into adjacent markets.</li>
+          </ul>
         </div>
-      </header>
+      </div>
 
-      <main>
-        <h2>Projects</h2>
-
-        <div class="note-entry" id="web_app">
-          <h3>Data Visualization Application (2018)</h3>
-          <img src="../images/irx.png" alt="Data Visualization Application" />
-          <p><strong>PlanetRisk Analytics:</strong> A powerful analytical tool designed to simplify data exploration and analysis. With advanced search capabilities and graph analysis features, it delivers deep insights and visualizations, empowering users to make informed decisions.</p>
+      <div class="project-card">
+        <img src="../images/pr_app_1.png" alt="PlanetRisk Mobile" />
+        <div>
+          <h3>PlanetRisk Mobile (2017)</h3>
+          <p><strong>Role:</strong> Product Manager</p>
+          <ul>
+            <li><strong>Problem:</strong> Leaders lost situational awareness once away from desktop systems.</li>
+            <li><strong>Solution:</strong> Developed a mobile alerts app that surfaced early signals from open-source feeds.</li>
+            <li><strong>Impact:</strong> Equipped US military and corporate-security teams with timely, actionable intelligence in the field.</li>
+          </ul>
         </div>
+      </div>
 
-        <div class="note-entry" id="mobile_app">
-          <h3>Risk Alerting Mobile App (2017)</h3>
-          <img src="../images/pr_app_1.png" alt="Risk Alerting Mobile App" />
-          <p><strong>PlanetRisk Mobile:</strong> A mobile app designed to provide users with actionable alerts by analyzing publicly available information from social media, news sources, and various online platforms. This app ensures users stay informed and ready to respond to emerging trends and potential risks in real-time.</p>
+      <div class="project-card">
+        <img src="../images/spadac.png" alt="Predictive Assessments" />
+        <div>
+          <h3>Predictive Assessments (2011)</h3>
+          <p><strong>Role:</strong> Product Strategist</p>
+          <ul>
+            <li><strong>Problem:</strong> Intelligence remained reactive; threats were only addressed once they appeared.</li>
+            <li><strong>Solution:</strong> Operationalised predictive models (built by data scientists) to generate forward-looking risk assessments.</li>
+            <li><strong>Impact:</strong> Used by law-enforcement and counter-terrorism teams to anticipate emerging risks.</li>
+          </ul>
         </div>
+      </div>
+    </main>
 
-        <div class="note-entry" id="analysis">
-          <h3>Geospatial Predictive Assessments (2011)</h3>
-          <img src="../images/spadac.png" alt="Geospatial Predictive Assessments" />
-          <p><strong>Geospatial Analytics:</strong> Utilized advanced statistical and machine learning models to perform in-depth analysis of spatial data, enabling accurate predictions of future events and trends. This project demonstrated the power of predictive analytics in uncovering valuable insights from complex datasets.</p>
-        </div>
-      </main>
-
-      <footer>
-        <p>© 2025 Anthony Bursae • 
-          <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
-          <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
-        </p>
-      </footer>
-
-    </div>
+    <footer>
+      <p>© 2025 Anthony Bursae • 
+        <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
+        <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
+      </p>
+    </footer>
   </div>
+</div>
 </body>
 </html>

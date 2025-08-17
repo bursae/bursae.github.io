@@ -9,83 +9,77 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <div class="site-container">
-    <div class="page">
+<div class="site-container">
 
-      <header>
-        <a href="../index.html">
-          <img src="../images/dancer.png" alt="Anthony Bursae logo" />
-        </a>
-        <div class="header-content">
-          <h1><a href="../index.html">Anthony Bursae</a></h1>
-          <nav>
-            <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="projects.html">Projects</a></li>
-              <li><a href="places.html">Places</a></li>
-              <li><a href="notes.html" class="active">Notes</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+  <!-- UNIFIED HEADER -->
+  <header class="site-header">
+    <a href="../index.html"><img src="../images/dancer.png" alt="Anthony Bursae logo" /></a>
+    <h1><a href="../index.html" style="text-decoration:none;color:inherit;">Anthony Bursae</a></h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="places.html">Places</a>
+      <a href="notes.html" class="active">   <!-- stays active even when URL has '?file=...' -->
+    </nav>
+  </header>
 
-      <main>
-        <div id="note-list" class="note-list">Loading notes...</div>
-        <div id="note-content" style="display:none;">
-          <a href="notes.html" class="back-link">← Back to Notes</a>
-          <div id="note-body"></div>
-        </div>
-      </main>
+  <div class="page">
+    <main style="max-width:32rem; padding-top:1rem;">
 
-      <footer>
-        <p>© 2025 Anthony Bursae • 
-          <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
-          <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
-        </p>
-      </footer>
+      <div id="note-list" class="note-list">Loading notes...</div>
 
-    </div>
+      <div id="note-content" style="display:none;">
+        <a href="notes.html" class="back-link">← Back to Notes</a>
+        <div id="note-body"></div>
+      </div>
+
+    </main>
+
+    <footer>
+      <p>© 2025 Anthony Bursae • 
+        <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
+        <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
+      </p>
+    </footer>
   </div>
+</div>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const file = params.get('file');
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const file = params.get('file');
+  const noteList = document.getElementById('note-list');
+  const noteContent = document.getElementById('note-content');
+  const noteBody = document.getElementById('note-body');
 
-    const noteList = document.getElementById('note-list');
-    const noteContent = document.getElementById('note-content');
-    const noteBody = document.getElementById('note-body');
-
-    if (file) {
-      noteList.style.display = 'none';
-      noteContent.style.display = 'block';
-
-      fetch(`../posts/${file}`)
-        .then(res => res.text())
-        .then(text => {
-          noteBody.innerHTML = marked.parse(text);
-        })
-        .catch(err => {
-          noteBody.innerHTML = "Failed to load post.";
-          console.error(err);
-        });
-    } else {
-      noteContent.style.display = 'none';
-
-      fetch('../posts/posts.json')
-        .then(res => res.json())
-        .then(notes => {
-          noteList.innerHTML = notes.map(note => `
-            <div style="margin-bottom: 2rem;">
-              <h3><a href="notes.html?file=${note.file}">${note.title}</a></h3>
-              <small>${note.date}</small>
-            </div>
-          `).join('');
-        })
-        .catch(err => {
-          noteList.innerHTML = "Failed to load posts.";
-          console.error(err);
-        });
-    }
-  </script>
+  if (file) {
+    noteList.style.display = 'none';
+    noteContent.style.display = 'block';
+    fetch(`../posts/${file}`)
+      .then(res => res.text())
+      .then(text => {
+        noteBody.innerHTML = marked.parse(text);
+      })
+      .catch(err => {
+        noteBody.innerHTML = "Failed to load post.";
+        console.error(err);
+      });
+  } else {
+    noteContent.style.display = 'none';
+    fetch('../posts/posts.json')
+      .then(res => res.json())
+      .then(notes => {
+        noteList.innerHTML = notes.map(note => `
+          <div style="margin-bottom:2rem;">
+            <h3><a href="notes.html?file=${note.file}">${note.title}</a></h3>
+            <small>${note.date}</small>
+          </div>
+        `).join('');
+      })
+      .catch(err => {
+        noteList.innerHTML = "Failed to load posts.";
+        console.error(err);
+      });
+  }
+</script>
 </body>
 </html>

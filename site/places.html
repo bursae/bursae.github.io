@@ -8,74 +8,78 @@
   <link rel="stylesheet" href="../css/main.css" />
 </head>
 <body>
-  <div class="site-container">
-    <div class="page">
+<div class="site-container">
+  <div class="page">
 
-      <header>
-        <a href="../index.html">
-          <img src="../images/dancer.png" alt="Anthony Bursae logo" />
-        </a>
-        <div class="header-content">
-          <h1><a href="../index.html">Anthony Bursae</a></h1>
-          <nav>
-            <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="projects.html">Projects</a></li>
-              <li><a href="places.html" class="active">Places</a></li>
-              <li><a href="notes.html">Notes</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+    <!-- UNIFIED HEADER -->
+    <header class="site-header">
+      <a href="../index.html"><img src="../images/dancer.png" alt="Anthony Bursae logo" /></a>
+      <h1><a href="../index.html" style="text-decoration:none;color:inherit;">Anthony Bursae</a></h1>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="places.html" class="active">Places</a>
+        <a href="../index.html">Notes</a>
+      </nav>
+    </header>
 
-      <main>
-        <h2>Places</h2>
+    <!-- CONTENT -->
+    <main>
+      <h2>Places</h2>
 
-        <div class="note-entry" id="spring_lake">
-          <h3>Spring Lake</h3>
-          <img src="../images/spring_lake.png" alt="Spring Lake" />
-          <p><small>40.1537° N, 74.0279° W</small></p>
-        </div>
+      <div class="note-entry" id="spring_lake">
+        <h3>Spring Lake</h3>
+        <img src="../images/spring_lake.png" alt="Spring Lake" />
+        <p><small>40.1537° N, 74.0279° W</small></p>
+      </div>
 
-        <div class="note-entry" id="englewood">
-          <h3>Englewood</h3>
-          <img src="../images/old_office.png" alt="Englewood" />
-          <p><small>40.8929° N, 73.9726° W</small></p>
-        </div>
+      <div class="note-entry" id="englewood">
+        <h3>Englewood</h3>
+        <img src="../images/old_office.png" alt="Englewood" />
+        <p><small>40.8929° N, 73.9726° W</small></p>
+      </div>
 
-        <div class="note-entry" id="pascack_valley">
-          <h3>Pascack Valley</h3>
-          <img src="../images/pond_yard.png" alt="Pascack Valley" />
-          <p><small>41.0011° N, 74.0320° W</small></p>
-        </div>
+      <div class="note-entry" id="pascack_valley">
+        <h3>Pascack Valley</h3>
+        <img src="../images/pond_yard.png" alt="Pascack Valley" />
+        <p><small>41.0011° N, 74.0320° W</small></p>
+      </div>
 
-        <div class="note-entry" id="bournemouth">
-          <h3>Bournemouth</h3>
-          <img src="../images/bournemouth.png" alt="Bournemouth" />
-          <p><small>50.7192° N, 1.8808° W</small></p>
-        </div>
+      <div class="note-entry" id="bournemouth">
+        <h3>Bournemouth</h3>
+        <img src="../images/bournemouth.png" alt="Bournemouth" />
+        <p><small>50.7192° N, 1.8808° W</small></p>
+      </div>
 
-        <div class="note-entry" id="highland_brook">
-          <h3>Highland Brook</h3>
-          <img src="../images/highland_brook2.png" alt="Highland Brook" />
-          <p><small>41.0022° N, 74.0321° W</small></p>
-        </div>
+      <div class="note-entry" id="highland_brook">
+        <h3>Highland Brook</h3>
+        <img src="../images/highland_brook2.png" alt="Highland Brook" />
+        <p><small>41.0022° N, 74.0321° W</small></p>
+      </div>
 
-        <div class="note-entry" id="kingsland">
-          <h3>Kingsland</h3>
-          <img src="../images/lyndhurst.png" alt="Kingsland" />
-          <p><small>40.8090° N, 74.1227° W</small></p>
-        </div>
-      </main>
+      <div class="note-entry" id="kingsland">
+        <h3>Kingsland</h3>
+        <img src="../images/lyndhurst.png" alt="Kingsland" />
+        <p><small>40.8090° N, 74.1227° W</small></p>
+      </div>
+      <style>
+      .note-entry img {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 4px; /* optional */
+  }
+</style>
+    </main>
 
-      <footer>
-        <p>© 2025 Anthony Bursae • 
-          <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
-          <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
-        </p>
-      </footer>
+    <footer>
+      <p>© 2025 Anthony Bursae • 
+        <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
+        <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
+      </p>
+    </footer>
 
-    </div>
   </div>
+</div>
 </body>
 </html>

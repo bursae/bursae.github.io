@@ -1,68 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anthony Bursae</title>
-  <link rel="icon" href="images/favicon-16x16.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css" />
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="icon" href="images/favicon-16x16.png" type="image/png">
+  <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-  <div class="site-container">
-    <div class="page">
-      <header>
-        <img src="images/dancer.png" alt="Anthony Bursae logo" />
-        <div class="header-content">
-          <h1><a href="index.html">Anthony Bursae</a></h1>
-          <nav>
-            <ul>
-              <li><a href="site/about.html">About</a></li>
-              <li><a href="site/projects.html">Projects</a></li>
-              <li><a href="site/places.html">Places</a></li>
-              <li><a href="site/notes.html">Notes</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+<body class="home">
+<div class="site-container">
 
-      <main class="content-right">
-        <h2 style="font-weight: 400; font-size: 1.5rem; margin-bottom: 1rem;">Notes on…</h2>
-        <section class="blog-feed" id="blog-feed">
-          Loading posts...
-        </section>
-      </main>
-    </div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html"><img src="images/dancer.png" alt="Anthony Bursae logo"></a>
+    <h1><a href="index.html" style="text-decoration:none;color:inherit;">Anthony Bursae</a></h1>
+    <nav>
+      <a href="site/about.html">About</a>
+      <a href="site/projects.html">Projects</a>
+      <a href="site/places.html">Places</a>
+      <a href="index.html" class="active">Notes</a>
+    </nav>
+  </header>
+
+  <div class="page">
+    <main style="padding-top:1.2rem; max-width:32rem;">
+      <p>
+        To build, observe, and leave a small account of both.
+      </p>
+
+      <h2 style="margin-top:2rem; margin-bottom:1rem;">Notes on…</h2>
+
+      <section id="blog-feed">
+        Loading posts...
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Anthony Bursae •
+        <a href="mailto:anthony.bursae@gmail.com">Email</a> •
+        <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
+      </p>
+    </footer>
   </div>
+</div>
 
-  <footer>
-    <p>© 2025 Anthony Bursae • 
-      <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
-      <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
-    </p>
-  </footer>
-
-  <script>
-    async function loadPosts() {
-      try {
-        const res = await fetch('posts/posts.json');
-        const posts = await res.json();
-        const feed = document.getElementById('blog-feed');
-
-        feed.innerHTML = posts.map(post => `
-          <article class="post">
-            <h2><a href="site/notes.html?file=${post.file}">${post.title}</a></h2>
-            <small>${post.date}</small>
-          </article>
-        `).join('');
-      } catch (err) {
-        document.getElementById('blog-feed').innerHTML = 'Failed to load posts.';
-        console.error(err);
-      }
+<script>
+  async function loadPosts() {
+    try {
+      const res = await fetch('posts/posts.json');
+      const posts = await res.json();
+      const feed = document.getElementById('blog-feed');
+      feed.innerHTML = posts.map(post => `
+        <article class="post" style="margin-bottom:2rem;">
+          <h3><a href="site/notes.html?file=${post.file}">${post.title}</a></h3>
+          <small>${post.date}</small>
+        </article>
+      `).join('');
+    } catch (err) {
+      console.error(err);
     }
-
-    loadPosts();
-  </script>
+  }
+  loadPosts();
+</script>
 </body>
 </html>
