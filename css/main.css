@@ -27,9 +27,7 @@ html, body {
   color: var(--font-color);
 }
 
-main > *:first-child {
-  margin-top: 0;
-}
+main > *:first-child { margin-top: 0; }
 
 .site-container {
   min-height: 100vh;
@@ -60,9 +58,7 @@ main > *:first-child {
   max-width: 60px;
   transition: transform .2s ease;
 }
-.site-header img:hover {
-  transform: scale(1.05);
-}
+.site-header img:hover { transform: scale(1.05); }
 .site-header h1 {
   margin: 0;
   font-size: 1.6rem;
@@ -98,9 +94,7 @@ main > *:first-child {
   transition: transform .2s ease;
 }
 .site-header nav a:hover::after,
-.site-header nav a.active::after {
-  transform: scaleX(1);
-}
+.site-header nav a.active::after { transform: scaleX(1); }
 
 /* -------------------------
    Homepage hero framing
@@ -137,7 +131,7 @@ main > *:first-child {
 .note-body img,
 #note-body img {
   width: 100%;
-  max-width: clamp(240px, 75%, 600px);
+  max-width: clamp(240px, 75%, 600px) !important;
   height: auto;
   display: block;
   margin: 1.25rem auto;
@@ -159,14 +153,14 @@ main hr {
    Buttons
 -------------------------  */
 a.button {
-    display: inline-block;
-    padding: 0.5rem 1.25rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 500;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    transition: all .15s ease;
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  transition: all .15s ease;
 }
 a.button.primary {
   background: var(--primary-color);
@@ -176,9 +170,7 @@ a.button:hover {
   background: var(--primary-color);
   color: #fff;
 }
-a.button.secondary:hover {
-  background: #666;
-}
+a.button.secondary:hover { background: #666; }
 
 /* -------------------------
    Footer
@@ -194,9 +186,7 @@ footer a {
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
-footer a:hover {
-  border-bottom: 1px solid var(--primary-color);
-}
+footer a:hover { border-bottom: 1px solid var(--primary-color); }
 
 /* -------------------------
    Mobile (≤600px)
@@ -207,25 +197,17 @@ footer a:hover {
     justify-content: space-between;
     gap: 0.5rem;
   }
-  .site-header h1 {
-    font-size: 1.4rem;
-  }
-  .site-header img {
-    max-width: 50px;
-  }
+  .site-header h1 { font-size: 1.4rem; }
+  .site-header img { max-width: 50px; }
   .site-header nav {
     width: 100%;
     justify-content: center;
     gap: 1rem;
   }
-  #note-list h3 {
-    font-size: 1rem;
-  }
-  #note-body {
-    font-size: 1rem;
-  }
+  #note-list h3 { font-size: 1rem; }
+  #note-body { font-size: 1rem; }
   a.button {
-    width:100%;
+    width: 100%;
     margin-bottom: 0.75rem;
   }
 }
