@@ -137,7 +137,7 @@ main > *:first-child {
 .note-body img,
 #note-body img {
   width: 100%;
-  max-width: clamp(240px, 75%, 360px);
+  max-width: clamp(240px, 75%, 475px);
   height: auto;
   display: block;
   margin: 1.25rem auto;
