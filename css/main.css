@@ -129,7 +129,7 @@ main > *:first-child { margin-top: 0; }
 .note-body img,
 #note-body img {
   width: 100%;
-  max-width: clamp(240px, 75%, 600px);
+  max-width: 350px;      /* now capped similarly to portfolio */
   height: auto;
   margin: 1.25rem auto;
   display: block;
