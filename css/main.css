@@ -3,19 +3,20 @@
 
 /* -------------------------
    Base
--------------------------  */
+------------------------- */
 :root {
   --font-family: "Inter", system-ui, -apple-system, sans-serif;
   --font-color: #222;
   --background-color: #fdfdfd;
   --primary-color: #000;
   --hover-color: #2b5fc0;
-
   --border-color: #e2e2e2;
+  --space-sm: 0.75rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
 }
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+
+*, *::before, *::after { box-sizing: border-box; }
 
 html, body {
   margin: 0;
@@ -38,20 +39,18 @@ main > *:first-child { margin-top: 0; }
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--space-sm);
 }
 
 /* -------------------------
    Header
--------------------------  */
+------------------------- */
 .site-header {
   width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 0;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
   border-bottom: 1px solid var(--border-color);
 }
 .site-header img {
@@ -64,7 +63,6 @@ main > *:first-child { margin-top: 0; }
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1;
-  position: relative;
 }
 .site-header h1 a {
   text-decoration: none;
@@ -72,7 +70,6 @@ main > *:first-child { margin-top: 0; }
 }
 .site-header nav {
   display: flex;
-  align-items: center;
   gap: 1.5rem;
   margin-left: auto;
 }
@@ -97,41 +94,31 @@ main > *:first-child { margin-top: 0; }
 .site-header nav a.active::after { transform: scaleX(1); }
 
 /* -------------------------
-   Homepage hero framing
--------------------------  */
+   Homepage framing
+------------------------- */
 .home .page main {
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  padding: 2.5rem 0;
+  padding: var(--space-lg) 0;
 }
 
 /* -------------------------
-   Note grid & post listing
--------------------------  */
-#note-list .note-list-item {
-  margin-bottom: 1.5rem;
-}
+   Note listing
+------------------------- */
+#note-list .note-list-item { margin-bottom: var(--space-md); }
 #note-list h3 {
-  margin: 0;
-  font-weight: 500;
-  font-size: 1.05rem;
+  margin: 0; font-weight: 500; font-size: 1.05rem;
 }
-#note-list h3 a {
-  color: inherit;
-  text-decoration: none;
-}
-#note-list small {
-  color: #888;
-  font-size: 0.85rem;
-}
+#note-list h3 a { color: inherit; text-decoration: none; }
+#note-list small { color: #888; font-size: 0.85rem; }
 
 /* -------------------------
-   Note post body
--------------------------  */
+   Note body
+------------------------- */
 .note-body img,
 #note-body img {
   width: 100%;
-  max-width: clamp(240px, 75%, 600px) !important;
+  max-width: clamp(240px, 75%, 600px);
   height: auto;
   display: block;
   margin: 1.25rem auto;
@@ -141,43 +128,44 @@ main > *:first-child { margin-top: 0; }
 
 /* -------------------------
    Divider
--------------------------  */
+------------------------- */
 main hr {
   border: none;
   border-top: 1px solid var(--border-color);
-  margin: 2rem 0;
+  margin: var(--space-lg) 0;
   opacity: 0.6;
 }
 
 /* -------------------------
    Buttons
--------------------------  */
+------------------------- */
 a.button {
   display: inline-block;
   padding: 0.5rem 1.25rem;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 500;
-  color: var(--primary-color);
   border: 1px solid var(--primary-color);
-  transition: all .15s ease;
+  transition: background .15s ease, color .15s ease;
+  color: var(--primary-color);
 }
 a.button.primary {
   background: var(--primary-color);
   color: #fff;
 }
-a.button:hover {
-  background: var(--primary-color);
-  color: #fff;
+a.button.primary:hover {
+  opacity: 0.9;
 }
-a.button.secondary:hover { background: #666; }
+a.button.secondary:hover {
+  background: #666; color:#fff;
+}
 
 /* -------------------------
    Footer
--------------------------  */
+------------------------- */
 footer {
   text-align: center;
-  padding: 2rem 0;
+  padding: var(--space-lg) 0;
   font-size: .875rem;
   color: #888;
 }
@@ -186,34 +174,33 @@ footer a {
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
-footer a:hover { border-bottom: 1px solid var(--primary-color); 
-}
+footer a:hover { border-bottom-color: var(--primary-color); }
+
 /* ---------------------------------------------------------
-   ✨ Mobile layout enhancements (≤600px)
+   ✨ Mobile Enhancements (≤600px)
 --------------------------------------------------------- */
 @media (max-width:600px) {
-  
-  /* 1) Loosen global padding to give more breathing room */
-  .page {
-    padding: 0 0.75rem;
-  }
+  .page { padding: 0 var(--space-sm); }
 
-  /* 2) Header: tighter + less jumpy */
   .site-header {
-    padding: 0.75rem 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: var(--space-sm) 0;
   }
   .site-header img { max-width: 46px; }
   .site-header h1 { font-size: 1.25rem; }
   .site-header nav {
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
     margin-top: 0.5rem;
   }
 
-  /* 3) Portfolio / project content: force vertical stacking */
   .project-card,
   .about-layout {
     flex-direction: column !important;
     align-items: center !important;
-    text-align: center;
+    text-align: left;
   }
   .project-card img,
   .about-layout img {
@@ -223,33 +210,34 @@ footer a:hover { border-bottom: 1px solid var(--primary-color);
   .project-card p,
   .about-layout p {
     max-width: 95%;
+    text-align: left;
   }
 
-  /* 4) Buttons: full width touch targets */
   a.button {
     width: 100%;
-    margin-bottom: 0.75rem;
+    margin-bottom: var(--space-sm);
   }
 
-  /* 5) Reduce oversized images inside notes */
   .note-body img,
   #note-body img {
-    max-width: 90% !important;
+    max-width: 90%;
   }
+
+  /* ensure all body-copy text is left-aligned on mobile */
+  body, p, li, #note-body { text-align: left; }
 }
+
 /* -------------------------
    Markdown tables
 ------------------------- */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
+  margin: var(--space-md) 0;
 }
 th, td {
   padding: 0.5rem 0.75rem;
   border-bottom: 1px solid var(--border-color);
   text-align: left;
 }
-th {
-  font-weight: 600;
-}
+th { font-weight: 600; }
