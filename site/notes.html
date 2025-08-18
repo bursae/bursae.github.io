@@ -65,7 +65,7 @@
       .then(res => res.text())
       .then(text => {
         noteBody.innerHTML = marked.parse(text);
-        resizeNoteImages();  // <— automatically resize images
+        resizeNoteImages();  // <- automatically resize images
       })
       .catch(err => {
         noteBody.innerHTML = "Failed to load post.";
