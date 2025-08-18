@@ -1,18 +1,22 @@
+/* Load Inter font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
+/* -------------------------
+   Base
+-------------------------  */
 :root {
-  --font-family: "Inter", system-ui, "Segoe UI", sans-serif;
+  --font-family: "Inter", system-ui, -apple-system, sans-serif;
   --font-color: #222;
   --background-color: #fdfdfd;
   --primary-color: #000;
   --hover-color: #2b5fc0;
-  --table-border: #ccc;
-  --table-zebra: #f8f8f8;
-  --footnote-size: 0.75rem;
-  --footnote-color: #666;
+
+  --border-color: #e2e2e2;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-/* Reset */
 html, body {
   margin: 0;
   padding: 0;
@@ -22,6 +26,7 @@ html, body {
   background: var(--background-color);
   color: var(--font-color);
 }
+
 main > *:first-child {
   margin-top: 0;
 }
@@ -32,61 +37,54 @@ main > *:first-child {
   flex-direction: column;
 }
 .page {
+  width: 100%;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* Header */
+/* -------------------------
+   Header
+-------------------------  */
 .site-header {
+  width: 100%;
   max-width: 960px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  border-bottom: 1px solid #e2e2e2;
+  gap: 0.75rem;
   padding: 1rem 0;
-  height: 100px;
-  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-color);
 }
 .site-header img {
-  max-width: 80px;
-  margin-right: 0.5rem;
+  max-width: 60px;
   transition: transform .2s ease;
 }
-.site-header img:hover { transform: scale(1.05); }
+.site-header img:hover {
+  transform: scale(1.05);
+}
 .site-header h1 {
   margin: 0;
-  font-size: 30px;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 1;
-  padding-bottom: .2rem;
   position: relative;
 }
-.site-header h1::after {
-  content: "";
-  position: absolute;
-  bottom: 0; left: 0;
-  width: 100%; height: 2px;
-  background: currentColor;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .2s ease;
-}
-.site-header h1:hover::after {
-  transform: scaleX(1);
+.site-header h1 a {
+  text-decoration: none;
+  color: inherit;
 }
 .site-header nav {
   display: flex;
+  align-items: center;
   gap: 1.5rem;
-  margin-left: 2rem;
-  font-size: 15px;
-  margin-top: 0.25rem;
+  margin-left: auto;
 }
 .site-header nav a {
-  position: relative;
-  text-decoration: none;
+  font-size: 0.95rem;
   color: #666;
+  text-decoration: none;
+  position: relative;
   padding-bottom: .2rem;
 }
 .site-header nav a::after {
@@ -104,44 +102,90 @@ main > *:first-child {
   transform: scaleX(1);
 }
 
-/* Homepage Hero Frame */
+/* -------------------------
+   Homepage hero framing
+-------------------------  */
 .home .page main {
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   padding: 2.5rem 0;
 }
 
-/* Blog Feed */
-#blog-feed article.post {
-  margin: 0; padding: 0.25rem 0;
+/* -------------------------
+   Note grid & post listing
+-------------------------  */
+#note-list .note-list-item {
+  margin-bottom: 1.5rem;
 }
-#blog-feed h3 {
-  margin: 0; font-size: 1.05rem; font-weight: 500; display: inline;
+#note-list h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.05rem;
 }
-#blog-feed h3 a {
-  text-decoration: none; color: var(--font-color);
+#note-list h3 a {
+  color: inherit;
+  text-decoration: none;
 }
-#blog-feed h3 a:hover {
-  text-decoration: underline;
-}
-#blog-feed small {
-  color: #888; font-size: 0.85rem; margin-left: 0.5rem;
+#note-list small {
+  color: #888;
+  font-size: 0.85rem;
 }
 
-/* Note Images */
-.note-body img {
-  width: 400px;
+/* -------------------------
+   Note post body
+-------------------------  */
+.note-body img,
+#note-body img {
+  width: 100%;
+  max-width: clamp(240px, 75%, 360px);
   height: auto;
   display: block;
-  margin: 1.5rem auto;
+  margin: 1.25rem auto;
   border-radius: 4px;
   object-fit: contain;
 }
 
-/* Footer */
+/* -------------------------
+   Divider
+-------------------------  */
+main hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2rem 0;
+  opacity: 0.6;
+}
+
+/* -------------------------
+   Buttons
+-------------------------  */
+a.button {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    transition: all .15s ease;
+}
+a.button.primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+a.button:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+a.button.secondary:hover {
+  background: #666;
+}
+
+/* -------------------------
+   Footer
+-------------------------  */
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 0;
   font-size: .875rem;
   color: #888;
 }
@@ -154,123 +198,34 @@ footer a:hover {
   border-bottom: 1px solid var(--primary-color);
 }
 
-/* Divider */
-main hr {
-  border: none;
-  border-top: 1px solid #e0e0e0;
-  margin: 2rem 0;
-  width: 100%;
-  opacity: 0.6;
-}
-
-/* Buttons */
-a.button {
-  display: inline-block;
-  padding: 0.5rem 1.25rem;
-  border: 1px solid var(--primary-color);
-  border-radius: 4px;
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: 500;
-  transition: background .15s ease, color .15s ease;
-}
-a.button:hover {
-  background: var(--primary-color);
-  color: #fff;
-}
-a.button.secondary:hover {
-  background: #666;
-  color: #fff;
-}
-a.button.primary {
-  background: var(--primary-color);
-  color: #fff;
-  border-color: var(--primary-color);
-}
-a.button.primary:hover {
-  opacity: 0.9;
-}
-
-/* ——————————————————————————————
-      MOBILE: 600px AND BELOW
-   —————————————————————————————— */
-@media (max-width: 600px) {
-
-  .page {
-    max-width: 100%;
-    padding: 0 0.75rem;
-  }
-
+/* -------------------------
+   Mobile (≤600px)
+------------------------- */
+@media (max-width:600px) {
   .site-header {
     flex-wrap: wrap;
-    height: auto;
-    gap: 1rem;
-  }
-  .site-header nav {
-    margin-left: 0;
-    gap: 1rem;
-    margin-top: .5rem;
+    justify-content: space-between;
+    gap: 0.5rem;
   }
   .site-header h1 {
-    font-size: 26px;
+    font-size: 1.4rem;
   }
   .site-header img {
-    max-width: 60px;
+    max-width: 50px;
   }
-
-  .home .cta-row {
-    display: flex;
-    flex-direction: column;
-  }
-  .home .cta-row a.button {
+  .site-header nav {
     width: 100%;
-    margin-right: 0;
-    margin-bottom: .75rem;
-  }
-
-  .project-card {
-    flex-direction: column;
-    align-items: center;
-  }
-  .project-card img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-
-  .about-layout {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .about-layout .about-images {
     justify-content: center;
-    margin-bottom: 1rem;
-  }
-  .about-layout img {
-    width: 160px;
-  }
-  .about-layout p {
-    max-width: 90%;
-  }
-
-  #note-list .note-list-item {
-    margin-bottom: 1.5rem;
+    gap: 1rem;
   }
   #note-list h3 {
     font-size: 1rem;
-    line-height: 1.3;
-  }
-  #note-content .back-link, #note-content .button {
-    display: block;
-    width: 100%;
-    margin-bottom: 0.75rem;
   }
   #note-body {
     font-size: 1rem;
   }
-  #note-body img {
-    max-width: 100%;
-    height: auto;
+  a.button {
+    width:100%;
+    margin-bottom: 0.75rem;
   }
 }
