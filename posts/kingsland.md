@@ -2,13 +2,14 @@
 
 ![Kingsland](../images/kingsland.png)
 
-| **Aspect**               | **Details**                                                                                                                                                          |
-|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Location**             | Western edge of the Hackensack Meadowlands in southern Bergen County, NJ — ~8 mi from NYC, wedged between salt-meadow and upland ridge.                               |
-| **Soil & Situation**     | Meadow-muck and clay over marl (once worked for brick-earth), firming to loam/gravel inland. Formerly oak- and hickory-timbered; damp airs and fogs drifting in.     |
-| **Industry History**     | Lenape hunting grounds → Dutch clay pits/pasture → brickworks & DL&W rail-shops → WWI munitions (Canadian Car & Foundry, 1917) → toys, barbells → warehousing/freight.|
-| **Present Condition**    | Commuter quarter of modest brick/clapboard houses centred on Kingsland NJ Transit station. Industry has ebbed; place retains a plain, workmanlike aspect.            |
-| **Population & Character** | Long a no-nonsense Italian-American railroad village; now a mortgage-holding, quietly aspirational commuter backwater.                                           |
+| **Aspect**            | **Details**                                                                                                                   |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| **Location**          | Western edge of the Hackensack Meadowlands, Bergen County NJ — ~8 mi from NYC; wedged between salt-meadow and upland ridge.   |
+| **Soil / Terrain**    | Meadow muck over marl (once dug for brick-earth), turning to loam and gravel inland. Formerly oak- and hickory-timbered.       |
+| **Air / Climate**     | Damp airs, fog drifting in off the Meadowlands.                                                                                |
+| **Historical Uses**   | Lenape hunting grounds → Dutch pasture → brickmaking & DL&W rail-shops → WWI munitions → toys/barbells → warehousing/freight. |
+| **Today**             | Plain, workmanlike commuter quarter of brick/clapboard houses clustered around Kingsland station.                              |
+| **Character**         | Long Italian-American railroad village; now a mortgage-holding, quietly aspirational commuter backwater.                       |
 
 ---
 
