@@ -186,29 +186,55 @@ footer a {
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
-footer a:hover { border-bottom: 1px solid var(--primary-color); }
-
-/* -------------------------
-   Mobile (≤600px)
-------------------------- */
+footer a:hover { border-bottom: 1px solid var(--primary-color); 
+}
+/* ---------------------------------------------------------
+   ✨ Mobile layout enhancements (≤600px)
+--------------------------------------------------------- */
 @media (max-width:600px) {
+  
+  /* 1) Loosen global padding to give more breathing room */
+  .page {
+    padding: 0 0.75rem;
+  }
+
+  /* 2) Header: tighter + less jumpy */
   .site-header {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0.5rem;
+    padding: 0.75rem 0;
   }
-  .site-header h1 { font-size: 1.4rem; }
-  .site-header img { max-width: 50px; }
+  .site-header img { max-width: 46px; }
+  .site-header h1 { font-size: 1.25rem; }
   .site-header nav {
-    width: 100%;
-    justify-content: center;
-    gap: 1rem;
+    margin-top: 0.5rem;
   }
-  #note-list h3 { font-size: 1rem; }
-  #note-body { font-size: 1rem; }
+
+  /* 3) Portfolio / project content: force vertical stacking */
+  .project-card,
+  .about-layout {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+  .project-card img,
+  .about-layout img {
+    margin-bottom: 1rem;
+    max-width: 100%;
+  }
+  .project-card p,
+  .about-layout p {
+    max-width: 95%;
+  }
+
+  /* 4) Buttons: full width touch targets */
   a.button {
     width: 100%;
     margin-bottom: 0.75rem;
+  }
+
+  /* 5) Reduce oversized images inside notes */
+  .note-body img,
+  #note-body img {
+    max-width: 90% !important;
   }
 }
 /* -------------------------
