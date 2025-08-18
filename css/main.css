@@ -9,9 +9,8 @@
   --font-color: #222;
   --background-color: #fdfdfd;
   --primary-color: #000;
-  --hover-color: #2b5fc0;
   --border-color: #e2e2e2;
-  --space-sm: 0.75rem;
+  --space-sm: .75rem;
   --space-md: 1.5rem;
   --space-lg: 2.5rem;
 }
@@ -40,13 +39,13 @@ main > *:first-child { margin-top: 0; }
   max-width: 960px;
   margin: 0 auto;
   padding: 0 var(--space-sm);
+  flex: 1;
 }
 
 /* -------------------------
    Header
 ------------------------- */
 .site-header {
-  width: 100%;
   display: flex;
   align-items: center;
   gap: var(--space-sm);
@@ -62,19 +61,15 @@ main > *:first-child { margin-top: 0; }
   margin: 0;
   font-size: 1.6rem;
   font-weight: 500;
-  line-height: 1;
 }
-.site-header h1 a {
-  text-decoration: none;
-  color: inherit;
-}
+.site-header h1 a { text-decoration: none; color: inherit; }
 .site-header nav {
   display: flex;
   gap: 1.5rem;
   margin-left: auto;
 }
 .site-header nav a {
-  font-size: 0.95rem;
+  font-size: .95rem;
   color: #666;
   text-decoration: none;
   position: relative;
@@ -103,6 +98,22 @@ main > *:first-child { margin-top: 0; }
 }
 
 /* -------------------------
+   Portfolio cards
+------------------------- */
+.project-card {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+.project-card img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+/* -------------------------
    Note listing
 ------------------------- */
 #note-list .note-list-item { margin-bottom: var(--space-md); }
@@ -110,30 +121,30 @@ main > *:first-child { margin-top: 0; }
   margin: 0; font-weight: 500; font-size: 1.05rem;
 }
 #note-list h3 a { color: inherit; text-decoration: none; }
-#note-list small { color: #888; font-size: 0.85rem; }
+#note-list small { color: #888; font-size: .85rem; }
 
 /* -------------------------
-   Note body
+   Note body images
 ------------------------- */
 .note-body img,
 #note-body img {
   width: 100%;
   max-width: clamp(240px, 75%, 600px);
   height: auto;
-  display: block;
   margin: 1.25rem auto;
+  display: block;
   border-radius: 4px;
   object-fit: contain;
 }
 
 /* -------------------------
-   Divider
+   Dividers
 ------------------------- */
 main hr {
   border: none;
   border-top: 1px solid var(--border-color);
   margin: var(--space-lg) 0;
-  opacity: 0.6;
+  opacity: .6;
 }
 
 /* -------------------------
@@ -141,24 +152,17 @@ main hr {
 ------------------------- */
 a.button {
   display: inline-block;
-  padding: 0.5rem 1.25rem;
+  padding: .5rem 1.25rem;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 500;
   border: 1px solid var(--primary-color);
-  transition: background .15s ease, color .15s ease;
   color: var(--primary-color);
+  transition: background .15s ease, color .15s ease;
 }
-a.button.primary {
-  background: var(--primary-color);
-  color: #fff;
-}
-a.button.primary:hover {
-  opacity: 0.9;
-}
-a.button.secondary:hover {
-  background: #666; color:#fff;
-}
+a.button.primary { background: var(--primary-color); color:#fff; }
+a.button.primary:hover { opacity:.9; }
+a.button.secondary:hover { background:#666; color:#fff; }
 
 /* -------------------------
    Footer
@@ -174,70 +178,84 @@ footer a {
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
-footer a:hover { border-bottom-color: var(--primary-color); }
+footer a:hover { border-bottom-color:var(--primary-color); }
+
+/* -------------------------
+   About page
+------------------------- */
+.about-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.about-layout .about-images {
+  display: flex;
+  gap: 1rem;
+}
+.about-layout img {
+  width: 200px;
+  height: auto;
+  border-radius: 4px;
+}
 
 /* ---------------------------------------------------------
    ✨ Mobile Enhancements (≤600px)
 --------------------------------------------------------- */
-@media (max-width:600px) {
-  .page { padding: 0 var(--space-sm); }
-
+@media (max-width: 600px) {
+  .page { padding:0 var(--space-sm); }
   .site-header {
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: var(--space-sm) 0;
+    justify-content:space-between;
+    padding:var(--space-sm) 0;
   }
-  .site-header img { max-width: 46px; }
-  .site-header h1 { font-size: 1.25rem; }
+  .site-header img { max-width:46px; }
+  .site-header h1 { font-size:1.25rem; }
   .site-header nav {
-    width: 100%;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 0.5rem;
+    width:100%;
+    justify-content:center;
+    gap:1rem;
+    margin-top:.5rem;
   }
 
   .project-card,
   .about-layout {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: left;
+    flex-direction:column;
+    align-items:center;
+    text-align:left;
   }
   .project-card img,
   .about-layout img {
-    margin-bottom: 1rem;
-    max-width: 100%;
+    max-width:100%;
+    margin-bottom:1rem;
   }
   .project-card p,
   .about-layout p {
-    max-width: 95%;
-    text-align: left;
+    max-width:95%;
   }
 
   a.button {
-    width: 100%;
-    margin-bottom: var(--space-sm);
+    width:100%;
+    margin-bottom:var(--space-sm);
   }
 
   .note-body img,
   #note-body img {
-    max-width: 90%;
+    max-width:90%;
   }
-
-  /* ensure all body-copy text is left-aligned on mobile */
-  body, p, li, #note-body { text-align: left; }
+  body,p,li,#note-body { text-align:left; }
 }
 
 /* -------------------------
    Markdown tables
 ------------------------- */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: var(--space-md) 0;
+  width:100%;
+  border-collapse:collapse;
+  margin:var(--space-md) 0;
 }
-th, td {
-  padding: 0.5rem 0.75rem;
-  border-bottom: 1px solid var(--border-color);
-  text-align: left;
+th,td {
+  padding:.5rem .75rem;
+  border-bottom:1px solid var(--border-color);
+  text-align:left;
 }
-th { font-weight: 600; }
+th { font-weight:600; }

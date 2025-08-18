@@ -9,41 +9,39 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-<div class="site-container">
+  <div class="site-container">
+    <div class="page">
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <a href="../index.html"><img src="../images/dancer.png" alt="Anthony Bursae logo" /></a>
-    <h1><a href="../index.html" style="text-decoration:none;color:inherit;">Anthony Bursae</a></h1>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="projects.html">Portfolio</a>
-      <a href="notes.html" class="active">Notes</a>
-    </nav>
-  </header>
+      <header class="site-header">
+        <a href="../index.html"><img src="../images/dancer.png" alt="Anthony Bursae logo" /></a>
+        <h1><a href="../index.html">Anthony Bursae</a></h1>
+        <nav>
+          <a href="about.html">About</a>
+          <a href="projects.html">Portfolio</a>
+          <a href="notes.html" class="active">Notes</a>
+        </nav>
+      </header>
 
-  <div class="page">
-    <main style="max-width:32rem; padding-top:1rem;">
+      <main style="max-width:32rem; padding-top:1rem;">
+        <h2 style="margin-bottom:1rem;">Notes</h2>
 
-      <h2 style="margin-bottom:1rem;">Notes</h2>
+        <div id="note-list" class="note-list">Loading notes...</div>
 
-      <div id="note-list" class="note-list">Loading notes...</div>
+        <div id="note-content" style="display:none;">
+          <a href="notes.html" class="button secondary" style="margin-bottom:1rem;">← Back to Notes</a>
+          <div id="note-body"></div>
+        </div>
+      </main>
 
-      <div id="note-content" style="display:none;">
-        <a href="notes.html" class="button secondary" style="margin-bottom:1rem;">← Back to Notes</a>
-        <div id="note-body"></div>
-      </div>
+      <footer>
+        <p>© 2025 Anthony Bursae •
+          <a href="mailto:anthony.bursae@gmail.com">Email</a> •
+          <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
+        </p>
+      </footer>
 
-    </main>
-
-    <footer>
-      <p>© 2025 Anthony Bursae • 
-        <a href="mailto:anthony.bursae@gmail.com">Email</a> • 
-        <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
-      </p>
-    </footer>
+    </div>
   </div>
-</div>
 
 <script>
   const params = new URLSearchParams(window.location.search);
