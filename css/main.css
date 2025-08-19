@@ -68,18 +68,49 @@ main > *:first-child { margin-top: 0; }
   padding: var(--space-sm) 0;
   border-bottom: 1px solid var(--border-color);
 }
+
 .site-header img {
   max-width: 60px;
   transition: transform .2s ease;
 }
-.site-header img:hover { transform: scale(1.05); }
-.site-header h1 { margin: 0; }
-.site-header h1 a { text-decoration: none; color: inherit; }
+.site-header img:hover {
+  transform: scale(1.05);
+}
+
+.site-header h1 {
+  margin: 0;
+}
+
+/* NYTimes-style underline hover for header name */
+.site-header h1 a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-header h1 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+
+.site-header h1 a:hover::after {
+  transform: scaleX(1);
+}
+
 .site-header nav {
   display: flex;
   gap: 1.5rem;
   margin-left: auto;
 }
+
 .site-header nav a {
   font-size: .95rem;
   color: #666;
@@ -87,18 +118,25 @@ main > *:first-child { margin-top: 0; }
   position: relative;
   padding-bottom: .2rem;
 }
+
 .site-header nav a::after {
   content: "";
   position: absolute;
-  bottom: 0; left: 0;
-  width: 100%; height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
   background: currentColor;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform .2s ease;
 }
+
 .site-header nav a:hover::after,
-.site-header nav a.active::after { transform: scaleX(1); }
+.site-header nav a.active::after {
+  transform: scaleX(1);
+}
+
 
 /* -------------------------
    Homepage framing
@@ -123,7 +161,7 @@ main > *:first-child { margin-top: 0; }
   height: auto;
   border-radius: 4px;
   object-fit: contain;
-}
+} 
 
 /* -------------------------
    Note listing
@@ -175,6 +213,15 @@ a.button {
 a.button.primary { background: var(--primary-color); color:#fff; }
 a.button.primary:hover { opacity:.9; }
 a.button.secondary:hover { background:#666; color:#fff; }
+/* Homepage buttons hover interaction */
+a.button {
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+a.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
 /* -------------------------
    Footer
