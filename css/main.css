@@ -129,7 +129,7 @@ main > *:first-child { margin-top: 0; }
 .note-body img,
 #note-body img {
   width: 100%;
-  max-width: 350px;      /* now capped similarly to portfolio */
+  max-width: 350px;
   height: auto;
   margin: 1.25rem auto;
   display: block;
@@ -181,7 +181,7 @@ footer a {
 footer a:hover { border-bottom-color:var(--primary-color); }
 
 /* -------------------------
-   About page
+   About page (desktop)
 ------------------------- */
 .about-layout {
   display: flex;
@@ -199,13 +199,13 @@ footer a:hover { border-bottom-color:var(--primary-color); }
 }
 
 /* ---------------------------------------------------------
-   ✨ Mobile Enhancements (≤600px)
+   ✨ Responsive (≤768px)
 --------------------------------------------------------- */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .page { padding:0 var(--space-sm); }
   .site-header {
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content:flex-start;
     padding:var(--space-sm) 0;
   }
   .site-header img { max-width:46px; }
@@ -217,31 +217,44 @@ footer a:hover { border-bottom-color:var(--primary-color); }
     margin-top:.5rem;
   }
 
-  .project-card,
+  /* About page - stack images earlier */
   .about-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+  .about-layout img {
+    width: 100%;
+    max-width: 220px;
+    margin-bottom: 1rem;
+  }
+
+  /* Portfolio card stacking */
+  .project-card {
     flex-direction:column;
     align-items:center;
     text-align:left;
   }
-  .project-card img,
-  .about-layout img {
+  .project-card img {
     max-width:100%;
     margin-bottom:1rem;
   }
-  .project-card p,
-  .about-layout p {
+  .project-card p {
     max-width:95%;
   }
 
+  /* Buttons */
   a.button {
     width:100%;
     margin-bottom:var(--space-sm);
   }
 
+  /* Note images */
   .note-body img,
   #note-body img {
     max-width:90%;
   }
+
   body,p,li,#note-body { text-align:left; }
 }
 
