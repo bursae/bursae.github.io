@@ -2,8 +2,6 @@
 
 ![Grilled Lobster](../images/lobster.png)
 
-There’s nothing delicate about a lobster. It's armored, cracks clams for a living, and survives under crushing tides. The only way to eat one is over fire - not drowned in butter.
-
 ---
 
 ## Ingredients
@@ -17,10 +15,7 @@ There’s nothing delicate about a lobster. It's armored, cracks clams for a liv
 
 ## Method
 
-1. Place each lobster on its back. Drive a sharp knife between the eyes and split clean through. No slow boiling, end it quickly.
-
-2. Brush the exposed meat with olive oil. Not for flavor just so it doesn’t weld itself to the grill.
-
-3. Lay on a medium-hot fire **cut-side down** for 2–3 minutes. Flip to **shell-side down** and cook until the shell turns deep red and white foam seeps from the tail - 8–10 minutes for smaller lobsters, 12–14 for larger.
-
-4. Remove, sprinkle with sea salt, and give each half a hard squeeze of lemon.
+- Place each lobster on its back, then swiftly drive the tip of a sharp knife between the eyes and split clean through — cleanly and humanely.
+- Split in half lengthwise and brush the meat with olive oil.
+- Grill **shell-side down** over a medium-hot fire until the shells turn deep red and white foam seeps from the tail — 8–10 minutes for smaller lobsters, 12–14 for larger.
+- Finish with sea salt and a hard squeeze of lemon.
