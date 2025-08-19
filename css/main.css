@@ -203,6 +203,7 @@ footer a:hover { border-bottom-color:var(--primary-color); }
 --------------------------------------------------------- */
 @media (max-width: 768px) {
   .page { padding:0 var(--space-sm); }
+
   .site-header {
     flex-wrap: wrap;
     justify-content:flex-start;
@@ -217,19 +218,17 @@ footer a:hover { border-bottom-color:var(--primary-color); }
     margin-top:.5rem;
   }
 
-  /* About page - stack images earlier */
-  .about-layout {
+  /* About page: stack the two images */
+  .about-layout .about-images {
     flex-direction: column;
     align-items: center;
-    text-align: left;
   }
-  .about-layout img {
-    width: 100%;
-    max-width: 220px;
+  .about-layout .about-images img {
+    max-width: 100%;
     margin-bottom: 1rem;
   }
 
-  /* Portfolio card stacking */
+  /* Portfolio cards */
   .project-card {
     flex-direction:column;
     align-items:center;
@@ -272,3 +271,9 @@ th,td {
   text-align:left;
 }
 th { font-weight:600; }
+/* Stack the images above the text on mobile */
+@media (max-width: 768px) {
+  .about-layout {
+    flex-direction: column;
+  }
+}
