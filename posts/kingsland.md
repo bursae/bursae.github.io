@@ -11,6 +11,8 @@
 | **Present Aspect** | Plain commuter quarter of brick and clapboard dwellings clustered around Kingsland station on the former DL&W mainline.<sup>[4]</sup>                              |
 | **Character**      | A former railway settlement since subdued into quiet suburban tenancy.<sup>[4]</sup>                                                                               |
 
+![Lyndhurst](../images/lyndhurst.png)
+
 ---
 
 ### Notes
