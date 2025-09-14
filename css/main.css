@@ -208,16 +208,11 @@ a.button {
   font-weight: 500;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
-  transition: background .15s ease, color .15s ease;
+  transition: background .15s ease, color .15s ease, transform .15s ease, box-shadow .15s ease;
 }
 a.button.primary { background: var(--primary-color); color:#fff; }
 a.button.primary:hover { opacity:.9; }
 a.button.secondary:hover { background:#666; color:#fff; }
-/* Homepage buttons hover interaction */
-a.button {
-  transition: transform .15s ease, box-shadow .15s ease;
-}
-
 a.button:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -240,26 +235,65 @@ footer a {
 footer a:hover { border-bottom-color:var(--primary-color); }
 
 /* -------------------------
-   About page (desktop)
+   About page (mobile-first)
 ------------------------- */
+
+/* Layout: text + images wrapper */
 .about-layout {
   display: flex;
-  align-items: flex-start;
-  gap: 2rem;
+  flex-direction: column;         /* stack on mobile */
+  gap: 1.25rem;
+  padding: var(--space-md) 0;
 }
+
+/* Image group: stacked by default with controlled spacing */
 .about-layout .about-images {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;         /* stack */
+  gap: 1rem;                      /* spacing between images (no inline gaps) */
+  align-items: center;
 }
-.about-layout img {
-  width: 200px;
+
+/* Images: responsive and block-level (kills inline whitespace) */
+.about-layout .about-images img {
+  display: block;
+  width: 100%;
+  max-width: 520px;               /* feel free to tweak */
   height: auto;
   border-radius: 4px;
 }
 
-/* ---------------------------------------------------------
-   ✨ Responsive (≤768px)
---------------------------------------------------------- */
+/* Text column sane width on very wide screens */
+.about-layout p {
+  max-width: 65ch;
+  margin: 0;
+}
+
+/* -------------------------
+   Responsive (≥768px): side-by-side
+------------------------- */
+@media (min-width: 768px) {
+  .about-layout {
+    flex-direction: row;          /* text beside images */
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .about-layout .about-images {
+    flex-direction: row;          /* images side-by-side */
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .about-layout .about-images img {
+    max-width: 280px;             /* keep them neat side-by-side */
+  }
+}
+
+/* -------------------------
+   Other responsive tweaks (≤768px)
+------------------------- */
 @media (max-width: 768px) {
   .page { padding:0 var(--space-sm); }
 
@@ -277,19 +311,6 @@ footer a:hover { border-bottom-color:var(--primary-color); }
     margin-top:.5rem;
   }
 
-  .about-layout {
-    flex-direction: column;
-    padding: var(--space-md) 0;
-  }
-  .about-layout .about-images {
-    flex-direction: column;
-    align-items: center;
-  }
-  .about-layout .about-images img {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-
   .project-card {
     flex-direction:column;
     align-items:center;
@@ -299,9 +320,7 @@ footer a:hover { border-bottom-color:var(--primary-color); }
     max-width:100%;
     margin-bottom:1rem;
   }
-  .project-card p {
-    max-width:95%;
-  }
+  .project-card p { max-width:95%; }
 
   a.button {
     width:100%;
@@ -330,10 +349,3 @@ th,td {
   text-align:left;
 }
 th { font-weight:600; }
-
-/* Stack the images above the text on mobile */
-@media (max-width: 768px) {
-  .about-layout {
-    flex-direction: column;
-  }
-}

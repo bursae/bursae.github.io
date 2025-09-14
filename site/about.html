@@ -6,43 +6,79 @@
   <title>About – Anthony Bursae</title>
   <link rel="icon" href="../images/favicon-16x16.png" type="image/png" />
   <link rel="stylesheet" href="../css/main.css" />
+  <style>
+    /* Mobile-first stacked layout */
+    .about-images {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem; /* space between images */
+      align-items: center;
+    }
+
+    .about-images img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Optional: side-by-side for larger screens */
+    @media (min-width: 768px) {
+      .about-images {
+        flex-direction: row;
+        gap: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="site-container">
-  <div class="page">
+  <div class="site-container">
+    <div class="page">
 
-    <header class="site-header">
-      <a href="../index.html"><img src="../images/dancer.png" alt="Anthony Bursae logo"></a>
-      <h1><a href="../index.html">Anthony Bursae</a></h1>
-      <nav>
-        <a href="about.html" class="active">About</a>
-        <a href="projects.html">Portfolio</a>
-        <a href="../index.html">Notes</a>
-      </nav>
-    </header>
+      <header class="site-header">
+        <a href="../index.html">
+          <img src="../images/dancer.png" alt="Anthony Bursae logo">
+        </a>
+        <h1><a href="../index.html">Anthony Bursae</a></h1>
+        <nav>
+          <a href="about.html" class="active">About</a>
+          <a href="projects.html">Portfolio</a>
+          <a href="../index.html">Notes</a>
+        </nav>
+      </header>
 
-    <main class="about">
+      <main class="about">
+        <hr>
 
-      <hr>
-
-      <div class="about-layout">
-        <div class="about-images">
-          <img src="../images/about.png" alt="Anthony Bursae professional photo">
-          <img src="../images/family.png" alt="Anthony Bursae and family">
+        <div class="about-layout">
+          <div class="about-images">
+            <img src="../images/anthony_bursae.png" alt="Anthony Bursae professional photo">
+          </div>
+          <p>
+            I grew up in the hamlet of 
+            <a href="/site/notes.html?file=kingsland.md">Kingsland</a>, just outside New York City. 
+            After serving aboard a Navy destroyer and earning a degree in history, 
+            I began building tech products for a living. 
+            Today I live in 
+            <a href="/site/notes.html?file=bergen.md">Bergen County</a>, New Jersey, 
+            with my wife, daughter, son, and dog.
+          </p>
         </div>
-        <p>
-          I grew up in the hamlet of <a href="/site/notes.html?file=kingsland.md">Kingsland</a>, just outside New York City. After serving aboard a Navy destroyer and earning a degree in history, I began building tech products for a living. Today I live in <a href="/site/notes.html?file=bergen.md">Bergen County</a>, New Jersey, with my wife, daughter, son, and dog.
+
+        <div class="about-layout">
+          <div class="about-images">
+            <img src="../images/about.png" alt="Anthony Bursae casual photo">
+            <img src="../images/family.png" alt="Anthony Bursae with family">
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>© 2025 Anthony Bursae • 
+          <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
         </p>
-      </div>
-    </main>
+      </footer>
 
-    <footer>
-      <p>© 2025 Anthony Bursae •
-        <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
-      </p>
-    </footer>
-
+    </div>
   </div>
-</div>
 </body>
 </html>
