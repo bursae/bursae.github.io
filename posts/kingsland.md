@@ -9,14 +9,14 @@
 | **Year / Era** | **Event** |
 |-----------------|------------|
 | **Pre-1700s** | Lenape hunting and fishing grounds along the Hackensack flats.<sup>[1]</sup> |
-| **1720s–1730s** | Isaac Kingsland acquires and drains portions of the Hackensack salt meadows for hay production — early “meadow lots.”<sup>[1]</sup> |
+| **1720s–1730s** | Isaac Kingsland acquires and drains portions of the Hackensack salt meadows for hay production - early “meadow lots.”<sup>[1]</sup> |
 | **1840s–1860s** | Area used for Dutch-English pasture and small clay pits within New Barbadoes Township.<sup>[2]</sup> |
 | **1868–1870** | Delaware, Lackawanna & Western Railroad extends its main line through the meadows; **Kingsland Station** established.<sup>[4]</sup> |
 | **1880s–1890s** | Growth of **Kingsland Brick Works** and DL&W rail-servicing shops; a small hamlet forms around the station, populated largely by Italian immigrant laborers.<sup>[2][4][5]</sup> |
 | **1916–1917** | **Canadian Car & Foundry** builds munitions plant for Allied contracts, employing hundreds of local and immigrant workers; destroyed in the **Kingsland Explosion** (Jan 11 1917).<sup>[3]</sup> |
 | **1920s–1940s** | Site redeveloped for **light manufacturing and warehouses**; residential blocks expand inland as Lyndhurst suburbanizes.<sup>[3][4][6]</sup> |
 | **Post-1950** | Becomes a **commuter suburb**; the rail corridor remains active while industry declines.<sup>[4][6]</sup> |
-| **Today** | Low, level housing and industrial remnants — a suburb built over reclaimed marsh and rail fill, shaped as much by labor as by land.<sup>[4][6]</sup> |
+| **Today** | Low, level housing and industrial remnants - a suburb built over reclaimed marsh and rail fill, shaped as much by labor as by land.<sup>[4][6]</sup> |
 
 ---
 
