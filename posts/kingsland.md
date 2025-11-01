@@ -5,7 +5,6 @@
 ---
 
 ## Timeline  
-*How the meadow turned to map.*
 
 | **Year / Era** | **Event** |
 |-----------------|------------|
