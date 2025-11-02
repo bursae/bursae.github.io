@@ -350,49 +350,48 @@ th,td {
 }
 th { font-weight:600; }
 
-/* Family section — limit image size and make responsive (mobile-optimized) */
+/* ABOUT SECTION — color & contrast fixes */
+.about-hero, .about-family, .bio-text {
+  color: #1f2937; /* overall readable body text */
+}
+
+/* Make the family panel neutral white with subtle border for consistency */
 .about-family {
-  margin-top: 3rem;
-  padding: 2rem 1rem;
-  background: #fafafa;
-  border-radius: 6px;
-}
-.about-family .about-images {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  align-items: center;
+  background: #ffffff;
+  border: 1px solid #eceff1;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03);
+  color: #1f2937;
 }
 
-/* Use a viewport-aware width so images scale down on small screens but remain constrained on larger ones */
+/* Images sit on white cards with gentle shadow so colors read correctly */
 .about-family .about-images img {
-  width: min(240px, 46vw);
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-  display: block;
-  object-fit: cover;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  border-radius: 8px;
 }
 
-/* Tighter sizing for small phones */
-@media (max-width: 480px) {
-  .about-family {
-    padding: 1.25rem 0.75rem;
-  }
-  .about-family .about-images {
-    gap: 0.5rem;
-  }
-  .about-family .about-images img {
-    width: min(180px, 42vw);
-  }
+/* Reading list needs stronger contrast and clearer emphasis */
+.reading-list-inline {
+  color: #374151;
+  font-style: normal;
+  line-height: 1.6;
+}
+.reading-list-inline strong {
+  font-style: normal;
+  font-weight: 600;
+  color: #111827;
 }
 
-@media (min-width: 768px) {
-  .about-family .about-images {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .about-family .about-images img {
-    width: min(240px, 32vw);
-  }
+/* Links in bio should be visible but visually subtle */
+.bio-text a {
+  color: #0b66c3;
+  text-decoration: underline;
 }
+.bio-text a:focus,
+.bio-text a:hover {
+  color: #064a92;
+}
+
+/* Ensure footer contrast isn't changed by these rules */
+footer, footer a { color: inherit; }
+/* end changes */
