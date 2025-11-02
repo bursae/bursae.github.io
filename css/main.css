@@ -349,3 +349,50 @@ th,td {
   text-align:left;
 }
 th { font-weight:600; }
+
+/* Family section — limit image size and make responsive (mobile-optimized) */
+.about-family {
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  background: #fafafa;
+  border-radius: 6px;
+}
+.about-family .about-images {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* Use a viewport-aware width so images scale down on small screens but remain constrained on larger ones */
+.about-family .about-images img {
+  width: min(240px, 46vw);
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Tighter sizing for small phones */
+@media (max-width: 480px) {
+  .about-family {
+    padding: 1.25rem 0.75rem;
+  }
+  .about-family .about-images {
+    gap: 0.5rem;
+  }
+  .about-family .about-images img {
+    width: min(180px, 42vw);
+  }
+}
+
+@media (min-width: 768px) {
+  .about-family .about-images {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .about-family .about-images img {
+    width: min(240px, 32vw);
+  }
+}

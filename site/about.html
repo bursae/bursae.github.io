@@ -63,13 +63,22 @@
       align-items: center;
     }
 
+    /* changed: limit family images and make responsive */
+    .about-family .about-images img {
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: block;
+    }
+
     @media (min-width: 768px) {
       .about-family .about-images {
         flex-direction: row;
         justify-content: center;
       }
       .about-family .about-images img {
-        max-width: 280px;
+        max-width: 240px;
       }
     }
   </style>
@@ -107,17 +116,17 @@
             </p>
             <p class="reading-list-inline">
               <strong>Reading List:</strong><br>
-              <em>On the Shortness of Life</em> – Seneca<br>
-              <em>Venice: The Remarkable History of the Lagoon City</em> – Alessandro Romano<br>
-              <em>The Old Man and the Sea</em> – Ernest Hemingway
+              <em>On the Shortness of Life</em> - Seneca<br>
+              <em>Venice: The Remarkable History of the Lagoon City</em> - Alessandro Romano<br>
+              <em>The Old Man and the Sea</em> - Ernest Hemingway
             </p>
           </div>
         </section>
 
         <section class="about-family">
           <div class="about-images">
-            <img src="../images/about.png" alt="Anthony Bursae casual photo">
-            <img src="../images/family.png" alt="Anthony Bursae with family">
+            <img src="../images/about.png" alt="Anthony Bursae casual photo" loading="lazy" decoding="async">
+            <img src="../images/family.png" alt="Anthony Bursae with family" loading="lazy" decoding="async">
           </div>
         </section>
       </main>
