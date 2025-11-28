@@ -17,8 +17,6 @@
 | **1950s-Present** | Rail declines, suburbs rise — Kingsland becomes a **commuter neighborhood** built on filled marsh and former industrial ground.<sup>[5][7]</sup> |
 | **Today** | Low houses, light industry, and old rail lines remain — a town shaped by land reclamation and labor<sup>[5][7]</sup> |
 
----
-
 ![Lyndhurst](../images/lyndhurst.png)
 
 ---
