@@ -18,6 +18,7 @@
 | **Post-1950** | Becomes a **commuter suburb**; the rail corridor remains active while industry declines.<sup>[4][6]</sup> |
 | **Today** | Low, level housing and industrial remnants - a suburb built over reclaimed marsh and rail fill, shaped as much by labor as by land.<sup>[4][6]</sup> |
 
+![Lyndhurst](../images/lyndhurst.png)
 ---
 
 ### Notes
@@ -31,4 +32,4 @@
 
 ---
 
-![Lyndhurst](../images/lyndhurst.png)
+
