@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Notes – Anthony Bursae</title>
+  <meta name="description" content="Notes and essays by Anthony Bursae on places, products, history, and technology." />
   <link rel="icon" href="../images/favicon-16x16.png" type="image/png" />
   <link rel="stylesheet" href="../css/main.css" />
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -13,28 +14,28 @@
   <div class="page">
 
     <header class="site-header">
-      <a href="../index.html"><img src="../images/dancer.png" alt="Anthony Bursae logo" /></a>
+      <a href="../index.html"><img src="../images/dancer.png" alt="Anthony Bursae logo" width="1024" height="1024" /></a>
       <h1><a href="../index.html">Anthony Bursae</a></h1>
       <nav>
         <a href="about.html">About</a>
         <a href="projects.html">Portfolio</a>
-        <a href="notes.html" class="active">Notes</a>
+        <a href="notes.html" class="active" aria-current="page">Notes</a>
       </nav>
     </header>
 
-    <main style="max-width:32rem; padding-top:1rem;">
-      <h2 style="margin-bottom:1rem;">Notes on...</h2>
+    <main class="narrow-main">
+      <h2 class="notes-title">Notes on...</h2>
 
       <div id="note-list" class="note-list">Loading notes...</div>
 
-      <div id="note-content" style="display:none;">
-        <a href="notes.html" class="button secondary" style="margin-bottom:1rem;">← Back to Notes</a>
+      <div id="note-content" class="is-hidden">
+        <a href="notes.html" class="button secondary notes-back-button">← Back to Notes</a>
         <div id="note-body"></div>
       </div>
     </main>
 
     <footer>
-      <p>© 2025 Anthony Bursae • 
+      <p>© 2026 Anthony Bursae • 
         <a href="https://www.linkedin.com/in/anthonybursae/">LinkedIn</a>
       </p>
     </footer>
@@ -49,29 +50,21 @@
   const noteContent = document.getElementById('note-content');
   const noteBody = document.getElementById('note-body');
 
-  // Helper to resize images in notes after parsing markdown
-  function resizeNoteImages() {
-    document.querySelectorAll('#note-body img').forEach(img => {
-      img.style.width = '100%';
-      img.style.maxWidth = '350px';
-    });
-  }
-
   if (file) {
-    noteList.style.display = 'none';
-    noteContent.style.display = 'block';
+    noteList.classList.add('is-hidden');
+    noteContent.classList.remove('is-hidden');
     fetch(`../posts/${file}`)
       .then(res => res.text())
       .then(text => {
         noteBody.innerHTML = marked.parse(text);
-        resizeNoteImages();  // <- automatically resize images
       })
       .catch(err => {
         noteBody.innerHTML = "Failed to load post.";
         console.error(err);
       });
   } else {
-    noteContent.style.display = 'none';
+    noteList.classList.remove('is-hidden');
+    noteContent.classList.add('is-hidden');
     fetch('../posts/posts.json')
       .then(res => res.json())
       .then(notes => {
