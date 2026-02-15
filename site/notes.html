@@ -8,6 +8,7 @@
   <link rel="icon" href="../images/favicon-16x16.png" type="image/png" />
   <link rel="stylesheet" href="../css/main.css" />
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
 </head>
 <body>
 <div class="site-container">
@@ -49,37 +50,116 @@
   const noteList = document.getElementById('note-list');
   const noteContent = document.getElementById('note-content');
   const noteBody = document.getElementById('note-body');
+  const notesTitle = document.querySelector('.notes-title');
 
-  if (file) {
-    noteList.classList.add('is-hidden');
-    noteContent.classList.remove('is-hidden');
-    fetch(`../posts/${file}`)
-      .then(res => res.text())
-      .then(text => {
-        noteBody.innerHTML = marked.parse(text);
-      })
-      .catch(err => {
-        noteBody.innerHTML = "Failed to load post.";
-        console.error(err);
-      });
-  } else {
-    noteList.classList.remove('is-hidden');
-    noteContent.classList.add('is-hidden');
-    fetch('../posts/posts.json')
-      .then(res => res.json())
-      .then(notes => {
-        noteList.innerHTML = notes.map(note => `
-          <div class="note-list-item">
-            <h3><a href="notes.html?file=${note.file}">${note.title}</a></h3>
-            <small>${note.date}</small>
-          </div>
-        `).join('');
-      })
-      .catch(err => {
-        noteList.innerHTML = "Failed to load posts.";
-        console.error(err);
-      });
+  function escapeHtml(text) {
+    const span = document.createElement('span');
+    span.textContent = text;
+    return span.innerHTML;
   }
+
+  function isSafeMarkdownFile(filename) {
+    return /^[a-z0-9_-]+\.md$/i.test(filename);
+  }
+
+  function setError(message) {
+    noteBody.innerHTML = `<p>${escapeHtml(message)}</p>`;
+  }
+
+  function renderNotesList(notes) {
+    if (!Array.isArray(notes) || notes.length === 0) {
+      noteList.textContent = "No notes published yet.";
+      return;
+    }
+
+    noteList.innerHTML = "";
+    const fragment = document.createDocumentFragment();
+    notes.forEach(note => {
+      const item = document.createElement("div");
+      item.className = "note-list-item";
+
+      const heading = document.createElement("h3");
+      const link = document.createElement("a");
+      link.href = `notes.html?file=${encodeURIComponent(note.file)}`;
+      link.textContent = note.title;
+      heading.appendChild(link);
+
+      const date = document.createElement("small");
+      date.textContent = note.date || "";
+
+      item.appendChild(heading);
+      item.appendChild(date);
+      fragment.appendChild(item);
+    });
+
+    noteList.appendChild(fragment);
+  }
+
+  async function fetchNotesIndex() {
+    const res = await fetch('../posts/posts.json', { cache: 'no-store' });
+    if (!res.ok) {
+      throw new Error(`Failed to load posts index (${res.status})`);
+    }
+    return res.json();
+  }
+
+  async function fetchNoteFile(filename) {
+    const res = await fetch(`../posts/${filename}`, { cache: 'no-store' });
+    if (!res.ok) {
+      throw new Error(`Failed to load note (${res.status})`);
+    }
+    return res.text();
+  }
+
+  function renderMarkdown(markdown) {
+    marked.setOptions({ gfm: true, breaks: false });
+    const unsafeHtml = marked.parse(markdown);
+    const safeHtml = window.DOMPurify
+      ? window.DOMPurify.sanitize(unsafeHtml)
+      : unsafeHtml;
+    noteBody.innerHTML = safeHtml;
+  }
+
+  async function initNotesPage() {
+    try {
+      const notes = await fetchNotesIndex();
+      const noteMap = new Map(notes.map(note => [note.file, note]));
+
+      if (file) {
+        noteList.classList.add('is-hidden');
+        noteContent.classList.remove('is-hidden');
+        noteBody.textContent = "Loading note...";
+
+        if (!isSafeMarkdownFile(file) || !noteMap.has(file)) {
+          setError("That note could not be found.");
+          return;
+        }
+
+        const note = noteMap.get(file);
+        const markdown = await fetchNoteFile(file);
+        renderMarkdown(markdown);
+        document.title = `${note.title} – Notes – Anthony Bursae`;
+      } else {
+        noteList.classList.remove('is-hidden');
+        noteContent.classList.add('is-hidden');
+        notesTitle.textContent = "Notes";
+        renderNotesList(notes);
+      }
+    } catch (err) {
+      console.error(err);
+      if (file) {
+        noteList.classList.add('is-hidden');
+        noteContent.classList.remove('is-hidden');
+        setError("Failed to load this note.");
+      } else {
+        noteList.classList.remove('is-hidden');
+        noteContent.classList.add('is-hidden');
+        noteList.textContent = "Failed to load notes.";
+      }
+    }
+  }
+
+  initNotesPage();
 </script>
 </body>
 </html>

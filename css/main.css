@@ -211,6 +211,11 @@ main > *:first-child { margin-top: 0; }
 }
 #note-list h3 a { color: inherit; text-decoration: none; }
 #note-list small { color: #888; font-size: .85rem; }
+#note-list .note-list-item h3 a:hover,
+#note-list .note-list-item h3 a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
 /* -------------------------
    Note body images
@@ -224,6 +229,57 @@ main > *:first-child { margin-top: 0; }
   display: block;
   border-radius: 4px;
   object-fit: contain;
+}
+
+#note-body {
+  line-height: 1.75;
+}
+
+#note-body h1,
+#note-body h2,
+#note-body h3 {
+  margin-top: 1.5rem;
+}
+
+#note-body p,
+#note-body ul,
+#note-body ol,
+#note-body blockquote {
+  max-width: 68ch;
+}
+
+#note-body ul,
+#note-body ol {
+  padding-left: 1.2rem;
+}
+
+#note-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.92em;
+  background: #f3f5f7;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
+
+#note-body pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 0.9rem 1rem;
+  background: #f3f5f7;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+}
+
+#note-body pre code {
+  background: transparent;
+  padding: 0;
+}
+
+#note-body blockquote {
+  border-left: 3px solid #c8d2dd;
+  margin-left: 0;
+  padding-left: 0.9rem;
+  color: var(--muted-color);
 }
 
 /* -------------------------
