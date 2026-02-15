@@ -71,7 +71,9 @@ main > *:first-child { margin-top: 0; }
 }
 
 .site-header img {
-  max-width: 60px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
   transition: transform .2s ease;
 }
 .site-header img:hover {
