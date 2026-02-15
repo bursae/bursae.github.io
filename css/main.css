@@ -187,6 +187,39 @@ main > *:first-child { margin-top: 0; }
   margin-bottom: 2.2rem;
   align-items: center;
 }
+
+.project-list .project-card {
+  margin-bottom: 0;
+  padding: 1.35rem 0;
+}
+
+.project-list .project-card + .project-card {
+  border-top: 2px solid #d7dee6;
+}
+
+.project-card > div {
+  max-width: 68ch;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+  color: var(--primary-color);
+}
+
+.project-card ul {
+  margin-top: 0.55rem;
+  margin-bottom: 0;
+  padding-left: 1.1rem;
+}
+
+.project-card li {
+  margin-bottom: 0.55rem;
+}
+
+.project-card li:last-child {
+  margin-bottom: 0;
+}
 .project-card img {
   max-width: 390px;
   width: 100%;
@@ -199,7 +232,9 @@ main > *:first-child { margin-top: 0; }
   margin-top: 0;
   margin-bottom: 0.6rem;
   color: var(--muted-color);
-  font-size: 0.95rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 /* -------------------------
