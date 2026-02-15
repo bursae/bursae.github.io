@@ -1,17 +1,32 @@
 [
   {
+    "title": "Highland Brook",
+    "file": "highland_brook.md",
+    "date": "2015"
+  },
+  {
+    "title": "Pond Yard",
+    "file": "pond_yard.md",
+    "date": "2016"
+  },
+  {
+    "title": "Bournemouth",
+    "file": "bournemouth.md",
+    "date": "2018"
+  },
+  {
     "title": "Kingsland",
     "file": "kingsland.md",
-    "date": "July 2025"
+    "date": "2025"
   },
   {
     "title": "Grilling Lobsters",
     "file": "lobster.md",
-    "date": "June 2025"
+    "date": "2025"
   },
   {
     "title": "The County of Bergen",
     "file": "bergen.md",
-    "date": "June 2025"
+    "date": "2025"
   }
 ]

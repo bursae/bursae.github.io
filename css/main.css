@@ -89,8 +89,8 @@ main > *:first-child { margin-top: 0; }
 }
 
 .site-header img {
-  width: 92px;
-  height: 92px;
+  width: 108px;
+  height: 108px;
   object-fit: contain;
   transition: opacity .2s ease;
 }
@@ -459,23 +459,6 @@ footer a:hover { border-bottom-color:var(--primary-color); }
   box-shadow: 0 8px 20px rgba(17, 24, 39, 0.06);
 }
 
-/* -------------------------
-   Places page
-------------------------- */
-.places-main .note-entry {
-  margin-bottom: var(--space-lg);
-}
-
-.places-main .note-entry img {
-  width: min(400px, 100%);
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: var(--radius-sm);
-  display: block;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-soft);
-}
-
 @media (min-width: 768px) {
   .about-family .about-images {
     flex-direction: row;
@@ -507,7 +490,7 @@ footer a:hover { border-bottom-color:var(--primary-color); }
     justify-content:flex-start;
     padding:var(--space-sm) 0;
   }
-  .site-header img { max-width:66px; }
+  .site-header img { max-width:78px; }
   .site-header h1 { font-size:1.25rem; }
   .site-header nav {
     width:100%;
