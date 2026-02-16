@@ -1,7 +1,7 @@
 # Bournemouth
 
-![Bournemouth](../images/bournemouth.png)
+Business trip to Bournemouth, England.
 
 ---
 
-Business trip to Bournemouth.
+![Bournemouth](../images/bournemouth.png)

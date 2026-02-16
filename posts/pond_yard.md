@@ -1,7 +1,7 @@
 # Pond Yard
 
-![Pond Yard](../images/pond_yard.png)
+My first garden.
 
 ---
 
-Built my first garden around a dogwood tree.
+![Pond Yard](../images/pond_yard.png)

@@ -1,7 +1,7 @@
 # Highland Brook
 
-![Highland Brook](../images/highland_brook2.png)
+Winter walk in the Pascack Valley.
 
 ---
 
-Winter hike in Highland Brook.
+![Highland Brook](../images/highland_brook2.png)
