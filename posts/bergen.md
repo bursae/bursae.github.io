@@ -5,34 +5,34 @@
 ### Boundaries
 ![Map showing boundaries](../images/bound.png)
 
-Bergen County occupies New Jersey's northeastern edge, where suburban New Jersey meets the New York metropolitan machine. New York State sits on its northern and eastern sides, with the Hudson marking a hard eastern border. To the west and south lie Passaic and Essex, forming a softer internal frontier shaped less by law than by commuter flows.
+Bergen County sits in the northeast corner of New Jersey. New York borders it to the north and east, with the Hudson defining its eastern edge. Passaic and Essex border the west and south, but in practice the county is tied most closely to the New York commuter economy.
 
 ---
 
 ### Water
 ![Map showing water bodies](../images/water.png)
 
-Water is both infrastructure and constraint. The Hackensack and Passaic river systems cut through the county, while Oradell Reservoir, Woodcliff Lake and Lake Tappan underpin regional water supply. What looks like landscape is, in practice, a managed utility network.
+Water shapes both the map and the daily function of the county. The Hackensack and Passaic systems run through Bergen, while Oradell Reservoir, Woodcliff Lake and Lake Tappan support regional supply. Much of the landscape is also infrastructure.
 
 ---
 
 ### Mountains & Cliffs
 ![Map showing mountains and cliffs](../images/mountains.png)
 
-Topography sharpens toward the margins. The Ramapo Mountains rise in the north-west, and the Palisades form a dramatic basalt wall above the Hudson. The result is a county that is geographically varied but economically integrated, with sightlines that quite literally point to Manhattan.
+The terrain changes quickly at the edges. The Ramapo Mountains rise in the northwest, and the Palisades form a steep basalt wall over the Hudson. Bergen can feel geographically varied, but economically it operates as part of one metropolitan system.
 
 ---
 
 ### Transportation
 ![Map showing transportation routes](../images/transit.png)
 
-Transport is Bergen's governing logic. I-80, I-95, Route 4 and Route 17 carry a daily circulation of workers and goods, reinforced by NJ Transit lines into Hoboken and New York City. Bridges and tunnels tie the county to Manhattan and the Bronx, turning geography into a timetable.
+Transportation drives the county. I-80, I-95, Route 4 and Route 17 move workers and goods every day, backed by NJ Transit service into Hoboken and New York City. Bridges and tunnels connect Bergen directly to Manhattan and the Bronx.
 
 ---
 
 ### Towns
 ![Map showing towns](../images/towns.png)
 
-Hackensack is the county seat, but Bergen's character is distributed across a patchwork of municipalities. Englewood, Ridgewood, Teaneck and Fort Lee each play distinct roles, yet all belong to the same metropolitan ecology: locally governed, regionally dependent, and closely coupled to New York's economy.
+Hackensack is the county seat, but Bergen is defined by its network of municipalities. Englewood, Ridgewood, Teaneck and Fort Lee each have distinct local identities. Together they function as part of a regionally connected county tied to New York.
 
 ---
