@@ -183,14 +183,14 @@ main > *:first-child { margin-top: 0; }
 ------------------------- */
 .project-card {
   display: flex;
-  gap: 1.25rem;
+  gap: 2.1rem;
   margin-bottom: 2.2rem;
   align-items: center;
 }
 
 .project-list .project-card {
   margin-bottom: 0;
-  padding: 1.6rem 0;
+  padding: 3rem 0;
 }
 
 .project-list .project-card + .project-card {
