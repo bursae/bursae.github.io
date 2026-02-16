@@ -89,8 +89,8 @@ main > *:first-child { margin-top: 0; }
 }
 
 .site-header img {
-  width: 84px;
-  height: 84px;
+  width: 74px;
+  height: 74px;
   object-fit: contain;
   transition: opacity .2s ease;
 }
@@ -558,7 +558,7 @@ footer a:hover { border-bottom-color:var(--primary-color); }
     justify-content:flex-start;
     padding:var(--space-sm) 0;
   }
-  .site-header img { max-width:62px; }
+  .site-header img { max-width:54px; }
   .site-header h1 { font-size:1.25rem; }
   .site-header nav {
     width:100%;

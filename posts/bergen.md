@@ -12,7 +12,7 @@ Bergen County sits in the northeast corner of New Jersey. New York borders it to
 ### Water
 ![Map showing water bodies](../images/water.png)
 
-Water shapes both the map and the daily function of the county. The Hackensack and Passaic systems run through Bergen, while Oradell Reservoir, Woodcliff Lake and Lake Tappan support regional supply. Much of the landscape is also infrastructure.
+Water shapes both the map and the daily function of the county. The Hackensack and Passaic systems run through Bergen, while Oradell Reservoir, Woodcliff Lake and Lake Tappan support regional supply.
 
 ---
 
@@ -33,6 +33,6 @@ Transportation drives the county. I-80, I-95, Route 4 and Route 17 move workers 
 ### Towns
 ![Map showing towns](../images/towns.png)
 
-Hackensack is the county seat, but Bergen is defined by its network of municipalities. Englewood, Ridgewood, Teaneck and Fort Lee each have distinct local identities. Together they function as part of a regionally connected county tied to New York.
+In Bergen County, with Hackensack as its seat, power is local. Seventy municipalities - Ridgewood and Fort Lee among them — control their schools, zoning and tax base. The fragmentation dates to “boroughitis,” the 1890s incorporation rush after school and tax laws made secession fiscally rational. Bergen sits in New York’s orbit but governs as a federation of guarded municipalities.
 
 ---
