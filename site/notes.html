@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Photos – Anthony Bursae</title>
+  <title>Gallery – Anthony Bursae</title>
   <meta name="description" content="Photo notes by Anthony Bursae on places, history, and travel." />
   <link rel="icon" href="../images/favicon-16x16.png" type="image/png" />
   <link rel="stylesheet" href="../css/main.css" />
@@ -20,7 +20,7 @@
       <nav>
         <a href="about.html">About</a>
         <a href="projects.html">Portfolio</a>
-        <a href="notes.html" class="active" aria-current="page">Photos</a>
+        <a href="notes.html" class="active" aria-current="page">Gallery</a>
       </nav>
     </header>
 
@@ -28,7 +28,7 @@
       <div id="note-list" class="note-list">Loading notes...</div>
 
       <div id="note-content" class="is-hidden">
-        <a href="notes.html" class="button secondary notes-back-button">← Back to Photos</a>
+        <a href="notes.html" class="button secondary notes-back-button">← Back to Gallery</a>
         <div id="note-body"></div>
       </div>
     </main>
@@ -75,13 +75,25 @@
       const item = document.createElement("div");
       item.className = "note-list-item";
 
-      const heading = document.createElement("h3");
       const link = document.createElement("a");
+      link.className = "gallery-card";
       link.href = `notes.html?file=${encodeURIComponent(note.file)}`;
-      link.textContent = note.title;
-      heading.appendChild(link);
 
-      item.appendChild(heading);
+      if (note.thumbnail) {
+        const thumb = document.createElement("img");
+        thumb.className = "gallery-thumb";
+        thumb.src = note.thumbnail;
+        thumb.alt = note.title;
+        thumb.loading = "lazy";
+        thumb.decoding = "async";
+        link.appendChild(thumb);
+      }
+
+      const title = document.createElement("h3");
+      title.textContent = note.title;
+      link.appendChild(title);
+
+      item.appendChild(link);
       fragment.appendChild(item);
     });
 
@@ -131,7 +143,7 @@
         const note = noteMap.get(file);
         const markdown = await fetchNoteFile(file);
         renderMarkdown(markdown);
-        document.title = `${note.title} – Photos – Anthony Bursae`;
+        document.title = `${note.title} – Gallery – Anthony Bursae`;
       } else {
         noteList.classList.remove('is-hidden');
         noteContent.classList.add('is-hidden');
@@ -146,7 +158,7 @@
       } else {
         noteList.classList.remove('is-hidden');
         noteContent.classList.add('is-hidden');
-        noteList.textContent = "Failed to load photos.";
+        noteList.textContent = "Failed to load gallery.";
       }
     }
   }
