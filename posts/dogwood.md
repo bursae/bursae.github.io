@@ -1,11 +1,11 @@
 # Dogwood
 
-My first garden was built around a dogwood. Native to the eastern United States.
+My first garden was built around a dogwood, native to the eastern United States.
 
-- Spring: white bracts open before the canopy fills
-- Summer: a calm, level green canopy
-- Fall: foliage deepens to burgundy
-- Winter: bark set in an alligator pattern
+- Spring: white bracts 
+- Summer: green canopy
+- Fall: burgundy foliage 
+- Winter: alligator bark 
 
 ---
 
