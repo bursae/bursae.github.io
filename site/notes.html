@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Notes – Anthony Bursae</title>
-  <meta name="description" content="Notes and essays by Anthony Bursae on places, products, history, and technology." />
+  <title>Photos – Anthony Bursae</title>
+  <meta name="description" content="Photo notes by Anthony Bursae on places, history, and travel." />
   <link rel="icon" href="../images/favicon-16x16.png" type="image/png" />
   <link rel="stylesheet" href="../css/main.css" />
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -20,17 +20,15 @@
       <nav>
         <a href="about.html">About</a>
         <a href="projects.html">Portfolio</a>
-        <a href="notes.html" class="active" aria-current="page">Notes</a>
+        <a href="notes.html" class="active" aria-current="page">Photos</a>
       </nav>
     </header>
 
     <main class="narrow-main">
-      <h2 class="notes-title">Notes on...</h2>
-
       <div id="note-list" class="note-list">Loading notes...</div>
 
       <div id="note-content" class="is-hidden">
-        <a href="notes.html" class="button secondary notes-back-button">← Back to Notes</a>
+        <a href="notes.html" class="button secondary notes-back-button">← Back to Photos</a>
         <div id="note-body"></div>
       </div>
     </main>
@@ -50,7 +48,6 @@
   const noteList = document.getElementById('note-list');
   const noteContent = document.getElementById('note-content');
   const noteBody = document.getElementById('note-body');
-  const notesTitle = document.querySelector('.notes-title');
 
   function escapeHtml(text) {
     const span = document.createElement('span');
@@ -84,11 +81,7 @@
       link.textContent = note.title;
       heading.appendChild(link);
 
-      const date = document.createElement("small");
-      date.textContent = note.date || "";
-
       item.appendChild(heading);
-      item.appendChild(date);
       fragment.appendChild(item);
     });
 
@@ -138,11 +131,10 @@
         const note = noteMap.get(file);
         const markdown = await fetchNoteFile(file);
         renderMarkdown(markdown);
-        document.title = `${note.title} – Notes – Anthony Bursae`;
+        document.title = `${note.title} – Photos – Anthony Bursae`;
       } else {
         noteList.classList.remove('is-hidden');
         noteContent.classList.add('is-hidden');
-        notesTitle.textContent = "Notes";
         renderNotesList(notes);
       }
     } catch (err) {
@@ -154,7 +146,7 @@
       } else {
         noteList.classList.remove('is-hidden');
         noteContent.classList.add('is-hidden');
-        noteList.textContent = "Failed to load notes.";
+        noteList.textContent = "Failed to load photos.";
       }
     }
   }

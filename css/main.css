@@ -6,7 +6,7 @@
 ------------------------- */
 :root {
   --font-family: "Inter", system-ui, -apple-system, sans-serif;
-  --font-color: #1f2933;
+  --font-color: #2f3a45;
   --background-color: #fafbfc;
   --primary-color: #111827;
   --border-color: #e6e9ed;
@@ -107,7 +107,7 @@ main > *:first-child { margin-top: 0; }
 .site-header h1 a {
   position: relative;
   text-decoration: none;
-  color: inherit;
+  color: var(--muted-color);
 }
 
 .site-header h1 a::after {
@@ -485,7 +485,7 @@ footer a:hover { border-bottom-color:var(--primary-color); }
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  padding: 2.5rem 0;
+  padding: 1.1rem 0 2rem;
 }
 
 .about-hero img {
@@ -622,6 +622,58 @@ th { font-weight:600; }
   font-style: normal;
   font-weight: 600;
   color: var(--primary-color);
+}
+
+.experience-block {
+  margin-top: 1rem;
+  max-width: 68ch;
+  font-family: var(--font-family);
+}
+
+.experience-label {
+  margin: 0 0 0.4rem;
+  font-size: 0.76rem;
+  color: var(--muted-color);
+}
+
+.experience-era + .experience-era {
+  margin-top: 0.3rem;
+}
+
+.experience-era-label {
+  margin: 0;
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted-color);
+  font-family: var(--font-family);
+}
+
+.experience-timeline {
+  list-style: none;
+  margin: 0.12rem 0 0;
+  padding: 0 0 0 1rem;
+  border-left: 1px solid var(--border-color);
+}
+
+.experience-timeline li {
+  position: relative;
+  margin: 0;
+  padding: 0.12rem 0 0.12rem 0.58rem;
+  font-size: 0.76rem;
+  line-height: 1.3;
+  font-family: var(--font-family);
+}
+
+.experience-timeline li::before {
+  content: "";
+  position: absolute;
+  left: -1.28rem;
+  top: 0.58rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #c2ccd7;
 }
 
 .bio-text a {
