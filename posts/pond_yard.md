@@ -4,4 +4,4 @@
 
 ---
 
-Pond Yard, Pascack Valley — still.
+Built my first garden around a dogwood tree.

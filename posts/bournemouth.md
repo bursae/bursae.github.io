@@ -4,4 +4,4 @@
 
 ---
 
-Bournemouth — windswept.
+Work trip to Bournemouth.

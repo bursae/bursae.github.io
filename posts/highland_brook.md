@@ -4,4 +4,4 @@
 
 ---
 
-Highland Brook, Bergen County — calm.
+Winter stroll over the highland brook.
