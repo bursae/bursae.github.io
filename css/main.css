@@ -258,7 +258,7 @@ main > *:first-child { margin-top: 0; }
 .note-body img,
 #note-body img {
   width: 100%;
-  max-width: 350px;
+  max-width: 560px;
   height: auto;
   margin: 1.25rem auto;
   display: block;
