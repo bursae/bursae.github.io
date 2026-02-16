@@ -661,7 +661,7 @@ th { font-weight:600; }
 .experience-label {
   margin: 0 0 0.4rem;
   font-size: 0.76rem;
-  color: var(--muted-color);
+  color: #7f8b97;
 }
 
 .experience-era + .experience-era {
@@ -672,8 +672,8 @@ th { font-weight:600; }
   margin: 0;
   font-size: 0.66rem;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--muted-color);
+  text-transform: none;
+  color: #8b96a1;
   font-family: var(--font-family);
 }
 
@@ -681,7 +681,7 @@ th { font-weight:600; }
   list-style: none;
   margin: 0.12rem 0 0;
   padding: 0 0 0 1rem;
-  border-left: 1px solid var(--border-color);
+  border-left: 1px solid #d9e1e8;
 }
 
 .experience-timeline li {
@@ -691,6 +691,7 @@ th { font-weight:600; }
   font-size: 0.76rem;
   line-height: 1.3;
   font-family: var(--font-family);
+  color: #6f7b87;
 }
 
 .experience-timeline li::before {
@@ -701,7 +702,7 @@ th { font-weight:600; }
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #c2ccd7;
+  background: #d2dae3;
 }
 
 .bio-text a {
