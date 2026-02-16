@@ -4,4 +4,4 @@
 
 ---
 
-Work trip to Bournemouth.
+Business trip to Bournemouth.

@@ -4,4 +4,4 @@
 
 ---
 
-Winter stroll over the highland brook.
+Winter hike in Highland Brook.

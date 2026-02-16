@@ -1,20 +1,5 @@
 [
   {
-    "title": "Highland Brook",
-    "file": "highland_brook.md",
-    "date": "2015"
-  },
-  {
-    "title": "Pond Yard",
-    "file": "pond_yard.md",
-    "date": "2016"
-  },
-  {
-    "title": "Bournemouth",
-    "file": "bournemouth.md",
-    "date": "2018"
-  },
-  {
     "title": "Kingsland",
     "file": "kingsland.md",
     "date": "2025"
@@ -28,5 +13,20 @@
     "title": "The County of Bergen",
     "file": "bergen.md",
     "date": "2025"
+  },
+  {
+    "title": "Bournemouth",
+    "file": "bournemouth.md",
+    "date": "2018"
+  },
+  {
+    "title": "Pond Yard",
+    "file": "pond_yard.md",
+    "date": "2016"
+  },
+  {
+    "title": "Highland Brook",
+    "file": "highland_brook.md",
+    "date": "2015"
   }
 ]
