@@ -1,7 +1,6 @@
 # Lyndhurst
 
-Lyndhurst, New Jersey, sits in the Hackensack Meadowlands between the Passaic and Hackensack rivers.
-Once marsh and freight land, it is now a commuter borough tied to Manhattan by rail.
+Lyndhurst sits in the Meadowlands between the Passaic and Hackensack rivers. A compact residential town shaped by low marshland, rail lines, and its proximity to Manhattan.
 
 ![Kingsland](../images/kingsland.png)
 
