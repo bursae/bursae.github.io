@@ -461,14 +461,20 @@ footer {
   text-align: center;
   padding: var(--space-lg) 0;
   font-size: .875rem;
-  color: var(--muted-color);
+  color: #7a8793;
+}
+footer p {
+  color: #7a8793;
 }
 footer a {
-  color: var(--primary-color);
+  color: #6f7e8a;
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
-footer a:hover { border-bottom-color:var(--primary-color); }
+footer a:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
 
 /* -------------------------
    Shared page layout
