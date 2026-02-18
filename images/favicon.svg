@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    :root {
+      --bg: #f3f7f5;
+      --fg: #1f2937;
+      --accent: #2b6f6a;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111827;
+        --fg: #e5e7eb;
+        --accent: #7fc7be;
+      }
+    }
+  </style>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="var(--bg)" stroke="var(--accent)" stroke-width="3"/>
+  <path d="M17 48L29 16H35L47 48H40L37 40H27L24 48Z" fill="var(--fg)"/>
+  <rect x="29" y="31" width="6" height="5" fill="var(--bg)"/>
+</svg>
