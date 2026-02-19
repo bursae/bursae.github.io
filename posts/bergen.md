@@ -19,20 +19,20 @@ Water shapes both the map and the daily function of the county. The Hackensack a
 ### Mountains & Cliffs
 ![Map showing mountains and cliffs](../images/mountains.png)
 
-The terrain changes quickly at the edges. The Ramapo Mountains rise in the northwest, and the Palisades form a steep basalt wall over the Hudson. Bergen can feel geographically varied.
+The terrain changes quickly at the edges. The Ramapo Mountains rise in the northwest, and the Palisades form a steep basalt wall over the Hudson.
 
 ---
 
 ### Transportation
 ![Map showing transportation routes](../images/transit.png)
 
-Transportation drives the county. I-80, I-95, Route 4 and Route 17 move workers and goods every day, backed by NJ Transit service into Hoboken and New York City. Bridges and tunnels connect Bergen directly to Manhattan.
+Transportation drives the county. I-80, I-95, Route 4 and Route 17 move workers and goods every day, backed by NJ Transit service into Hoboken and New York City. The George Washington Bridge connects Bergen County directly to Manhattan across the Hudson River.
 
 ---
 
 ### Towns
 ![Map showing towns](../images/towns.png)
 
-In Bergen County, with Hackensack as its seat, power is local. Seventy municipalities - Ridgewood and Fort Lee among them - control their schools, zoning and tax base. The fragmentation dates to “boroughitis,” the 1890s incorporation rush after school and tax laws made secession fiscally rational. Bergen sits in New York’s orbit but governs as a federation of guarded municipalities.
+In Bergen County, with Hackensack as its seat, power is local. Seventy municipalities - Ridgewood and Fort Lee among them - control their schools, zoning and tax base. The fragmentation dates to “boroughitis,” the 1890s incorporation rush after school and tax laws made secession fiscally rational. Bergen sits in New York’s orbit but governs as a federation of municipalities.
 
 ---
