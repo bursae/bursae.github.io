@@ -22,5 +22,17 @@
     "file": "dogwood.md",
     "date": "2016",
     "thumbnail": "../images/pond_yard.png"
+  },
+  {
+    "title": "Sound",
+    "file": "sound.md",
+    "date": "2026",
+    "thumbnail": "../images/sound.png"
+  },
+  {
+    "title": "Venice",
+    "file": "venice.md",
+    "date": "2026",
+    "thumbnail": "../images/venice.png"
   }
 ]
