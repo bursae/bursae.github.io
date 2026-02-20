@@ -1,6 +1,6 @@
 # Venice
 
-The heaviest part of the Doge’s Palace appears to float above delicate columns.
+The Doge’s Palace reflects Venetian Gothic, blending pointed arches and tracery with Byzantine pattern and eastern Mediterranean influence shaped by trade.
 
 ---
 
