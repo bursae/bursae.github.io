@@ -1,6 +1,6 @@
 # Venice
 
-The Doge’s Palace reflects Venetian Gothic, blending pointed arches and tracery with Byzantine pattern and eastern Mediterranean influence shaped by trade.
+Venetian Gothic architecture of the Doge’s Palace (centered) in Venice.
 
 ---
 

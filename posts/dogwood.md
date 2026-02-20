@@ -1,7 +1,3 @@
 # Dogwood
 
-Our first garden grew around a flowering dogwood - Cornus florida - native to the eastern United States.
-
----
-
-![Dogwood](../images/pond_yard.png)
+Our old garden in the Pascack Valley of New Jersey.
