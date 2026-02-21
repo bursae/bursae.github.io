@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery – Anthony Bursae</title>
-  <meta name="description" content="Photo notes by Anthony Bursae on places, history, and travel." />
+  <title>Place Notes | Anthony Bursae</title>
+  <meta id="meta-description" name="description" content="Place notes by Anthony Bursae on geography, history, and travel." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://anthonybursae.com/site/notes.html" />
+  <link id="meta-canonical" rel="canonical" href="https://anthonybursae.com/site/notes.html" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Anthony Bursae" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://anthonybursae.com/site/notes.html" />
-  <meta property="og:title" content="Gallery – Anthony Bursae" />
-  <meta property="og:description" content="Photo notes by Anthony Bursae on places, history, and travel." />
-  <meta property="og:image" content="https://anthonybursae.com/images/lyndhurst.png" />
+  <meta id="meta-og-url" property="og:url" content="https://anthonybursae.com/site/notes.html" />
+  <meta id="meta-og-title" property="og:title" content="Place Notes | Anthony Bursae" />
+  <meta id="meta-og-description" property="og:description" content="Place notes by Anthony Bursae on geography, history, and travel." />
+  <meta id="meta-og-image" property="og:image" content="https://anthonybursae.com/images/lyndhurst.png" />
   <meta property="og:image:alt" content="Lyndhurst note image" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Gallery – Anthony Bursae" />
-  <meta name="twitter:description" content="Photo notes by Anthony Bursae on places, history, and travel." />
-  <meta name="twitter:image" content="https://anthonybursae.com/images/lyndhurst.png" />
+  <meta id="meta-twitter-title" name="twitter:title" content="Place Notes | Anthony Bursae" />
+  <meta id="meta-twitter-description" name="twitter:description" content="Place notes by Anthony Bursae on geography, history, and travel." />
+  <meta id="meta-twitter-image" name="twitter:image" content="https://anthonybursae.com/images/lyndhurst.png" />
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="../images/favicon-32x32.png" type="image/png" sizes="32x32" />
   <link rel="icon" href="../images/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -63,9 +63,62 @@
 <script>
   const params = new URLSearchParams(window.location.search);
   const file = params.get('file');
+  const siteOrigin = "https://anthonybursae.com";
+  const defaultNotesTitle = "Place Notes | Anthony Bursae";
+  const defaultNotesDescription = "Place notes by Anthony Bursae on geography, history, and travel.";
+  const defaultNotesImage = `${siteOrigin}/images/lyndhurst.png`;
+  const notesBaseUrl = `${siteOrigin}/site/notes.html`;
   const noteList = document.getElementById('note-list');
   const noteContent = document.getElementById('note-content');
   const noteBody = document.getElementById('note-body');
+
+  function setMetaById(id, value) {
+    const el = document.getElementById(id);
+    if (el && value) {
+      el.setAttribute('content', value);
+    }
+  }
+
+  function updateNotesMetadata(note) {
+    if (!note) {
+      document.title = defaultNotesTitle;
+      setMetaById("meta-description", defaultNotesDescription);
+      setMetaById("meta-og-title", defaultNotesTitle);
+      setMetaById("meta-og-description", defaultNotesDescription);
+      setMetaById("meta-og-url", notesBaseUrl);
+      setMetaById("meta-og-image", defaultNotesImage);
+      setMetaById("meta-twitter-title", defaultNotesTitle);
+      setMetaById("meta-twitter-description", defaultNotesDescription);
+      setMetaById("meta-twitter-image", defaultNotesImage);
+      const canonical = document.getElementById("meta-canonical");
+      if (canonical) {
+        canonical.setAttribute("href", notesBaseUrl);
+      }
+      return;
+    }
+
+    const noteTitle = `${note.title} | Place Notes | Anthony Bursae`;
+    const noteDescription = note.description || `${note.title} place note by Anthony Bursae.`;
+    const noteUrl = `${notesBaseUrl}?file=${encodeURIComponent(note.file)}`;
+    const noteImage = note.thumbnail
+      ? `${siteOrigin}/${note.thumbnail.replace(/^\.\.\//, "")}`
+      : defaultNotesImage;
+
+    document.title = noteTitle;
+    setMetaById("meta-description", noteDescription);
+    setMetaById("meta-og-title", noteTitle);
+    setMetaById("meta-og-description", noteDescription);
+    setMetaById("meta-og-url", noteUrl);
+    setMetaById("meta-og-image", noteImage);
+    setMetaById("meta-twitter-title", noteTitle);
+    setMetaById("meta-twitter-description", noteDescription);
+    setMetaById("meta-twitter-image", noteImage);
+
+    const canonical = document.getElementById("meta-canonical");
+    if (canonical) {
+      canonical.setAttribute("href", noteUrl);
+    }
+  }
 
   function escapeHtml(text) {
     const span = document.createElement('span');
@@ -161,11 +214,12 @@
         const note = noteMap.get(file);
         const markdown = await fetchNoteFile(file);
         renderMarkdown(markdown);
-        document.title = `${note.title} – Gallery – Anthony Bursae`;
+        updateNotesMetadata(note);
       } else {
         noteList.classList.remove('is-hidden');
         noteContent.classList.add('is-hidden');
         renderNotesList(notes);
+        updateNotesMetadata(null);
       }
     } catch (err) {
       console.error(err);

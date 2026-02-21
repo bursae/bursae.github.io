@@ -3,36 +3,42 @@
     "title": "Lyndhurst",
     "file": "lyndhurst.md",
     "date": "2025",
+    "description": "A geographic note on Lyndhurst in the Meadowlands, shaped by marshland, rail lines, and proximity to Manhattan.",
     "thumbnail": "../images/lyndhurst.png"
   },
   {
     "title": "Bergen",
     "file": "bergen.md",
     "date": "2025",
+    "description": "A place note on Bergen County boundaries, water systems, terrain, transportation corridors, and municipal structure.",
     "thumbnail": "../images/towns.png"
   },
   {
     "title": "Bournemouth",
     "file": "bournemouth.md",
     "date": "2018",
+    "description": "A visual note from Bournemouth on England’s Dorset coast.",
     "thumbnail": "../images/bournemouth.png"
   },
   {
     "title": "Pascack",
     "file": "pascack.md",
     "date": "2016",
+    "description": "A short place note from the Pascack Valley in New Jersey.",
     "thumbnail": "../images/pond_yard.png"
   },
   {
     "title": "Sound",
     "file": "sound.md",
     "date": "2026",
+    "description": "A dusk view and place note from the Long Island Sound.",
     "thumbnail": "../images/sound.png"
   },
   {
     "title": "Venice",
     "file": "venice.md",
     "date": "2026",
+    "description": "A place note on Venetian Gothic architecture at the Doge's Palace waterfront.",
     "thumbnail": "../images/venice.png"
   }
 ]
