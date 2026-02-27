@@ -22,6 +22,8 @@
   --shadow-soft: 0 2px 8px rgba(17, 24, 39, 0.03);
   --radius-sm: 0;
   --radius-md: 0;
+  --radius-image: 8px;
+  --radius-image-soft: 4px;
   --space-sm: .5rem;
   --space-md: 1rem;
   --space-lg: 2rem;
@@ -156,8 +158,8 @@ main > *:first-child { margin-top: 0; }
 
 .site-header nav a {
   font-size: 0.86rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted-color);
   text-decoration: none;
@@ -288,7 +290,7 @@ main > *:first-child { margin-top: 0; }
   max-width: 100%;
   aspect-ratio: 4 / 3;
   height: auto;
-  border-radius: 0;
+  border-radius: var(--radius-image);
   object-fit: contain;
   border: 1px solid var(--frame-color);
   background: var(--surface-color);
@@ -318,7 +320,7 @@ main > *:first-child { margin-top: 0; }
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 0;
+  border-radius: var(--radius-image);
   border: 1px solid var(--frame-color);
   background: var(--surface-soft);
   box-shadow: none;
@@ -349,7 +351,7 @@ main > *:first-child { margin-top: 0; }
   height: auto;
   margin: 1.25rem auto;
   display: block;
-  border-radius: 4px;
+  border-radius: var(--radius-image-soft);
   object-fit: contain;
 }
 
@@ -540,12 +542,30 @@ footer a:hover {
   padding-top: 0;
 }
 
+.home .home-main {
+  --home-feature-width: 455px;
+}
+
 .home-main .section-label {
   margin-bottom: 0.45rem;
 }
 
 .home-main > p.section-label + p {
   margin-bottom: 0.95rem;
+  max-width: var(--home-feature-width);
+}
+
+.home-feature-image {
+  margin: 0 0 1rem;
+  max-width: var(--home-feature-width);
+}
+
+.home-feature-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--frame-color);
+  border-radius: var(--radius-image);
 }
 
 .cta-row {
@@ -611,7 +631,7 @@ footer a:hover {
 
 .about-hero img {
   max-width: 300px;
-  border-radius: 6px;
+  border-radius: var(--radius-image);
   box-shadow: 0 4px 16px rgba(0,0,0,0.05);
 }
 
@@ -640,7 +660,7 @@ footer a:hover {
 .about-family .about-images img {
   width: 220px;
   height: 220px;
-  border-radius: 0;
+  border-radius: var(--radius-image);
   display: block;
   background: var(--surface-color);
   box-shadow: none;
