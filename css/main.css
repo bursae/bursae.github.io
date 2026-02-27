@@ -131,9 +131,9 @@ main > *:first-child { margin-top: 0; }
 .site-header h1 {
   margin: 0;
   font-family: var(--display-family);
-  font-weight: 500;
-  font-size: 1.72rem;
-  letter-spacing: -0.015em;
+  font-weight: 300;
+  font-size: 1.82rem;
+  letter-spacing: -0.006em;
 }
 
 .site-header h1 a {
