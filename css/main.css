@@ -642,11 +642,12 @@ footer a:hover {
 }
 
 .about-family {
-  margin-top: 3rem;
-  padding: 2rem 1rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem 0 0;
   border-radius: 0;
-  background: var(--surface-color);
-  border: 1px solid var(--frame-color);
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--line-soft);
   box-shadow: none;
 }
 
@@ -780,45 +781,47 @@ th { font-weight:600; }
 }
 
 .experience-block {
-  margin-top: 1rem;
+  margin-top: 1.25rem;
   max-width: 68ch;
   font-family: var(--font-family);
 }
 
 .experience-label {
-  margin: 0 0 0.4rem;
-  font-size: 0.82rem;
-  color: #6d7985;
+  margin: 0 0 0.55rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #475260;
 }
 
 .experience-era + .experience-era {
-  margin-top: 0.45rem;
+  margin-top: 0.65rem;
 }
 
 .experience-era-label {
   margin: 0;
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   text-transform: none;
-  color: #75818d;
+  color: #5a6674;
   font-family: var(--font-family);
 }
 
 .experience-timeline {
   list-style: none;
-  margin: 0.12rem 0 0;
+  margin: 0.18rem 0 0;
   padding: 0 0 0 1rem;
-  border-left: 1px solid #dfe6ed;
+  border-left: 1px solid #d2dae3;
 }
 
 .experience-timeline li {
   position: relative;
   margin: 0;
-  padding: 0.12rem 0 0.12rem 0.58rem;
-  font-size: 0.86rem;
-  line-height: 1.45;
+  padding: 0.16rem 0 0.16rem 0.62rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
   font-family: var(--font-family);
-  color: #56626e;
+  color: #313a44;
 }
 
 .experience-timeline li::before {
@@ -829,7 +832,7 @@ th { font-weight:600; }
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #d2dae3;
+  background: #b8c4d1;
 }
 
 .bio-text a {
