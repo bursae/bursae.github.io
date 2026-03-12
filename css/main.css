@@ -713,20 +713,57 @@ footer a:hover {
     line-height: 1.72;
   }
 
-  .page { padding:0 var(--space-sm); }
+  .page { padding:0 0.35rem; }
 
   .site-header {
     flex-wrap: wrap;
     justify-content:flex-start;
-    padding:var(--space-sm) 0;
+    gap: 0.55rem;
+    padding:0.45rem 0 0.55rem;
   }
-  .site-header img { max-width:44px; }
-  .site-header h1 { font-size:1.08rem; }
+  .site-brand {
+    gap: 0.65rem;
+  }
+  .site-header img {
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+  }
+  .site-header h1 {
+    font-size: 1rem;
+    letter-spacing: -0.01em;
+  }
   .site-header nav {
     width:100%;
-    justify-content:center;
-    gap:0.95rem;
-    margin-top:.5rem;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.7rem;
+    margin-top: 0.15rem;
+    padding-top: 0.45rem;
+    border-top: 1px solid rgba(17, 17, 17, 0.12);
+  }
+  .site-header nav a {
+    font-size: 0.82rem;
+    padding-bottom: 0.1rem;
+  }
+
+  .home-main {
+    padding-top: 0;
+  }
+  .home-main .section-label {
+    margin-bottom: 0.35rem;
+  }
+  .home-main > p.section-label + p {
+    margin-bottom: 0.8rem;
+    font-size: 1.28rem;
+    line-height: 1.2;
+    max-width: 14ch;
+  }
+  .home-feature-image {
+    margin-bottom: 0.85rem;
+  }
+  .cta-row {
+    gap: 0.65rem;
   }
 
   .project-card {
@@ -752,7 +789,8 @@ footer a:hover {
 
   a.button {
     width:100%;
-    margin-bottom:var(--space-sm);
+    margin-bottom:0;
+    text-align: center;
   }
 
   .note-body img,
