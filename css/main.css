@@ -755,9 +755,6 @@ footer a:hover {
   }
   .home-main > p.section-label + p {
     margin-bottom: 0.8rem;
-    font-size: 1.28rem;
-    line-height: 1.2;
-    max-width: 14ch;
   }
   .home-feature-image {
     margin-bottom: 0.85rem;
