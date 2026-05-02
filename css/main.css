@@ -17,7 +17,7 @@
   --accent-hover-color: #a9231d;
   --line-soft: #d6d6d6;
   --surface-soft: #efefec;
-  --frame-color: rgba(17, 17, 17, 0.24);
+  --frame-color: rgba(17, 17, 17, 0.17);
   --frame-strong: rgba(17, 17, 17, 0.4);
   --shadow-soft: 0 2px 8px rgba(17, 24, 39, 0.03);
   --radius-sm: 0;
@@ -225,7 +225,7 @@ main > *:first-child { margin-top: 0; }
   gap: 1.2rem;
   margin-bottom: 0;
   align-items: flex-start;
-  padding: 0 0 1rem;
+  padding: 0 0 1.25rem;
   border: 0;
   border-bottom: 1px solid var(--frame-color);
   border-radius: 0;
