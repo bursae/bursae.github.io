@@ -167,10 +167,10 @@
       title.textContent = note.title;
       link.appendChild(title);
 
-      if (note.location || note.date) {
+      if (note.location) {
         const meta = document.createElement("p");
         meta.className = "gallery-meta";
-        meta.textContent = [note.location, note.date].filter(Boolean).join(" / ");
+        meta.textContent = note.location;
         link.appendChild(meta);
       }
 
