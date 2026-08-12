@@ -4,4 +4,4 @@ The Long Island Sound at dusk.
 
 ---
 
-![Sound](../images/sound.png)
+![Sound](../images/optimized/sound-1200.webp)

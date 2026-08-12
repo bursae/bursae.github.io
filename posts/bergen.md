@@ -3,35 +3,35 @@
 ---
 
 ### Boundaries
-![Map showing boundaries](../images/bound.png)
+![Map showing boundaries](../images/optimized/bound-1200.webp)
 
 Bergen County sits in the northeast corner of New Jersey. New York borders it to the north and east, with the Hudson defining its eastern edge. Passaic and Essex border the west and south.
 
 ---
 
 ### Water
-![Map showing water bodies](../images/water.png)
+![Map showing water bodies](../images/optimized/water-1200.webp)
 
 Water shapes both the map and the daily function of the county. The Hackensack and Passaic systems run through Bergen, while Oradell Reservoir, Woodcliff Lake and Lake Tappan support regional supply.
 
 ---
 
 ### Mountains & Cliffs
-![Map showing mountains and cliffs](../images/mountains.png)
+![Map showing mountains and cliffs](../images/optimized/mountains-1200.webp)
 
 The terrain changes quickly at the edges. The Ramapo Mountains rise in the northwest, and the Palisades form a steep basalt wall over the Hudson.
 
 ---
 
 ### Transportation
-![Map showing transportation routes](../images/transit.png)
+![Map showing transportation routes](../images/optimized/transit-1200.webp)
 
 Transportation drives the county. I-80, I-95, Route 4 and Route 17 move workers and goods every day, backed by NJ Transit service into Hoboken and New York City. The George Washington Bridge connects Bergen County directly to Manhattan across the Hudson River.
 
 ---
 
 ### Towns
-![Map showing towns](../images/towns.png)
+![Map showing towns](../images/optimized/towns-1200.webp)
 
 In Bergen County, with Hackensack as its seat, power is local. Seventy municipalities - Ridgewood and Fort Lee among them - control their schools, zoning and tax base. The fragmentation dates to “boroughitis,” the 1890s incorporation rush after school and tax laws made secession fiscally rational. Bergen sits in New York’s orbit but governs as a federation of municipalities.
 

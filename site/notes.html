@@ -22,7 +22,7 @@
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="../images/favicon-32x32.png" type="image/png" sizes="32x32" />
   <link rel="icon" href="../images/favicon-16x16.png" type="image/png" sizes="16x16" />
-  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/main.css?v=2" />
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
 </head>
@@ -166,6 +166,13 @@
       const title = document.createElement("h3");
       title.textContent = note.title;
       link.appendChild(title);
+
+      if (note.location || note.date) {
+        const meta = document.createElement("p");
+        meta.className = "gallery-meta";
+        meta.textContent = [note.location, note.date].filter(Boolean).join(" / ");
+        link.appendChild(meta);
+      }
 
       item.appendChild(link);
       fragment.appendChild(item);

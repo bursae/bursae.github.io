@@ -3,42 +3,48 @@
     "title": "Lyndhurst",
     "file": "lyndhurst.md",
     "date": "2025",
+    "location": "Meadowlands / New Jersey",
     "description": "A geographic note on Lyndhurst in the Meadowlands, shaped by marshland, rail lines, and proximity to Manhattan.",
-    "thumbnail": "../images/lyndhurst.png"
+    "thumbnail": "../images/optimized/lyndhurst-720.webp"
   },
   {
     "title": "Bergen",
     "file": "bergen.md",
     "date": "2025",
+    "location": "Bergen County / New Jersey",
     "description": "A place note on Bergen County boundaries, water systems, terrain, transportation corridors, and municipal structure.",
-    "thumbnail": "../images/towns.png"
+    "thumbnail": "../images/optimized/towns-720.webp"
   },
   {
     "title": "Bournemouth",
     "file": "bournemouth.md",
     "date": "2018",
+    "location": "Dorset / England",
     "description": "A visual note from Bournemouth on England’s Dorset coast.",
-    "thumbnail": "../images/bournemouth.png"
+    "thumbnail": "../images/optimized/bournemouth-720.webp"
   },
   {
     "title": "Pascack",
     "file": "pascack.md",
     "date": "2016",
+    "location": "Pascack Valley / New Jersey",
     "description": "A short place note from the Pascack Valley in New Jersey.",
-    "thumbnail": "../images/pond_yard.png"
+    "thumbnail": "../images/optimized/pond_yard-720.webp"
   },
   {
     "title": "Sound",
     "file": "sound.md",
     "date": "2026",
+    "location": "Long Island Sound",
     "description": "A dusk view and place note from the Long Island Sound.",
-    "thumbnail": "../images/sound.png"
+    "thumbnail": "../images/optimized/sound-720.webp"
   },
   {
     "title": "Venice",
     "file": "venice.md",
     "date": "2026",
+    "location": "Venice / Italy",
     "description": "A place note on Venetian Gothic architecture at the Doge's Palace waterfront.",
-    "thumbnail": "../images/venice.png"
+    "thumbnail": "../images/optimized/venice-720.webp"
   }
 ]

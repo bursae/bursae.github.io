@@ -4,4 +4,4 @@ Our old garden in the Pascack Valley of New Jersey.
 
 ---
 
-![Pascack](../images/pond_yard.png)
+![Pascack](../images/optimized/pond_yard-1200.webp)
