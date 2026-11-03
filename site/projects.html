@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Anthony Bursae</title>
+  <title>Projects | Anthony Bursae</title>
   <meta name="description" content="Portfolio of product and analytics work by Anthony Bursae spanning geospatial intelligence, ad measurement, and decision-support platforms." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://anthonybursae.com/site/projects.html" />
@@ -11,18 +11,18 @@
   <meta property="og:site_name" content="Anthony Bursae" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://anthonybursae.com/site/projects.html" />
-  <meta property="og:title" content="Portfolio | Anthony Bursae" />
+  <meta property="og:title" content="Projects | Anthony Bursae" />
   <meta property="og:description" content="Portfolio of product and analytics work by Anthony Bursae spanning geospatial intelligence, ad measurement, and decision-support platforms." />
   <meta property="og:image" content="https://anthonybursae.com/images/parceliq.png" />
   <meta property="og:image:alt" content="Screenshot of property intelligence platform project" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Portfolio | Anthony Bursae" />
+  <meta name="twitter:title" content="Projects | Anthony Bursae" />
   <meta name="twitter:description" content="Portfolio of product and analytics work by Anthony Bursae spanning geospatial intelligence, ad measurement, and decision-support platforms." />
   <meta name="twitter:image" content="https://anthonybursae.com/images/parceliq.png" />
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="../images/favicon-32x32.png" type="image/png" sizes="32x32" />
   <link rel="icon" href="../images/favicon-16x16.png" type="image/png" sizes="16x16" />
-  <link rel="stylesheet" href="../css/main.css?v=2" />
+  <link rel="stylesheet" href="../css/main.css?v=4" />
 </head>
 <body>
 <div class="site-container">
@@ -30,80 +30,93 @@
 
     <header class="site-header">
       <a href="../index.html" class="site-brand">
-        <img src="../images/dancer.png" alt="Anthony Bursae logo" width="1024" height="1024">
+        <img src="../images/lantern-refined.png" alt="Anthony Bursae logo" width="1024" height="1024">
         <h1>Anthony Bursae</h1>
       </a>
       <nav>
         <a href="../index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="projects.html" class="active" aria-current="page">Portfolio</a>
-        <a href="notes.html">Gallery</a>
+        <a href="projects.html" class="active" aria-current="page">Projects</a>
+        <a href="notes.html">Notes</a>
       </nav>
     </header>
 
     <main class="projects-main">
-      <p class="section-label">Selected Work</p>
-      <section class="project-list" aria-label="Portfolio projects">
-      <!-- Add future projects by duplicating one .project-card block below. -->
-      <div class="project-card">
-        <img src="../images/optimized/parceliq-720.webp" alt="Parcel IQ MVP" width="720" height="470" decoding="async">
-        <div>
-          <p class="project-kicker">Data Platform / Product Strategy</p>
-          <h3>Property Intelligence Platform MVP</h3>
-          <p class="project-meta">2025</p>
-          <p class="project-result">Built a parcel-level property intelligence MVP that brought fragmented property data into one decision workflow. Designed the underlying data model and proved the foundation for a scalable platform.</p>
-        </div>
-      </div>
-
+      <h2 class="page-title">Projects</h2>
+      <p>Products I’ve helped build at work, and things I’m building on my own.</p>
+      <div id="project-filters" class="note-filters" role="group" aria-label="Filter projects" hidden></div>
+      <h2 class="section-label project-group-heading" id="career-projects">Professional</h2>
+      <section class="project-list" aria-labelledby="career-projects">
       <div class="project-card">
         <img src="../images/optimized/ias_publishers-720.webp" alt="Ad Measurement for Publishers" width="720" height="493" loading="lazy" decoding="async">
         <div>
-          <p class="project-kicker">Measurement / Publisher Workflows</p>
-          <h3>Publisher Ad Quality Measurement</h3>
+          <h3>Ad Measurement for Publishers</h3>
           <p class="project-meta">2024</p>
-          <p class="project-result">Redesigned publisher measurement around the way operators actually worked, replacing legacy reports with clearer, faster workflows. Expanded coverage into streaming and attention metrics, contributing to a 72% customer win rate in 2024.</p>
+          <p class="project-result">Clearer reporting helped publishers make better use of ad measurement, with expanded support for streaming and attention metrics. The work contributed to a 72% customer win rate in 2024.</p>
         </div>
       </div>
 
       <div class="project-card">
-        <img src="../images/optimized/open_measurement-720.webp" alt="Open Measurement SDK" width="720" height="546" loading="lazy" decoding="async">
+        <img src="../images/open-measurement-overview.svg" data-preview-src="../images/open-measurement-flow.svg" alt="OM SDK captures viewability signals in a mobile app and exposes them through OMID to independent measurement providers" width="1200" height="900" loading="lazy" decoding="async">
         <div>
-          <p class="project-kicker">Ad Tech / Standards Infrastructure</p>
-          <h3>Mobile Ad Viewability Measurement</h3>
+          <h3>Open Measurement SDK</h3>
           <p class="project-meta">2019</p>
-          <p class="project-result">Scaled Open Measurement SDK across in-app supply so advertisers could verify mobile viewability through independent third parties. Helped strengthen trust in mobile media measurement.</p>
+          <p class="project-result">Expanding OM SDK across mobile app inventory enabled independent providers to measure ad viewability through a shared standard. IAB Tech Lab later quoted me on its expansion to connected TV.</p>
+          <p><a href="https://iabtechlab.com/omsdk-cross-screen-journey-reaches-ctv-milestone/">Read my comments on IAB Tech Lab →</a></p>
         </div>
       </div>
 
       <div class="project-card">
         <img src="../images/optimized/irx-720.webp" alt="PlanetRisk Analytics" width="720" height="242" loading="lazy" decoding="async">
         <div>
-          <p class="project-kicker">Graph Analytics / Geospatial Intelligence</p>
-          <h3>Graph-Based Intelligence Application</h3>
+          <h3>Connected Data and Maps</h3>
           <p class="project-meta">2018</p>
-          <p class="project-result">Built a graph and geospatial intelligence application that helped analysts connect siloed data, networks, and places in one view. Reduced time-to-context and made network-based risk assessments faster and more consistent.</p>
+          <p class="project-result">This application brought separate datasets, networks, and maps into one view, helping analysts explore connections between people, places, and events. The work focused on connecting graph analysis with geographic context.</p>
         </div>
       </div>
 
       <div class="project-card">
         <img src="../images/optimized/pr_app_1-720.webp" alt="PlanetRisk Mobile" width="720" height="350" loading="lazy" decoding="async">
         <div>
-          <p class="project-kicker">Mobile Product / Situational Awareness</p>
-          <h3>Mobile Situational Intelligence App</h3>
+          <h3>PlanetRisk Mobile</h3>
           <p class="project-meta">2017</p>
-          <p class="project-result">Extended situational awareness into the field with a mobile app for location-aware alerts and early open-source signals. Helped operational leaders keep context and respond beyond the desktop.</p>
+          <p class="project-result">PlanetRisk Mobile brought location-based alerts and information from public sources to a phone. It let people follow developing situations while away from their desks.</p>
         </div>
       </div>
 
       <div class="project-card">
         <img src="../images/optimized/spadac-720.webp" alt="Geospatial Predictive Assessments" width="720" height="604" loading="lazy" decoding="async">
         <div>
-          <p class="project-kicker">Risk Modeling / Geospatial Forecasting</p>
-          <h3>Predictive Threat Assessments</h3>
+          <h3>Mapping Risk</h3>
           <p class="project-meta">2011</p>
-          <p class="project-result">Developed geospatial risk models that combined behavioral and environmental indicators into structured forecasts. Helped teams move from reactive planning toward earlier, evidence-based decisions.</p>
+          <p class="project-result">Geographic risk models combined behavioral and environmental data to help teams anticipate threats. The work supported earlier planning by showing where risks might develop.</p>
         </div>
       </div>
+      </section>
+      <h2 class="section-label project-group-heading" id="personal-projects">Personal</h2>
+      <section class="project-list" aria-labelledby="personal-projects">
+      <article class="project-card">
+        <img src="../images/optimized/parceliq-720.webp" alt="Parcel IQ MVP" width="720" height="470" loading="lazy" decoding="async">
+        <div>
+          <h3>Property Intelligence</h3>
+          <p class="project-meta">2025</p>
+          <p class="project-result">A prototype that brings property records together at the parcel level, making them easier to explore in one place. The work included building the application and its underlying data model.</p>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-laptop-preview">
+        <picture class="project-game-preview">
+          <source media="(prefers-reduced-motion: reduce)" srcset="../images/naval-commander-laptop-still.png">
+          <source srcset="../images/naval-commander-laptop.gif?v=2">
+          <img class="project-game-image" src="../images/naval-commander-laptop-still.png" alt="Naval Commander gameplay showing fleet movements on the campaign map" width="800" height="500" loading="lazy" decoding="async">
+        </picture>
+        </div>
+        <div>
+          <h3>Naval Commander</h3>
+          <p class="project-meta">Strategy game prototype</p>
+          <p class="project-result">A naval strategy game I’m making for fun. You command a fleet, capture ports, and keep your ships supplied.</p>
+        </div>
+      </article>
       </section>
     </main>
 
@@ -116,5 +129,11 @@
 
   </div>
 </div>
+<dialog class="project-preview" aria-label="Project screenshot">
+  <form method="dialog"><button autofocus>Close</button></form>
+  <img alt="">
+  <p></p>
+</dialog>
+<script src="../js/project-preview.js?v=2" defer></script>
 </body>
 </html>

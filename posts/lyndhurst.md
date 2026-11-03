@@ -1,6 +1,6 @@
 # Lyndhurst
 
-Lyndhurst sits in the Meadowlands between the Passaic and Hackensack rivers. A compact residential town shaped by low marshland, rail lines, and its proximity to Manhattan.
+An aerial view of Lyndhurst and a closer look at an old map of the region.
 
 ![Kingsland](../images/optimized/kingsland-1200.webp)
 

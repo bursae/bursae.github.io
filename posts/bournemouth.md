@@ -1,6 +1,6 @@
 # Bournemouth
 
-Bournemouth, England, on the Dorset coast.
+A view of the sea from the clifftop in Bournemouth.
 
 ---
 

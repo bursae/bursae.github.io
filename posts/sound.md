@@ -1,6 +1,6 @@
 # Sound
 
-The Long Island Sound at dusk.
+Long Island Sound at dusk.
 
 ---
 

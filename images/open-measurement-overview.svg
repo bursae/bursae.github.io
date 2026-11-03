@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Open Measurement</title>
+  <desc id="desc">A mobile ad supplies viewability signals through OM SDK and OMID to three independent measurement providers.</desc>
+  <defs>
+    <style>text{font-family:Inter,'Avenir Next',Arial,sans-serif;fill:#171717}text[fill]{fill:#62645f}.route{fill:none;stroke:#a8ada3;stroke-width:2}.accent{fill:#d22f27}</style>
+    <clipPath id="screen"><rect x="111" y="251" width="252" height="448" rx="4"/></clipPath>
+  </defs>
+  <rect width="1200" height="900" fill="#f6f6f4"/>
+  <rect x="72" y="64" width="24" height="4" class="accent"/>
+  <text x="72" y="125" font-size="40" font-weight="600" letter-spacing="-1.4">Open Measurement</text>
+  <text x="72" y="166" font-size="22" fill="#777">A shared SDK lets independent providers measure whether an ad could be seen.</text>
+  <rect x="98" y="225" width="278" height="502" rx="26" fill="#e9eae4" stroke="#a8ada3" stroke-width="2"/>
+  <path d="M211 238H263" stroke="#a8ada3" stroke-width="3" stroke-linecap="round"/>
+  <g clip-path="url(#screen)">
+    <rect x="111" y="251" width="252" height="448" fill="#fffefa"/>
+    <rect x="132" y="278" width="106" height="9" fill="#bdc2b7"/>
+    <path d="M132 315H339M132 332H320M132 349H332" stroke="#d9dcd3" stroke-width="6"/>
+    <rect x="132" y="381" width="210" height="202" fill="#c5cbbd"/>
+    <path d="M132 548L206 445L255 508L301 420L342 486V583H132Z" fill="#929f8a"/>
+    <path d="M132 567L228 499L291 555L342 525V583H132Z" fill="#657761"/>
+    <rect x="147" y="397" width="36" height="23" fill="#fffefa"/>
+    <text x="165" y="413" text-anchor="middle" font-size="12">AD</text>
+    <path d="M132 616H339M132 633H320M132 650H300" stroke="#d9dcd3" stroke-width="6"/>
+  </g>
+  <path d="M132 395V381H146M328 381H342V395M132 569V583H146M328 583H342V569" stroke="#d22f27" stroke-width="3" fill="none"/>
+  <path d="M342 482H468" class="route"/>
+  <circle cx="342" cy="482" r="5" class="accent"/>
+  <rect x="468" y="373" width="245" height="216" fill="#f6f6f4"/>
+  <path d="M468 373H713M468 589H713" stroke="#c9cdc3"/>
+  <text x="490" y="418" font-size="34" font-weight="500" letter-spacing="-1">OM SDK</text>
+  <text x="490" y="456" font-size="17" fill="#62645f" style="font-family:monospace">ad geometry</text>
+  <text x="490" y="482" font-size="17" fill="#62645f" style="font-family:monospace">obstructions</text>
+  <text x="490" y="508" font-size="17" fill="#62645f" style="font-family:monospace">app state</text>
+  <path d="M490 529H690" stroke="#d1d4c9"/>
+  <text x="490" y="563" font-size="20" style="font-family:monospace">OMID API</text>
+  <path d="M713 482H779M779 328V636M779 328H851M779 482H851M779 636H851" class="route"/>
+  <g fill="#f6f6f4" stroke="#a8ada3" stroke-width="2"><circle cx="851" cy="328" r="7"/><circle cx="851" cy="482" r="7"/><circle cx="851" cy="636" r="7"/></g>
+  <text x="878" y="335" font-size="24">Provider A</text>
+  <text x="878" y="489" font-size="24">Provider B</text>
+  <text x="878" y="643" font-size="24">Provider C</text>
+  <path d="M72 791H1128" stroke="#d1d4c9"/>
+  <text x="72" y="833" font-size="20" fill="#777">OM SDK exposes viewability signals through OMID for independent measurement.</text>
+</svg>

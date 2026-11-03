@@ -1,6 +1,6 @@
 # Pascack
 
-Our old garden in the Pascack Valley of New Jersey.
+A garden in New Jersey’s Pascack Valley.
 
 ---
 

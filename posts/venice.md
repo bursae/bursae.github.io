@@ -1,6 +1,6 @@
 # Venice
 
-Venetian Gothic architecture of the Doge’s Palace (centered) in Venice.
+The Doge’s Palace along the waterfront in Venice.
 
 ---
 

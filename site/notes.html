@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Place Notes | Anthony Bursae</title>
+  <title>Notes | Anthony Bursae</title>
   <meta id="meta-description" name="description" content="Place notes by Anthony Bursae on geography, history, and travel." />
   <meta name="robots" content="index,follow" />
   <link id="meta-canonical" rel="canonical" href="https://anthonybursae.com/site/notes.html" />
@@ -11,18 +11,18 @@
   <meta property="og:site_name" content="Anthony Bursae" />
   <meta property="og:type" content="website" />
   <meta id="meta-og-url" property="og:url" content="https://anthonybursae.com/site/notes.html" />
-  <meta id="meta-og-title" property="og:title" content="Place Notes | Anthony Bursae" />
+  <meta id="meta-og-title" property="og:title" content="Notes | Anthony Bursae" />
   <meta id="meta-og-description" property="og:description" content="Place notes by Anthony Bursae on geography, history, and travel." />
   <meta id="meta-og-image" property="og:image" content="https://anthonybursae.com/images/lyndhurst.png" />
   <meta property="og:image:alt" content="Lyndhurst note image" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta id="meta-twitter-title" name="twitter:title" content="Place Notes | Anthony Bursae" />
+  <meta id="meta-twitter-title" name="twitter:title" content="Notes | Anthony Bursae" />
   <meta id="meta-twitter-description" name="twitter:description" content="Place notes by Anthony Bursae on geography, history, and travel." />
   <meta id="meta-twitter-image" name="twitter:image" content="https://anthonybursae.com/images/lyndhurst.png" />
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="../images/favicon-32x32.png" type="image/png" sizes="32x32" />
   <link rel="icon" href="../images/favicon-16x16.png" type="image/png" sizes="16x16" />
-  <link rel="stylesheet" href="../css/main.css?v=2" />
+  <link rel="stylesheet" href="../css/main.css?v=4" />
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
 </head>
@@ -32,23 +32,25 @@
 
     <header class="site-header">
       <a href="../index.html" class="site-brand">
-        <img src="../images/dancer.png" alt="Anthony Bursae logo" width="1024" height="1024" />
+        <img src="../images/lantern-refined.png" alt="Anthony Bursae logo" width="1024" height="1024" />
         <h1>Anthony Bursae</h1>
       </a>
       <nav>
         <a href="../index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="projects.html">Portfolio</a>
-        <a href="notes.html" class="active" aria-current="page">Gallery</a>
+        <a href="projects.html">Projects</a>
+        <a href="notes.html" class="active" aria-current="page">Notes</a>
       </nav>
     </header>
 
-    <main class="narrow-main">
-      <p class="section-label">Place Notes</p>
-      <div id="note-list" class="note-list">Loading notes...</div>
+    <main class="narrow-main places-main">
+      <h2 class="page-title">Notes</h2>
+      <p id="places-intro">A collection of places, maps, and things worth documenting.</p>
+      <div id="note-filters" class="note-filters" role="group" aria-label="Filter notes by type" hidden></div>
+      <div id="note-list" class="note-list" aria-live="polite">Loading notes...</div>
 
       <div id="note-content" class="is-hidden">
-        <a href="notes.html" class="button secondary notes-back-button">← Back to Gallery</a>
+        <a href="notes.html" class="button secondary notes-back-button">← Back to Notes</a>
         <div id="note-body"></div>
       </div>
     </main>
@@ -67,8 +69,8 @@
   const params = new URLSearchParams(window.location.search);
   const file = params.get('file');
   const siteOrigin = "https://anthonybursae.com";
-  const defaultNotesTitle = "Place Notes | Anthony Bursae";
-  const defaultNotesDescription = "Place notes by Anthony Bursae on geography, history, and travel.";
+  const defaultNotesTitle = "Notes | Anthony Bursae";
+  const defaultNotesDescription = "Photographs and notes about places and subjects that interest Anthony Bursae.";
   const defaultNotesImage = `${siteOrigin}/images/lyndhurst.png`;
   const notesBaseUrl = `${siteOrigin}/site/notes.html`;
   const noteList = document.getElementById('note-list');
@@ -100,7 +102,7 @@
       return;
     }
 
-    const noteTitle = `${note.title} | Place Notes | Anthony Bursae`;
+    const noteTitle = `${note.title} | Notes | Anthony Bursae`;
     const noteDescription = note.description || `${note.title} place note by Anthony Bursae.`;
     const noteUrl = `${notesBaseUrl}?file=${encodeURIComponent(note.file)}`;
     const noteImage = note.thumbnail
@@ -139,7 +141,7 @@
 
   function renderNotesList(notes) {
     if (!Array.isArray(notes) || notes.length === 0) {
-      noteList.textContent = "No notes published yet.";
+      noteList.textContent = "No notes in this category yet.";
       return;
     }
 
@@ -165,12 +167,21 @@
 
       const title = document.createElement("h3");
       title.textContent = note.title;
-      link.appendChild(title);
+      const heading = document.createElement('div');
+      heading.className = 'note-heading';
+      heading.appendChild(title);
+      link.appendChild(heading);
+      if (note.type) {
+        const type = document.createElement('span');
+        type.className = 'note-type';
+        type.textContent = note.type;
+        heading.appendChild(type);
+      }
 
-      if (note.location) {
+      if (note.subtitle || note.location) {
         const meta = document.createElement("p");
         meta.className = "gallery-meta";
-        meta.textContent = note.location;
+        meta.textContent = note.subtitle || note.location;
         link.appendChild(meta);
       }
 
@@ -179,6 +190,28 @@
     });
 
     noteList.appendChild(fragment);
+  }
+
+  function renderNoteFilters(notes) {
+    const filters = document.getElementById('note-filters');
+    const types = ['All', ...new Set(['People', 'Places', 'Things', ...notes.map(note => note.type).filter(Boolean)])];
+    filters.replaceChildren();
+    filters.hidden = types.length < 2;
+    types.forEach(type => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      const count = type === 'All' ? notes.length : notes.filter(note => note.type === type).length;
+      button.textContent = `${type} (${count})`;
+      button.setAttribute('aria-controls', 'note-list');
+      button.setAttribute('aria-pressed', String(type === 'All'));
+      button.addEventListener('click', () => {
+        filters.querySelectorAll('button').forEach(filter => {
+          filter.setAttribute('aria-pressed', String(filter === button));
+        });
+        renderNotesList(type === 'All' ? notes : notes.filter(note => note.type === type));
+      });
+      filters.appendChild(button);
+    });
   }
 
   async function fetchNotesIndex() {
@@ -212,6 +245,7 @@
       const noteMap = new Map(notes.map(note => [note.file, note]));
 
       if (file) {
+        document.getElementById('places-intro').classList.add('is-hidden');
         noteList.classList.add('is-hidden');
         noteContent.classList.remove('is-hidden');
         noteBody.textContent = "Loading note...";
@@ -228,6 +262,7 @@
       } else {
         noteList.classList.remove('is-hidden');
         noteContent.classList.add('is-hidden');
+        renderNoteFilters(notes);
         renderNotesList(notes);
         updateNotesMetadata(null);
       }
@@ -240,7 +275,7 @@
       } else {
         noteList.classList.remove('is-hidden');
         noteContent.classList.add('is-hidden');
-        noteList.textContent = "Failed to load gallery.";
+        noteList.textContent = "Failed to load notes.";
       }
     }
   }
